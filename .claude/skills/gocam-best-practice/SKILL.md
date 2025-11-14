@@ -99,33 +99,15 @@ The `references/` directory contains detailed guidelines for specific annotation
 
 ### Specific Molecular Function Types
 
-1. **DNA-binding_transcription_factor_activity_annotation_guidelines.md**
-   - Single and multiple transcription targets
-   - Nuclear receptors and ligand-activated transcription factors
-   - Use 'has input' for regulated genes
-   - Use 'indirectly positively/negatively regulates' for target gene activities
-
-2. **Signaling_receptor_activity_annotation_guidelines.md**
-   - Protein ligand-activated receptors
-   - Small molecule-activated receptors
-   - Receptor/coreceptor systems
-   - Use 'directly positively regulates' from ligand to receptor
-
-3. **Transporter_activity_annotation_annotation_guidelines.md**
-   - Membrane transport annotation patterns
-   - Substrate and location specifications
-
-4. **E3_ubiquitin_ligases.md**
-   - E3 ligase complex components and activities
-   - Scaffold and catalytic subunit representation
-
-### Regulatory and Adaptor Activities
-
-- **Molecular_adaptor_activity.md**: Proteins that bring together other molecules
-- **Molecular_carrier_activity.md**: Proteins that transport molecules
-- **Protein_sequestering_activity.md**: Proteins that sequester other proteins
-- **Transcription_coregulator_activity.md**: Coactivators and corepressors
-- **WIP_-_Regulation_and_Regulatory_Processes_in_GO-CAM.md**: Regulatory relationship patterns
+- DNA-binding_transcription_factor_activity_annotation_guidelines.md
+- Signaling_receptor_activity_annotation_guidelines.md
+- Transporter_activity_annotation_annotation_guidelines.md
+- E3_ubiquitin_ligases.md
+- Molecular_adaptor_activity.md
+- Molecular_carrier_activity.md
+- Protein_sequestering_activity.md
+- Transcription_coregulator_activity.md
+- WIP_-_Regulation_and_Regulatory_Processes_in_GO-CAM.md
 
 ## Common Patterns and Best Practices
 
@@ -177,12 +159,7 @@ Always include:
 
 ## Reference File Usage Strategy
 
-When annotating:
-1. Identify the molecular function type involved
-2. Load the corresponding reference file from the list above
-3. Follow the specific guidelines for that activity type
-4. Pay attention to relation types and context requirements
-5. Use the example models provided in guidelines as templates
+When annotating, identify the molecular function type involved and load the corresponding reference file from the list above.
 
 ## Validation Checklist
 
@@ -273,13 +250,15 @@ barista add-fact --model $MODEL_ID \
 
 Load these files from the `references/` directory as needed:
 
-- Complex annotation: `How_to_annotate_complexes_in_GO-CAM.md`
-- Transcription factors: `DNA-binding_transcription_factor_activity_annotation_guidelines.md`
-- Receptors: `Signaling_receptor_activity_annotation_guidelines.md`
-- Transporters: `Transporter_activity_annotation_annotation_guidelines.md`
-- E3 ligases: `E3_ubiquitin_ligases.md`
-- Adaptors: `Molecular_adaptor_activity.md`, `How_to_annotate_molecular_adaptors.md`
-- Carriers: `Molecular_carrier_activity.md`
-- Sequestering: `Protein_sequestering_activity.md`, `How_to_annotate_sequestering_proteins.md`
-- Coregulators: `Transcription_coregulator_activity.md`
-- Regulation: `WIP_-_Regulation_and_Regulatory_Processes_in_GO-CAM.md`
+- How_to_annotate_complexes_in_GO-CAM.md
+- How_to_annotate_molecular_adaptors.md
+- How_to_annotate_sequestering_proteins.md
+- DNA-binding_transcription_factor_activity_annotation_guidelines.md
+- Signaling_receptor_activity_annotation_guidelines.md
+- Transporter_activity_annotation_annotation_guidelines.md
+- E3_ubiquitin_ligases.md
+- Molecular_adaptor_activity.md
+- Molecular_carrier_activity.md
+- Protein_sequestering_activity.md
+- Transcription_coregulator_activity.md
+- WIP_-_Regulation_and_Regulatory_Processes_in_GO-CAM.md

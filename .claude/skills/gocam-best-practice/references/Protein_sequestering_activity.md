@@ -1,6 +1,6 @@
 # Guidelines for annotating molecular sequestering activity
 
-A sequestering activity is defined as the binding to a specific molecule to prevent it from interacting with other partners or to inhibit its localization to the area of the cell or complex where the target is active.
+A sequestering activity is the binding to a specific molecule to prevent it from interacting with other partners or to inhibit its localization to the area of the cell or complex where it is active.
 
 # Pathway Editor
 
