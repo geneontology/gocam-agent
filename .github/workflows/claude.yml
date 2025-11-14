@@ -32,30 +32,25 @@ jobs:
         run: |
           uv sync
 
+      - name: Create command wrappers
+        run: |
+          mkdir -p ~/.local/bin
+          echo '#!/usr/bin/env bash' > ~/.local/bin/noctua
+          echo 'uv run noctua "$@"' >> ~/.local/bin/noctua
+          chmod +x ~/.local/bin/noctua
+      
+          echo '#!/usr/bin/env bash' > ~/.local/bin/barista
+          echo 'uv run noctua barista "$@"' >> ~/.local/bin/barista
+          chmod +x ~/.local/bin/barista
+      
+          echo "~/.local/bin" >> $GITHUB_PATH
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@beta
         
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          mcp_config: |
-            {
-              "mcpServers": {
-                "ols": {
-                  "command": "uvx",
-                  "args": [
-                    "ols-mcp"
-                  ]
-                },
-                "sequential-thinking": {
-                  "command": "npx",
-                  "args": [
-                    "-y",
-                    "@modelcontextprotocol/server-sequential-thinking"
-                  ]
-                }
-              }
-            }
 
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
