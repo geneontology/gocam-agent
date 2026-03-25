@@ -24,3 +24,9 @@ They are written for the command runner [just](https://github.com/casey/just/). 
 ## Credits
 
 This project uses the template [monarch-project-copier](https://github.com/monarch-initiative/monarch-project-copier)
+
+## MCP Servers
+
+The project `.mcp.json` configures an OLS (Ontology Lookup Service) MCP server for term lookups.
+
+**Note:** If you are authenticated with Claude Max/Pro, your web session MCPs (e.g., Noctua, PubMed, Notion) will also appear in Claude Code sessions. These are inherited from your account, not from this project's config. To restrict to project-only MCPs, use `--strict-mcp-config`. For this project, the CLI (`barista`) is the preferred interface for GO-CAM operations, not the Noctua MCP.
