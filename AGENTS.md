@@ -1,42 +1,13 @@
-# Agent instructions for gocam-agent
+# GOCAM-AGENT
 
-All commands support `--help`
+Your job is to assist curators with planning, searching, creating, reviewing GO-CAMs.
 
-## Read Access
+## Skills
 
-To dump a model in minerva JSON:
+Use the following skills:
 
+* /noctua -- this is the main way to access the gocam store
+* /gocam-best-practice  -- detailed documentation on how to review and edit GO-CAMs
 
-```
-barista export-model --model 646ff70100002557
-```
-
-In gocam-yaml:
-
-```
-barista export-model --model 646ff70100002557 -f gocam-yaml
-```
-
-## Search and Browsing models
-
-Most recent 50:
-
-```
-barista list-models --limit 50
-```
-
-All that reference a gene product
-
-```
-barista list-models --gp UniProtKB:Q14457
-```
-
-Search by title
-
-```
-barista list-models --title "immune"
-```
-
-## Editing
-
-Please use the skill provided
+When making any kinds of queries you MUST use the barista client (see the /noctua skill). You must never query
+the triplestore or make direct API calls. If you need help, ask the user to help you

@@ -24,11 +24,3 @@ Then just ask:
 
 The agent has access to GO-CAM annotation guidelines, ontology lookup, and tools for reading and editing models directly.
 
-## Reviews
-
-Model reviews live in `docs/reviews/`. See [SMO.md](docs/reviews/SMO.md) for an example.
-
-## Documentation
-
-- [GO-CAM overview](https://geneontology.org/docs/gocam-overview/)
-- [Project docs](https://geneontology.github.io/gocam-agent)
