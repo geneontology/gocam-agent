@@ -1,0 +1,428 @@
+{
+  "gene": "ATAD1",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-23T17:04:27",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "Q9D5T0",
+    "protein_name": "Outer mitochondrial transmembrane helix translocase",
+    "gene_names": [
+      "Atad1"
+    ],
+    "function": "Outer mitochondrial translocase required to remove mislocalized tail-anchored transmembrane proteins on mitochondria (By similarity). Specifically recognizes and binds tail-anchored transmembrane proteins: acts as a dislocase that mediates the ATP-dependent extraction of mistargeted tail-anchored transmembrane proteins from the mitochondrion outer membrane (By similarity). Also plays a critical role in regulating the surface expression of AMPA receptors (AMPAR), thereby regulating synaptic plasticity and learning and memory (PubMed:21496646). Required for NMDA-stimulated AMPAR internalization and inhibition of GRIA1 and GRIA2 recycling back to the plasma membrane; these activities are ATPase-dependent (PubMed:21496646)",
+    "go_mf": [
+      {
+        "id": "GO:0005524",
+        "term": "ATP binding",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:0016887",
+        "term": "ATP hydrolysis activity",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0140567",
+        "term": "membrane protein dislocase activity",
+        "evidence": "IEA:RHEA"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0140570",
+        "term": "extraction of mislocalized protein from mitochondrial outer membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0007612",
+        "term": "learning",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0007613",
+        "term": "memory",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0051967",
+        "term": "negative regulation of synaptic transmission, glutamatergic",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0002092",
+        "term": "positive regulation of receptor internalization",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0099149",
+        "term": "regulation of postsynaptic neurotransmitter receptor internalization",
+        "evidence": "IDA:SynGO"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0005741",
+        "term": "mitochondrial outer membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0005739",
+        "term": "mitochondrion",
+        "evidence": "HDA:MGI"
+      },
+      {
+        "id": "GO:0005778",
+        "term": "peroxisomal membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0098794",
+        "term": "postsynapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0045211",
+        "term": "postsynaptic membrane",
+        "evidence": "IDA:UniProtKB"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "ATAD1",
+    "bp": [
+      {
+        "id": "2914",
+        "uniprot_id": "Q9D5T0",
+        "hgnc_id": "HGNC:25903",
+        "hgnc_symbol": "ATAD1",
+        "pubmed_id": "21496646",
+        "go_id": "GO:0099149",
+        "go_name": "regulation of postsynaptic neurotransmitter receptor endocytosis",
+        "go_domain": "BP",
+        "evidence_biological_system": "intact tissue, cultured neurons",
+        "evidence_protein_targeting": "knockout",
+        "evidence_experiment_assay": "confocal microscopy, optical imaging",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "cc": [
+      {
+        "id": "2909",
+        "uniprot_id": "Q9D5T0",
+        "hgnc_id": "HGNC:25903",
+        "hgnc_symbol": "ATAD1",
+        "pubmed_id": "21496646",
+        "go_id": "GO:0098794",
+        "go_name": "postsynapse",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue, cultured neurons",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "confocal microscopy, western blot, fractionation",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 2
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0005524",
+      "go_name": "ATP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0140567",
+      "go_name": "membrane protein dislocase activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000116"
+    },
+    {
+      "go_id": "GO:0002092",
+      "go_name": "positive regulation of receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0007612",
+      "go_name": "learning",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0007613",
+      "go_name": "memory",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0051967",
+      "go_name": "negative regulation of synaptic transmission, glutamatergic",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0099149",
+      "go_name": "regulation of postsynaptic neurotransmitter receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0099149",
+      "go_name": "regulation of postsynaptic neurotransmitter receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0099149",
+      "go_name": "regulation of postsynaptic neurotransmitter receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006039",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0099149",
+      "go_name": "regulation of postsynaptic neurotransmitter receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0140570",
+      "go_name": "extraction of mislocalized protein from mitochondrial outer membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0140570",
+      "go_name": "extraction of mislocalized protein from mitochondrial outer membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0140570",
+      "go_name": "extraction of mislocalized protein from mitochondrial outer membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0140570",
+      "go_name": "extraction of mislocalized protein from mitochondrial outer membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005741",
+      "go_name": "mitochondrial outer membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006039",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:21496646"
+    },
+    {
+      "go_id": "GO:0005739",
+      "go_name": "mitochondrion",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007005",
+      "reference": "PMID:18614015"
+    },
+    {
+      "go_id": "GO:0005741",
+      "go_name": "mitochondrial outer membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0005741",
+      "go_name": "mitochondrial outer membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005741",
+      "go_name": "mitochondrial outer membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005778",
+      "go_name": "peroxisomal membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0005778",
+      "go_name": "peroxisomal membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005778",
+      "go_name": "peroxisomal membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0045211",
+      "go_name": "postsynaptic membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    },
+    {
+      "go_id": "GO:0045211",
+      "go_name": "postsynaptic membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:21496646"
+    }
+  ],
+  "ols4_terms": [
+    {
+      "error": "Server error '503 Service Temporarily Unavailable' for url 'https://www.ebi.ac.uk/ols4/api/search?q=ATAD1&ontology=go&rows=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503"
+    }
+  ]
+}

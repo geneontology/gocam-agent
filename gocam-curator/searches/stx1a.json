@@ -1,0 +1,1187 @@
+{
+  "gene": "stx1a",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-13T16:41:52",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "O35526",
+    "protein_name": "Syntaxin-1A",
+    "gene_names": [
+      "Stx1a"
+    ],
+    "function": "Plays an essential role in hormone and neurotransmitter calcium-dependent exocytosis and endocytosis (PubMed:17502420, PubMed:28031464, PubMed:28596237). Part of the SNARE (Soluble NSF Attachment Receptor) complex composed of SNAP25, STX1A and VAMP2 which mediates the fusion of synaptic vesicles with the presynaptic plasma membrane. STX1A and SNAP25 are localized on the plasma membrane while VAMP2 resides in synaptic vesicles. The pairing of the three SNAREs from the N-terminal SNARE motifs to the C-terminal anchors leads to the formation of the SNARE complex, which brings membranes into close proximity and results in final fusion. Participates in the calcium-dependent regulation of acrosomal exocytosis in sperm (PubMed:12101244). Also plays an important role in the exocytosis of hormones such as insulin or glucagon-like peptide 1 (GLP-1) (PubMed:17502420, PubMed:28031464, PubMed:28596237)",
+    "go_mf": [
+      {
+        "id": "GO:0043008",
+        "term": "ATP-dependent protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019855",
+        "term": "calcium channel inhibitor activity",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0048306",
+        "term": "calcium-dependent protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019869",
+        "term": "chloride channel inhibitor activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0042802",
+        "term": "identical protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019900",
+        "term": "kinase binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0017022",
+        "term": "myosin binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032028",
+        "term": "myosin head/neck binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0044877",
+        "term": "protein-containing complex binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030674",
+        "term": "protein-macromolecule adaptor activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005484",
+        "term": "SNAP receptor activity",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0000149",
+        "term": "SNARE binding",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0044325",
+        "term": "transmembrane transporter binding",
+        "evidence": "ISO:GO_Central"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0017156",
+        "term": "calcium-ion regulated exocytosis",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0006887",
+        "term": "exocytosis",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0046879",
+        "term": "hormone secretion",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0030073",
+        "term": "insulin secretion",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0006886",
+        "term": "intracellular protein transport",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0098815",
+        "term": "modulation of excitatory postsynaptic potential",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0045956",
+        "term": "positive regulation of calcium ion-dependent exocytosis",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0033605",
+        "term": "positive regulation of catecholamine secretion",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:2000463",
+        "term": "positive regulation of excitatory postsynaptic potential",
+        "evidence": "IGI:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0045921",
+        "term": "positive regulation of exocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0001956",
+        "term": "positive regulation of neurotransmitter secretion",
+        "evidence": "IGI:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0010701",
+        "term": "positive regulation of norepinephrine secretion",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0072657",
+        "term": "protein localization to membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016925",
+        "term": "protein sumoylation",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0045055",
+        "term": "regulated exocytosis",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0017157",
+        "term": "regulation of exocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0010807",
+        "term": "regulation of synaptic vesicle priming",
+        "evidence": "IGI:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0009629",
+        "term": "response to gravity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032940",
+        "term": "secretion by cell",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035493",
+        "term": "SNARE complex assembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035494",
+        "term": "SNARE complex disassembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016081",
+        "term": "synaptic vesicle docking",
+        "evidence": "IEA:Ensembl"
+      },
+      {
+        "id": "GO:0048488",
+        "term": "synaptic vesicle endocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016079",
+        "term": "synaptic vesicle exocytosis",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0048278",
+        "term": "vesicle docking",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0006906",
+        "term": "vesicle fusion",
+        "evidence": "IBA:GO_Central"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0001669",
+        "term": "acrosomal vesicle",
+        "evidence": "EXP:MGI"
+      },
+      {
+        "id": "GO:0042641",
+        "term": "actomyosin",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030424",
+        "term": "axon",
+        "evidence": "IDA:SynGO-UCL"
+      },
+      {
+        "id": "GO:0012505",
+        "term": "endomembrane system",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016020",
+        "term": "membrane",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0043005",
+        "term": "neuron projection",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0031965",
+        "term": "nuclear membrane",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "IDA:SynGO-UCL"
+      },
+      {
+        "id": "GO:0098839",
+        "term": "postsynaptic density membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0048787",
+        "term": "presynaptic active zone membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0042734",
+        "term": "presynaptic membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032991",
+        "term": "protein-containing complex",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098685",
+        "term": "Schaffer collateral - CA1 synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030141",
+        "term": "secretory granule",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0031201",
+        "term": "SNARE complex",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0008021",
+        "term": "synaptic vesicle",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0030672",
+        "term": "synaptic vesicle membrane",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0070044",
+        "term": "synaptobrevin 2-SNAP-25-syntaxin-1a complex",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0070032",
+        "term": "synaptobrevin 2-SNAP-25-syntaxin-1a-complexin I complex",
+        "evidence": "ISO:MGI"
+      },
+      {
+        "id": "GO:0070033",
+        "term": "synaptobrevin 2-SNAP-25-syntaxin-1a-complexin II complex",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0008076",
+        "term": "voltage-gated potassium channel complex",
+        "evidence": "ISO:GO_Central"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "STX1A",
+    "bp": [
+      {
+        "id": "1160",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "7901002",
+        "go_id": "GO:0016079",
+        "go_name": "synaptic vesicle exocytosis",
+        "go_domain": "BP",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antagonist",
+        "evidence_experiment_assay": "western blot, fractionation, other:tmmtransport",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "1247",
+        "uniprot_id": "O35526",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "27466336",
+        "go_id": "GO:0016079",
+        "go_name": "synaptic vesicle exocytosis",
+        "go_domain": "BP",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "knockout",
+        "evidence_experiment_assay": "patch-clamp",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "cc": [
+      {
+        "id": "1162",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "7860636",
+        "go_id": "GO:0030285",
+        "go_name": "integral component of synaptic vesicle membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy, western blot, fractionation, co-immunoprecipitation",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "1163",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "8301329",
+        "go_id": "GO:0099056",
+        "go_name": "integral component of presynaptic membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy, microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "1246",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "23622064",
+        "go_id": "GO:0030285",
+        "go_name": "integral component of synaptic vesicle membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "not targeted",
+        "evidence_experiment_assay": "fractionation",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "3749",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "26903802",
+        "go_id": "GO:0099059",
+        "go_name": "integral component of presynaptic active zone membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "3750",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "26903802",
+        "go_id": "GO:0099061",
+        "go_name": "integral component of postsynaptic density membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "3789",
+        "uniprot_id": "P32851",
+        "hgnc_id": "HGNC:11433",
+        "hgnc_symbol": "STX1A",
+        "pubmed_id": "26903802",
+        "go_id": "GO:0030285",
+        "go_name": "integral component of synaptic vesicle membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 8
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0017156",
+      "go_name": "calcium-ion regulated exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10468580"
+    },
+    {
+      "go_id": "GO:0008076",
+      "go_name": "voltage-gated potassium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0008076",
+      "go_name": "voltage-gated potassium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:12145198"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "PMID:7553862"
+    },
+    {
+      "go_id": "GO:0005484",
+      "go_name": "SNAP receptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0005484",
+      "go_name": "SNAP receptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:10468580"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:12832401"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:15774481"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:15774481"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:16642042"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:17055430"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:17283335"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:17296554"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:17296554"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:17500595"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:18760330"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:20114047"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21040848"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21040848"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21040848"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21040848"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24356748"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24705552"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24705552"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:26280336"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:26437117"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:26437117"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:29056747"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:7890599"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:7890599"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:8774707"
+    },
+    {
+      "go_id": "GO:0017022",
+      "go_name": "myosin binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0017022",
+      "go_name": "myosin binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0019855",
+      "go_name": "calcium channel inhibitor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10468580"
+    },
+    {
+      "go_id": "GO:0019869",
+      "go_name": "chloride channel inhibitor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0019869",
+      "go_name": "chloride channel inhibitor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0019900",
+      "go_name": "kinase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0019900",
+      "go_name": "kinase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0030674",
+      "go_name": "protein-macromolecule adaptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0030674",
+      "go_name": "protein-macromolecule adaptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0032028",
+      "go_name": "myosin head/neck binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0032028",
+      "go_name": "myosin head/neck binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": "identical protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": "identical protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0043008",
+      "go_name": "ATP-dependent protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043008",
+      "go_name": "ATP-dependent protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0044325",
+      "go_name": "transmembrane transporter binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0044325",
+      "go_name": "transmembrane transporter binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0048306",
+      "go_name": "calcium-dependent protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0048306",
+      "go_name": "calcium-dependent protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0140597",
+      "go_name": "protein carrier activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0001956",
+      "go_name": "positive regulation of neurotransmitter secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0001956",
+      "go_name": "positive regulation of neurotransmitter secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0001956",
+      "go_name": "positive regulation of neurotransmitter secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:24133272"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": "intracellular protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": "intracellular protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0006887",
+      "go_name": "exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0006906",
+      "go_name": "vesicle fusion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0006906",
+      "go_name": "vesicle fusion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0006906",
+      "go_name": "vesicle fusion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0009629",
+      "go_name": "response to gravity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0009629",
+      "go_name": "response to gravity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0010701",
+      "go_name": "positive regulation of norepinephrine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0010701",
+      "go_name": "positive regulation of norepinephrine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0010701",
+      "go_name": "positive regulation of norepinephrine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0010807",
+      "go_name": "regulation of synaptic vesicle priming",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0010807",
+      "go_name": "regulation of synaptic vesicle priming",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:24133272"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:27466336"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:27466336"
+    },
+    {
+      "go_id": "GO:0016079",
+      "go_name": "synaptic vesicle exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:27466336"
+    },
+    {
+      "go_id": "GO:0016081",
+      "go_name": "synaptic vesicle docking",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0016192",
+      "go_name": "vesicle-mediated transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0016925",
+      "go_name": "protein sumoylation",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0016925",
+      "go_name": "protein sumoylation",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0017156",
+      "go_name": "calcium-ion regulated exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0017157",
+      "go_name": "regulation of exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0017157",
+      "go_name": "regulation of exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0030073",
+      "go_name": "insulin secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:17502420"
+    },
+    {
+      "go_id": "GO:0032940",
+      "go_name": "secretion by cell",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0032940",
+      "go_name": "secretion by cell",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0033605",
+      "go_name": "positive regulation of catecholamine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0033605",
+      "go_name": "positive regulation of catecholamine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0033605",
+      "go_name": "positive regulation of catecholamine secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0035493",
+      "go_name": "SNARE complex assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035493",
+      "go_name": "SNARE complex assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0035494",
+      "go_name": "SNARE complex disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035494",
+      "go_name": "SNARE complex disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0045055",
+      "go_name": "regulated exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:17502420"
+    },
+    {
+      "go_id": "GO:0045921",
+      "go_name": "positive regulation of exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0045921",
+      "go_name": "positive regulation of exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    }
+  ],
+  "ols4_terms": [
+    {
+      "id": "GO:0070044",
+      "label": "synaptobrevin 2-SNAP-25-syntaxin-1a complex",
+      "description": "A SNARE complex that contains synaptobrevin 2 (VAMP2), SNAP-25, and syntaxin 1a (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070048",
+      "label": "endobrevin-SNAP-25-syntaxin-1a complex",
+      "description": "A SNARE complex that contains endobrevin (VAMP8), SNAP-25, and syntaxin 1a (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070032",
+      "label": "synaptobrevin 2-SNAP-25-syntaxin-1a-complexin I complex",
+      "description": "A SNARE complex that contains synaptobrevin 2 (VAMP2), SNAP-25, syntaxin 1a, and complexin I (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070033",
+      "label": "synaptobrevin 2-SNAP-25-syntaxin-1a-complexin II complex",
+      "description": "A SNARE complex that contains synaptobrevin 2 (VAMP2), SNAP-25, syntaxin 1a, and complexin II (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070356",
+      "label": "synaptotagmin-synaptobrevin 2-SNAP-25-syntaxin-1a-syntaxin-1b-Rab3a complex",
+      "description": "A SNARE complex that contains synaptotagmin, synaptobrevin 2 (VAMP2), SNAP-25, syntaxin 1a, syntaxin1b, and Rab3a (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070355",
+      "label": "synaptotagmin-synaptobrevin 2-SNAP-25-syntaxin-1a-syntaxin-1b-Rab3a-complexin II complex",
+      "description": "A SNARE complex that contains synaptotagmin, synaptobrevin 2 (VAMP2), SNAP-25, syntaxin 1a, syntaxin1b, Rab3a, and complexin II (or orthologs thereof)."
+    },
+    {
+      "id": "GO:0070768",
+      "label": "synaptotagmin-synaptobrevin 2-SNAP-25-syntaxin-1a-syntaxin-1b-Unc13 complex",
+      "description": "A SNARE complex that contains synaptotagmin, synaptobrevin 2 (VAMP2), SNAP-25, syntaxin 1a, syntaxin1b, and Unc13b (or orthologs thereof)."
+    }
+  ]
+}

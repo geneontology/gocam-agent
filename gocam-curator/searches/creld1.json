@@ -1,0 +1,190 @@
+{
+  "gene": "creld1",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-17T12:47:29",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "Q91XD7",
+    "protein_name": "Protein disulfide isomerase Creld1",
+    "gene_names": [
+      "Creld1"
+    ],
+    "function": "Protein disulfide isomerase (By similarity). Promotes the localization of acetylcholine receptors (AChRs) to the plasma membrane (PubMed:30407909)",
+    "go_mf": [
+      {
+        "id": "GO:0005509",
+        "term": "calcium ion binding",
+        "evidence": "IEA:InterPro"
+      },
+      {
+        "id": "GO:0003756",
+        "term": "protein disulfide isomerase activity",
+        "evidence": "IEA:UniProtKB-EC"
+      }
+    ],
+    "go_bp": [],
+    "go_cc": [
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0016020",
+        "term": "membrane",
+        "evidence": "IEA:UniProtKB-SubCell"
+      },
+      {
+        "id": "GO:0045202",
+        "term": "synapse",
+        "evidence": "IDA:SynGO"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "CRELD1",
+    "bp": [],
+    "cc": [
+      {
+        "id": "5565",
+        "uniprot_id": "Q91XD7",
+        "hgnc_id": "HGNC:14630",
+        "hgnc_symbol": "CRELD1",
+        "pubmed_id": "31171447",
+        "go_id": "GO:0045202",
+        "go_name": "synapse",
+        "go_domain": "CC",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "antibody, knockout",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 1
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0003674",
+      "go_name": "molecular_function",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000307",
+      "reference": "GO_REF:0000015"
+    },
+    {
+      "go_id": "GO:0003756",
+      "go_name": "protein disulfide isomerase activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000003"
+    },
+    {
+      "go_id": "GO:0005201",
+      "go_name": "extracellular matrix structural constituent",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0007666",
+      "reference": "PMID:28071719"
+    },
+    {
+      "go_id": "GO:0005509",
+      "go_name": "calcium ion binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0008150",
+      "go_name": "biological_process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000307",
+      "reference": "GO_REF:0000015"
+    },
+    {
+      "go_id": "GO:0005575",
+      "go_name": "cellular_component",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000307",
+      "reference": "GO_REF:0000015"
+    },
+    {
+      "go_id": "GO:0005615",
+      "go_name": "obsolete extracellular space",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0031012",
+      "go_name": "extracellular matrix",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0045202",
+      "go_name": "synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0045202",
+      "go_name": "synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0045202",
+      "go_name": "synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0045202",
+      "go_name": "synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:31171447"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    }
+  ],
+  "ols4_terms": []
+}

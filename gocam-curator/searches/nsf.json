@@ -1,0 +1,897 @@
+{
+  "gene": "NSF",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-04-02T15:05:15",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "P46460",
+    "protein_name": "Vesicle-fusing ATPase",
+    "gene_names": [
+      "Nsf",
+      "Skd2"
+    ],
+    "function": "Required for vesicle-mediated transport. Catalyzes the fusion of transport vesicles within the Golgi cisternae. Is also required for transport from the endoplasmic reticulum to the Golgi stack. Seems to function as a fusion protein required for the delivery of cargo proteins to all compartments of the Golgi stack GRIA2 leads to influence GRIA2 membrane cycling (By similarity)",
+    "go_mf": [
+      {
+        "id": "GO:0005524",
+        "term": "ATP binding",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:0016887",
+        "term": "ATP hydrolysis activity",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0043008",
+        "term": "ATP-dependent protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0140545",
+        "term": "ATP-dependent protein disaggregase activity",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0005509",
+        "term": "calcium ion binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0031748",
+        "term": "D1 dopamine receptor binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0042802",
+        "term": "identical protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035255",
+        "term": "ionotropic glutamate receptor binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030165",
+        "term": "PDZ domain binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019901",
+        "term": "protein kinase binding",
+        "evidence": "IPI:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0120283",
+        "term": "protein serine/threonine kinase binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0044877",
+        "term": "protein-containing complex binding",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0031267",
+        "term": "small GTPase binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0000149",
+        "term": "SNARE binding",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0019905",
+        "term": "syntaxin binding",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0017075",
+        "term": "syntaxin-1 binding",
+        "evidence": "IDA:ParkinsonsUK-UCL"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0043001",
+        "term": "Golgi to plasma membrane protein transport",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0006891",
+        "term": "intra-Golgi vesicle-mediated transport",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0006886",
+        "term": "intracellular protein transport",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:1904719",
+        "term": "positive regulation of AMPA glutamate receptor clustering",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:2000463",
+        "term": "positive regulation of excitatory postsynaptic potential",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0051491",
+        "term": "positive regulation of filopodium assembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0045732",
+        "term": "positive regulation of protein catabolic process",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0002092",
+        "term": "positive regulation of receptor internalization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0001921",
+        "term": "positive regulation of receptor recycling",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0048260",
+        "term": "positive regulation of receptor-mediated endocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0006813",
+        "term": "potassium ion transport",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0051260",
+        "term": "protein homooligomerization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032984",
+        "term": "protein-containing complex disassembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0017157",
+        "term": "regulation of exocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0002090",
+        "term": "regulation of receptor internalization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035494",
+        "term": "SNARE complex disassembly",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0160069",
+        "term": "surfactant secretion",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016192",
+        "term": "vesicle-mediated transport",
+        "evidence": "ISO:GO_Central"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0030424",
+        "term": "axon",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043679",
+        "term": "axon terminus",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0031410",
+        "term": "cytoplasmic vesicle",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005829",
+        "term": "cytosol",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:1902737",
+        "term": "dendritic filopodium",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043198",
+        "term": "dendritic shaft",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0044326",
+        "term": "dendritic spine neck",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098982",
+        "term": "GABA-ergic synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005794",
+        "term": "Golgi apparatus",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0000139",
+        "term": "Golgi membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005795",
+        "term": "Golgi stack",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0042599",
+        "term": "lamellar body",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043209",
+        "term": "myelin sheath",
+        "evidence": "HDA:UniProtKB"
+      },
+      {
+        "id": "GO:0031965",
+        "term": "nuclear membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0014069",
+        "term": "postsynaptic density",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0099091",
+        "term": "postsynaptic specialization, intracellular component",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0008021",
+        "term": "synaptic vesicle",
+        "evidence": "ISO:GO_Central"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "NSF",
+    "bp": [
+      {
+        "id": "273",
+        "uniprot_id": "P46461",
+        "hgnc_id": "HGNC:8016",
+        "hgnc_symbol": "NSF",
+        "pubmed_id": "9728921",
+        "go_id": "GO:0099504",
+        "go_name": "synaptic vesicle cycle",
+        "go_domain": "BP",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "knockout",
+        "evidence_experiment_assay": "western blot, fractionation",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "cc": [
+      {
+        "id": "272",
+        "uniprot_id": "P46461",
+        "hgnc_id": "HGNC:8016",
+        "hgnc_symbol": "NSF",
+        "pubmed_id": "25953899",
+        "go_id": "GO:0099523",
+        "go_name": "presynaptic cytosol",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue, cultured neurons",
+        "evidence_protein_targeting": "knockout, antibody",
+        "evidence_experiment_assay": "microscopy, western blot, fractionation, co-immunoprecipitation, yeast two-hybrid",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "4833",
+        "uniprot_id": "Q9QUL6",
+        "hgnc_id": "HGNC:8016",
+        "hgnc_symbol": "NSF",
+        "pubmed_id": "11461150",
+        "go_id": "GO:0099091",
+        "go_name": "postsynaptic specialization, intracellular component",
+        "go_domain": "CC",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy, confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 3
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0006813",
+      "go_name": "potassium ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:8082782"
+    },
+    {
+      "go_id": "GO:0000149",
+      "go_name": "SNARE binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0005509",
+      "go_name": "calcium ion binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:15322554"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:18272689"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:19455133"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21307259"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24687852"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:28671696"
+    },
+    {
+      "go_id": "GO:0005524",
+      "go_name": "ATP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0016887",
+      "go_name": "ATP hydrolysis activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:12832401"
+    },
+    {
+      "go_id": "GO:0017075",
+      "go_name": "syntaxin-1 binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:21307259"
+    },
+    {
+      "go_id": "GO:0019901",
+      "go_name": "protein kinase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:21307259"
+    },
+    {
+      "go_id": "GO:0019905",
+      "go_name": "syntaxin binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:14755058"
+    },
+    {
+      "go_id": "GO:0030165",
+      "go_name": "PDZ domain binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0030165",
+      "go_name": "PDZ domain binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0031267",
+      "go_name": "small GTPase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0031748",
+      "go_name": "D1 dopamine receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": "ionotropic glutamate receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": "ionotropic glutamate receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": "ionotropic glutamate receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": "identical protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043008",
+      "go_name": "ATP-dependent protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0044877",
+      "go_name": "protein-containing complex binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0120283",
+      "go_name": "protein serine/threonine kinase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0140545",
+      "go_name": "ATP-dependent protein disaggregase activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0001921",
+      "go_name": "positive regulation of receptor recycling",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0001921",
+      "go_name": "positive regulation of receptor recycling",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0002090",
+      "go_name": "regulation of receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0002092",
+      "go_name": "positive regulation of receptor internalization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": "intracellular protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": "intracellular protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0006891",
+      "go_name": "intra-Golgi vesicle-mediated transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0016192",
+      "go_name": "vesicle-mediated transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0017157",
+      "go_name": "regulation of exocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0032984",
+      "go_name": "protein-containing complex disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035494",
+      "go_name": "SNARE complex disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0035494",
+      "go_name": "SNARE complex disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0043001",
+      "go_name": "Golgi to plasma membrane protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0045732",
+      "go_name": "positive regulation of protein catabolic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0045732",
+      "go_name": "positive regulation of protein catabolic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0048260",
+      "go_name": "positive regulation of receptor-mediated endocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0051260",
+      "go_name": "protein homooligomerization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0051491",
+      "go_name": "positive regulation of filopodium assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0160069",
+      "go_name": "surfactant secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:1904719",
+      "go_name": "positive regulation of AMPA glutamate receptor clustering",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:2000463",
+      "go_name": "positive regulation of excitatory postsynaptic potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005795",
+      "go_name": "Golgi stack",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098982",
+      "go_name": "GABA-ergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0099091",
+      "go_name": "postsynaptic specialization, intracellular component",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0000139",
+      "go_name": "Golgi membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0001669",
+      "go_name": "acrosomal vesicle",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005737",
+      "go_name": "cytoplasm",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    },
+    {
+      "go_id": "GO:0005794",
+      "go_name": "Golgi apparatus",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005795",
+      "go_name": "Golgi stack",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005829",
+      "go_name": "cytosol",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005829",
+      "go_name": "cytosol",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0008021",
+      "go_name": "synaptic vesicle",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0014069",
+      "go_name": "postsynaptic density",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0030424",
+      "go_name": "axon",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0031410",
+      "go_name": "cytoplasmic vesicle",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0031965",
+      "go_name": "nuclear membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0042599",
+      "go_name": "lamellar body",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043198",
+      "go_name": "dendritic shaft",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043209",
+      "go_name": "myelin sheath",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007005",
+      "reference": "PMID:17634366"
+    },
+    {
+      "go_id": "GO:0043679",
+      "go_name": "axon terminus",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0044326",
+      "go_name": "dendritic spine neck",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0097225",
+      "go_name": "sperm midpiece",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0097228",
+      "go_name": "sperm principal piece",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0097229",
+      "go_name": "sperm end piece",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:1902737",
+      "go_name": "dendritic filopodium",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    }
+  ],
+  "ols4_terms": []
+}

@@ -1,0 +1,17 @@
+{
+  "gene": "bragg",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-12T09:28:12",
+  "uniprot": {
+    "status": "NOT_FOUND"
+  },
+  "syngo": {
+    "available": true,
+    "found": false,
+    "symbol": "bragg",
+    "canonical": "bragg"
+  },
+  "quickgo_annotations": [],
+  "ols4_terms": []
+}

@@ -1,0 +1,926 @@
+{
+  "gene": "cacng2",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-20T17:20:58",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "O88602",
+    "protein_name": "Voltage-dependent calcium channel gamma-2 subunit",
+    "gene_names": [
+      "Cacng2",
+      "Stg"
+    ],
+    "function": "Regulates the trafficking and gating properties of AMPA-selective glutamate receptors (AMPARs). Promotes their targeting to the cell membrane and synapses and modulates their gating properties by slowing their rates of activation, deactivation and desensitization. Does not show subunit-specific AMPA receptor regulation and regulates all AMPAR subunits. Thought to stabilize the calcium channel in an inactivated (closed) state (By similarity)",
+    "go_mf": [
+      {
+        "id": "GO:0016247",
+        "term": "channel regulator activity",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0035255",
+        "term": "ionotropic glutamate receptor binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005245",
+        "term": "voltage-gated calcium channel activity",
+        "evidence": "IMP:MGI"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0060082",
+        "term": "eye blink reflex",
+        "evidence": "IEA:Ensembl"
+      },
+      {
+        "id": "GO:0051899",
+        "term": "membrane depolarization",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0060081",
+        "term": "membrane hyperpolarization",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0050877",
+        "term": "nervous system process",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0007528",
+        "term": "neuromuscular junction development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0099645",
+        "term": "neurotransmitter receptor localization to postsynaptic specialization membrane",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:1904510",
+        "term": "positive regulation of protein localization to basolateral plasma membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0051968",
+        "term": "positive regulation of synaptic transmission, glutamatergic",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0098970",
+        "term": "postsynaptic neurotransmitter receptor diffusion trapping",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0006612",
+        "term": "protein targeting to membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:2000311",
+        "term": "regulation of AMPA receptor activity",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0042391",
+        "term": "regulation of membrane potential",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0099072",
+        "term": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0051592",
+        "term": "response to calcium ion",
+        "evidence": "IEA:Ensembl"
+      },
+      {
+        "id": "GO:0019226",
+        "term": "transmission of nerve impulse",
+        "evidence": "IGI:MGI"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0032281",
+        "term": "AMPA glutamate receptor complex",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0009986",
+        "term": "cell surface",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0044300",
+        "term": "cerebellar mossy fiber",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0098686",
+        "term": "hippocampal mossy fiber to CA3 synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0098839",
+        "term": "postsynaptic density membrane",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0098685",
+        "term": "Schaffer collateral - CA1 synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0036477",
+        "term": "somatodendritic compartment",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0005891",
+        "term": "voltage-gated calcium channel complex",
+        "evidence": "IEA:InterPro"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "CACNG2",
+    "bp": [
+      {
+        "id": "2502",
+        "uniprot_id": "O88602",
+        "hgnc_id": "HGNC:1406",
+        "hgnc_symbol": "CACNG2",
+        "pubmed_id": "11140673",
+        "go_id": "GO:0099072",
+        "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+        "go_domain": "BP",
+        "evidence_biological_system": "intact tissue, cultured neurons",
+        "evidence_protein_targeting": "knockout, overexpression",
+        "evidence_experiment_assay": "electron microscopy, confocal microscopy, patch-clamp, electrophysiology, western blot, protein–protein interaction",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "2697",
+        "uniprot_id": "O88602",
+        "hgnc_id": "HGNC:1406",
+        "hgnc_symbol": "CACNG2",
+        "pubmed_id": "17329211",
+        "go_id": "GO:0098970",
+        "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+        "go_domain": "BP",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "overexpression",
+        "evidence_experiment_assay": "wide-field fluorescence microscopy, patch-clamp",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "2733",
+        "uniprot_id": "O88602",
+        "hgnc_id": "HGNC:1406",
+        "hgnc_symbol": "CACNG2",
+        "pubmed_id": "18753375",
+        "go_id": "GO:0099645",
+        "go_name": "neurotransmitter receptor localization to postsynaptic specialization membrane",
+        "go_domain": "BP",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "knockout",
+        "evidence_experiment_assay": "patch-clamp, electrophysiology",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "cc": [
+      {
+        "id": "2045",
+        "uniprot_id": "O88602",
+        "hgnc_id": "HGNC:1406",
+        "hgnc_symbol": "CACNG2",
+        "pubmed_id": "27076426",
+        "go_id": "GO:0099061",
+        "go_name": "integral component of postsynaptic density membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 4
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0007528",
+      "go_name": "neuromuscular junction development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:17320843"
+    },
+    {
+      "go_id": "GO:0019226",
+      "go_name": "transmission of nerve impulse",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:15677329"
+    },
+    {
+      "go_id": "GO:0042391",
+      "go_name": "regulation of membrane potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:12151514"
+    },
+    {
+      "go_id": "GO:0050877",
+      "go_name": "nervous system process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:9293489"
+    },
+    {
+      "go_id": "GO:0051899",
+      "go_name": "membrane depolarization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:9065835"
+    },
+    {
+      "go_id": "GO:0060081",
+      "go_name": "membrane hyperpolarization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:9065835"
+    },
+    {
+      "go_id": "GO:0005245",
+      "go_name": "voltage-gated calcium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0005245",
+      "go_name": "voltage-gated calcium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005245",
+      "go_name": "voltage-gated calcium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:12151514"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:20805473"
+    },
+    {
+      "go_id": "GO:0016247",
+      "go_name": "channel regulator activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": "ionotropic glutamate receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": "ionotropic glutamate receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0006612",
+      "go_name": "protein targeting to membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0006612",
+      "go_name": "protein targeting to membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0006816",
+      "go_name": "calcium ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0019226",
+      "go_name": "transmission of nerve impulse",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0051592",
+      "go_name": "response to calcium ion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0051968",
+      "go_name": "positive regulation of synaptic transmission, glutamatergic",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0060082",
+      "go_name": "eye blink reflex",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0070588",
+      "go_name": "calcium ion transmembrane transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0098970",
+      "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098970",
+      "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:17329211"
+    },
+    {
+      "go_id": "GO:0098970",
+      "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006062",
+      "reference": "PMID:17329211"
+    },
+    {
+      "go_id": "GO:0098970",
+      "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:17329211"
+    },
+    {
+      "go_id": "GO:0098970",
+      "go_name": "postsynaptic neurotransmitter receptor diffusion trapping",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:17329211"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099072",
+      "go_name": "regulation of postsynaptic membrane neurotransmitter receptor levels",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0099645",
+      "go_name": "neurotransmitter receptor localization to postsynaptic specialization membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:18753375"
+    },
+    {
+      "go_id": "GO:0099645",
+      "go_name": "neurotransmitter receptor localization to postsynaptic specialization membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:18753375"
+    },
+    {
+      "go_id": "GO:0099645",
+      "go_name": "neurotransmitter receptor localization to postsynaptic specialization membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:18753375"
+    },
+    {
+      "go_id": "GO:1904510",
+      "go_name": "positive regulation of protein localization to basolateral plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:1904510",
+      "go_name": "positive regulation of protein localization to basolateral plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:2000311",
+      "go_name": "regulation of AMPA receptor activity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:2000311",
+      "go_name": "regulation of AMPA receptor activity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:2000969",
+      "go_name": "positive regulation of AMPA receptor activity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0098685",
+      "go_name": "Schaffer collateral - CA1 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:27076426"
+    },
+    {
+      "go_id": "GO:0098685",
+      "go_name": "Schaffer collateral - CA1 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:27076426"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098686",
+      "go_name": "hippocampal mossy fiber to CA3 synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098839",
+      "go_name": "postsynaptic density membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098839",
+      "go_name": "postsynaptic density membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:27076426"
+    },
+    {
+      "go_id": "GO:0098839",
+      "go_name": "postsynaptic density membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:27076426"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000279",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0001225",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0005589",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006006",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006042",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006063",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007695",
+      "reference": "PMID:11140673"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006013",
+      "reference": "PMID:17329211"
+    }
+  ],
+  "ols4_terms": []
+}

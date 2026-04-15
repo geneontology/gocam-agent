@@ -1,0 +1,1128 @@
+{
+  "gene": "arf6",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-19T14:25:27",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "P62331",
+    "protein_name": "ADP-ribosylation factor 6",
+    "gene_names": [
+      "Arf6"
+    ],
+    "function": "GTP-binding protein involved in protein trafficking that regulates endocytic recycling and cytoskeleton remodeling (PubMed:11950392). Required for normal completion of mitotic cytokinesis. Involved in the regulation of dendritic spine development, contributing to the regulation of dendritic branching and filopodia extension. Plays an important role in membrane trafficking, during junctional remodeling and epithelial polarization. Regulates surface levels of adherens junction proteins such as CDH1 (PubMed:20080746, PubMed:29420262). Required for NTRK1 sorting to the recycling pathway from early endosomes (By similarity)",
+    "go_mf": [
+      {
+        "id": "GO:0003925",
+        "term": "G protein activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019003",
+        "term": "GDP binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005525",
+        "term": "GTP binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0003924",
+        "term": "GTPase activity",
+        "evidence": "TAS:BHF-UCL"
+      },
+      {
+        "id": "GO:0035591",
+        "term": "signaling adaptor activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0031996",
+        "term": "thioesterase binding",
+        "evidence": "ISO:GO_Central"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0030154",
+        "term": "cell differentiation",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:0051301",
+        "term": "cell division",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:1990090",
+        "term": "cellular response to nerve growth factor stimulus",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030866",
+        "term": "cortical actin cytoskeleton organization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032456",
+        "term": "endocytic recycling",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0090162",
+        "term": "establishment of epithelial cell polarity",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0097284",
+        "term": "hepatocyte apoptotic process",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0006886",
+        "term": "intracellular protein transport",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0001889",
+        "term": "liver development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0099562",
+        "term": "maintenance of postsynaptic density structure",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0033028",
+        "term": "myeloid cell apoptotic process",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:2000171",
+        "term": "negative regulation of dendrite development",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:2000009",
+        "term": "negative regulation of protein localization to cell surface",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0007399",
+        "term": "nervous system development",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:0030838",
+        "term": "positive regulation of actin filament polymerization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0120183",
+        "term": "positive regulation of focal adhesion disassembly",
+        "evidence": "IMP:ARUK-UCL"
+      },
+      {
+        "id": "GO:0051549",
+        "term": "positive regulation of keratinocyte migration",
+        "evidence": "IMP:ARUK-UCL"
+      },
+      {
+        "id": "GO:1903438",
+        "term": "positive regulation of mitotic cytokinetic process",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0010976",
+        "term": "positive regulation of neuron projection development",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:1903078",
+        "term": "positive regulation of protein localization to plasma membrane",
+        "evidence": "IDA:BHF-UCL"
+      },
+      {
+        "id": "GO:0050714",
+        "term": "positive regulation of protein secretion",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0034394",
+        "term": "protein localization to cell surface",
+        "evidence": "IDA:BHF-UCL"
+      },
+      {
+        "id": "GO:1905345",
+        "term": "protein localization to cleavage furrow",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0036010",
+        "term": "protein localization to endosome",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0072659",
+        "term": "protein localization to plasma membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0015031",
+        "term": "protein transport",
+        "evidence": "TAS:MGI"
+      },
+      {
+        "id": "GO:0060998",
+        "term": "regulation of dendritic spine development",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0051489",
+        "term": "regulation of filopodium assembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0010975",
+        "term": "regulation of neuron projection development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:1905606",
+        "term": "regulation of presynapse assembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035020",
+        "term": "regulation of Rac protein signal transduction",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0034143",
+        "term": "regulation of toll-like receptor 4 signaling pathway",
+        "evidence": "NAS:BHF-UCL"
+      },
+      {
+        "id": "GO:0097178",
+        "term": "ruffle assembly",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0048488",
+        "term": "synaptic vesicle endocytosis",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016192",
+        "term": "vesicle-mediated transport",
+        "evidence": "ISO:GO_Central"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0005938",
+        "term": "cell cortex",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032154",
+        "term": "cleavage furrow",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0005737",
+        "term": "cytoplasm",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0005829",
+        "term": "cytosol",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005769",
+        "term": "early endosome",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0031901",
+        "term": "early endosome membrane",
+        "evidence": "IEA:UniProtKB-SubCell"
+      },
+      {
+        "id": "GO:0030139",
+        "term": "endocytic vesicle",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0005768",
+        "term": "endosome",
+        "evidence": "IDA:BHF-UCL"
+      },
+      {
+        "id": "GO:0031527",
+        "term": "filopodium membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0090543",
+        "term": "Flemming body",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005794",
+        "term": "Golgi apparatus",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0016020",
+        "term": "membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030496",
+        "term": "midbody",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043209",
+        "term": "myelin sheath",
+        "evidence": "HDA:UniProtKB"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0098794",
+        "term": "postsynapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098793",
+        "term": "presynapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0055037",
+        "term": "recycling endosome",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0055038",
+        "term": "recycling endosome membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0001726",
+        "term": "ruffle",
+        "evidence": "ISO:GO_Central"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "ARF6",
+    "bp": [
+      {
+        "id": "496",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "26731518",
+        "go_id": "GO:0048488",
+        "go_name": "synaptic vesicle endocytosis",
+        "go_domain": "BP",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "RNAi",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "2680",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "16672654",
+        "go_id": "GO:0099562",
+        "go_name": "maintenance of postsynaptic density structure",
+        "go_domain": "BP",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "RNAi, overexpression",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "2681",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "16672654",
+        "go_id": "GO:1905606",
+        "go_name": "regulation of presynapse assembly",
+        "go_domain": "BP",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "RNAi, overexpression",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "cc": [
+      {
+        "id": "4128",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "26731518",
+        "go_id": "GO:0098793",
+        "go_name": "presynapse",
+        "go_domain": "CC",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "4129",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "26731518",
+        "go_id": "GO:0098793",
+        "go_name": "presynapse",
+        "go_domain": "CC",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      },
+      {
+        "id": "4529",
+        "uniprot_id": "P62332",
+        "hgnc_id": "HGNC:659",
+        "hgnc_symbol": "ARF6",
+        "pubmed_id": "26731518",
+        "go_id": "GO:0098794",
+        "go_name": "postsynapse",
+        "go_domain": "CC",
+        "evidence_biological_system": "cultured neurons",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "confocal microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 6
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0001889",
+      "go_name": "liver development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:16880525"
+    },
+    {
+      "go_id": "GO:0010975",
+      "go_name": "regulation of neuron projection development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0006052",
+      "reference": "PMID:27330119"
+    },
+    {
+      "go_id": "GO:0015031",
+      "go_name": "protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000304",
+      "reference": "PMID:8947846"
+    },
+    {
+      "go_id": "GO:0016192",
+      "go_name": "vesicle-mediated transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0033028",
+      "go_name": "myeloid cell apoptotic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:16880525"
+    },
+    {
+      "go_id": "GO:0090162",
+      "go_name": "establishment of epithelial cell polarity",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:20080746"
+    },
+    {
+      "go_id": "GO:0097284",
+      "go_name": "hepatocyte apoptotic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:16880525"
+    },
+    {
+      "go_id": "GO:1903438",
+      "go_name": "positive regulation of mitotic cytokinetic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:1905345",
+      "go_name": "protein localization to cleavage furrow",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0003924",
+      "go_name": "GTPase activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0003924",
+      "go_name": "GTPase activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000304",
+      "reference": "PMID:16751103"
+    },
+    {
+      "go_id": "GO:0003925",
+      "go_name": "G protein activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0003925",
+      "go_name": "G protein activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:20493856"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:20493856"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22522702"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22522702"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22522702"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22522702"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22841714"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:22841714"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": "protein binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24616519"
+    },
+    {
+      "go_id": "GO:0005525",
+      "go_name": "GTP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005525",
+      "go_name": "GTP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005525",
+      "go_name": "GTP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005525",
+      "go_name": "GTP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000304",
+      "reference": "PMID:16751103"
+    },
+    {
+      "go_id": "GO:0005525",
+      "go_name": "GTP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000304",
+      "reference": "PMID:8947846"
+    },
+    {
+      "go_id": "GO:0019003",
+      "go_name": "GDP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0019003",
+      "go_name": "GDP binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0030674",
+      "go_name": "protein-macromolecule adaptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0031996",
+      "go_name": "thioesterase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0031996",
+      "go_name": "thioesterase binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0035591",
+      "go_name": "signaling adaptor activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": "intracellular protein transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0010975",
+      "go_name": "regulation of neuron projection development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0010976",
+      "go_name": "positive regulation of neuron projection development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0010976",
+      "go_name": "positive regulation of neuron projection development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0016192",
+      "go_name": "vesicle-mediated transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0030838",
+      "go_name": "positive regulation of actin filament polymerization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0030838",
+      "go_name": "positive regulation of actin filament polymerization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0030866",
+      "go_name": "cortical actin cytoskeleton organization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0030866",
+      "go_name": "cortical actin cytoskeleton organization",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0032456",
+      "go_name": "endocytic recycling",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0032456",
+      "go_name": "endocytic recycling",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0032456",
+      "go_name": "endocytic recycling",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0034143",
+      "go_name": "regulation of toll-like receptor 4 signaling pathway",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000303",
+      "reference": "PMID:16751103"
+    },
+    {
+      "go_id": "GO:0034394",
+      "go_name": "protein localization to cell surface",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:16751103"
+    },
+    {
+      "go_id": "GO:0035020",
+      "go_name": "regulation of Rac protein signal transduction",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0035020",
+      "go_name": "regulation of Rac protein signal transduction",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0036010",
+      "go_name": "protein localization to endosome",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0036010",
+      "go_name": "protein localization to endosome",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0036010",
+      "go_name": "protein localization to endosome",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0036010",
+      "go_name": "protein localization to endosome",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0036010",
+      "go_name": "protein localization to endosome",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:23572513"
+    },
+    {
+      "go_id": "GO:0048488",
+      "go_name": "synaptic vesicle endocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0048488",
+      "go_name": "synaptic vesicle endocytosis",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0050714",
+      "go_name": "positive regulation of protein secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0050714",
+      "go_name": "positive regulation of protein secretion",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0051489",
+      "go_name": "regulation of filopodium assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0051489",
+      "go_name": "regulation of filopodium assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0051549",
+      "go_name": "positive regulation of keratinocyte migration",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:25490267"
+    },
+    {
+      "go_id": "GO:0060998",
+      "go_name": "regulation of dendritic spine development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0060998",
+      "go_name": "regulation of dendritic spine development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0060998",
+      "go_name": "regulation of dendritic spine development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0060998",
+      "go_name": "regulation of dendritic spine development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:16325184"
+    },
+    {
+      "go_id": "GO:0072659",
+      "go_name": "protein localization to plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0072659",
+      "go_name": "protein localization to plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0097178",
+      "go_name": "ruffle assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0097178",
+      "go_name": "ruffle assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0099562",
+      "go_name": "maintenance of postsynaptic density structure",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0099562",
+      "go_name": "maintenance of postsynaptic density structure",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0120183",
+      "go_name": "positive regulation of focal adhesion disassembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:25490267"
+    },
+    {
+      "go_id": "GO:1903078",
+      "go_name": "positive regulation of protein localization to plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:16751103"
+    },
+    {
+      "go_id": "GO:1903438",
+      "go_name": "positive regulation of mitotic cytokinetic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:1903438",
+      "go_name": "positive regulation of mitotic cytokinetic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:1905345",
+      "go_name": "protein localization to cleavage furrow",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:1905345",
+      "go_name": "protein localization to cleavage furrow",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:1905606",
+      "go_name": "regulation of presynapse assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:1905606",
+      "go_name": "regulation of presynapse assembly",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:1990090",
+      "go_name": "cellular response to nerve growth factor stimulus",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:1990090",
+      "go_name": "cellular response to nerve growth factor stimulus",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:2000009",
+      "go_name": "negative regulation of protein localization to cell surface",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:29420262"
+    },
+    {
+      "go_id": "GO:2000171",
+      "go_name": "negative regulation of dendrite development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:2000171",
+      "go_name": "negative regulation of dendrite development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0001726",
+      "go_name": "ruffle",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005737",
+      "go_name": "cytoplasm",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005794",
+      "go_name": "Golgi apparatus",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005829",
+      "go_name": "cytosol",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0030139",
+      "go_name": "endocytic vesicle",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0030496",
+      "go_name": "midbody",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0030496",
+      "go_name": "midbody",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0032154",
+      "go_name": "cleavage furrow",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0055038",
+      "go_name": "recycling endosome membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098793",
+      "go_name": "presynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0098793",
+      "go_name": "presynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0098794",
+      "go_name": "postsynapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    }
+  ],
+  "ols4_terms": []
+}
