@@ -1,0 +1,17 @@
+{
+  "gene": "cacgna2",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-12T09:27:53",
+  "uniprot": {
+    "status": "NOT_FOUND"
+  },
+  "syngo": {
+    "available": true,
+    "found": false,
+    "symbol": "cacgna2",
+    "canonical": "cacgna2"
+  },
+  "quickgo_annotations": [],
+  "ols4_terms": []
+}

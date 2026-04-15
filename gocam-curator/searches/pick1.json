@@ -1,0 +1,1020 @@
+{
+  "gene": "pick1",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-10T10:08:46",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "Q62083",
+    "protein_name": "PRKCA-binding protein",
+    "gene_names": [
+      "Pick1",
+      "Prkcabp"
+    ],
+    "function": "Probable adapter protein that bind to and organize the subcellular localization of a variety of membrane proteins containing some PDZ recognition sequence. Involved in the clustering of various receptors, possibly by acting at the receptor internalization level. Plays a role in synaptic plasticity by regulating the trafficking and internalization of AMPA receptors. May be regulated upon PRKCA activation. May regulate ASIC1/ASIC3 channel. Regulates actin polymerization by inhibiting the actin-nucleating activity of the Arp2/3 complex; the function is competitive with nucleation promoting factors and is linked to neuronal morphology regulation and AMPA receptor (AMPAR) endocytosis. Via interaction with the Arp2/3 complex involved in regulation of synaptic plasicity of excitatory synapses and required for spine shrinkage during long-term depression (LTD). Involved in regulation of astrocyte morphology, antagonistic to Arp2/3 complex activator WASL/N-WASP function",
+    "go_mf": [
+      {
+        "id": "GO:0051015",
+        "term": "actin filament binding",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0071933",
+        "term": "Arp2/3 complex binding",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0008092",
+        "term": "cytoskeletal protein binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0035256",
+        "term": "G protein-coupled glutamate receptor binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0001664",
+        "term": "G protein-coupled receptor binding",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0042802",
+        "term": "identical protein binding",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0035255",
+        "term": "ionotropic glutamate receptor binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0140090",
+        "term": "membrane curvature sensor activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0046872",
+        "term": "metal ion binding",
+        "evidence": "IEA:UniProtKB-KW"
+      },
+      {
+        "id": "GO:0005543",
+        "term": "phospholipid binding",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0019904",
+        "term": "protein domain specific binding",
+        "evidence": "ISS:ParkinsonsUK-UCL"
+      },
+      {
+        "id": "GO:0005080",
+        "term": "protein kinase C binding",
+        "evidence": "IPI:UniProtKB"
+      },
+      {
+        "id": "GO:0140318",
+        "term": "protein transporter activity",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005102",
+        "term": "signaling receptor binding",
+        "evidence": "IPI:UniProtKB"
+      },
+      {
+        "id": "GO:0005484",
+        "term": "SNAP receptor activity",
+        "evidence": "ISO:GO_Central"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0097113",
+        "term": "AMPA glutamate receptor clustering",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0036294",
+        "term": "cellular response to decreased oxygen levels",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0042149",
+        "term": "cellular response to glucose starvation",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0097062",
+        "term": "dendritic spine maintenance",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0097061",
+        "term": "dendritic spine organization",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0021782",
+        "term": "glial cell development",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0006886",
+        "term": "intracellular protein transport",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0035556",
+        "term": "intracellular signal transduction",
+        "evidence": "NAS:UniProtKB"
+      },
+      {
+        "id": "GO:0060292",
+        "term": "long-term synaptic depression",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0015844",
+        "term": "monoamine transport",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0034316",
+        "term": "negative regulation of Arp2/3 complex-mediated actin nucleation",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0010629",
+        "term": "negative regulation of gene expression",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:1904719",
+        "term": "positive regulation of AMPA glutamate receptor clustering",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0002092",
+        "term": "positive regulation of receptor internalization",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0098737",
+        "term": "protein insertion into plasma membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0006468",
+        "term": "protein phosphorylation",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0006605",
+        "term": "protein targeting",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0043113",
+        "term": "receptor clustering",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0034315",
+        "term": "regulation of Arp2/3 complex-mediated actin nucleation",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0050796",
+        "term": "regulation of insulin secretion",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0099149",
+        "term": "regulation of postsynaptic neurotransmitter receptor internalization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0050803",
+        "term": "regulation of synapse structure or activity",
+        "evidence": "NAS:UniProtKB"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0005737",
+        "term": "cytoplasm",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0005856",
+        "term": "cytoskeleton",
+        "evidence": "IEA:UniProtKB-SubCell"
+      },
+      {
+        "id": "GO:0005829",
+        "term": "cytosol",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0030425",
+        "term": "dendrite",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043197",
+        "term": "dendritic spine",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0061846",
+        "term": "dendritic spine cytoplasm",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0060076",
+        "term": "excitatory synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005794",
+        "term": "Golgi apparatus",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0005739",
+        "term": "mitochondrion",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0043005",
+        "term": "neuron projection",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0048471",
+        "term": "perinuclear region of cytoplasm",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0014069",
+        "term": "postsynaptic density",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0098843",
+        "term": "postsynaptic endocytic zone",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0099572",
+        "term": "postsynaptic specialization",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098831",
+        "term": "presynaptic active zone cytoplasmic component",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0042734",
+        "term": "presynaptic membrane",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0032991",
+        "term": "protein-containing complex",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0045202",
+        "term": "synapse",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0008021",
+        "term": "synaptic vesicle",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0032588",
+        "term": "trans-Golgi network membrane",
+        "evidence": "IBA:GO_Central"
+      }
+    ]
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0006605",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:12826667"
+    },
+    {
+      "go_id": "GO:0001664",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0001664",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:7844141"
+    },
+    {
+      "go_id": "GO:0005080",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:9405395"
+    },
+    {
+      "go_id": "GO:0005102",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:9883737"
+    },
+    {
+      "go_id": "GO:0005102",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:9883737"
+    },
+    {
+      "go_id": "GO:0005484",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:23630453"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24069373"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:24498314"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:26306493"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:37261953"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:9405395"
+    },
+    {
+      "go_id": "GO:0005515",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:9883737"
+    },
+    {
+      "go_id": "GO:0005543",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0008092",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0019904",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0019904",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0019904",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035255",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035256",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0042802",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0051015",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0051015",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0071933",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0071933",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0140090",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0140318",
+      "go_name": null,
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0002092",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0002092",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0002092",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0006468",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0006468",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0006886",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0010629",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0015844",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0015844",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0021782",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0021782",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0034315",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0034316",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0034316",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035556",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000303",
+      "reference": "PMID:7844141"
+    },
+    {
+      "go_id": "GO:0036294",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0036294",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0042149",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0042149",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043113",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0043113",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043113",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0043113",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:9883737"
+    },
+    {
+      "go_id": "GO:0050796",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0050803",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000303",
+      "reference": "PMID:9883737"
+    },
+    {
+      "go_id": "GO:0060292",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0060292",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0061025",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000364",
+      "reference": "GO_REF:0000108"
+    },
+    {
+      "go_id": "GO:0097061",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0097061",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0097062",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0097062",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0097062",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0097113",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0098737",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0099149",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0106426",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:1904719",
+      "go_name": null,
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0008021",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0008021",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0014069",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0032588",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0043005",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0098843",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0099572",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005737",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005737",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:7844141"
+    },
+    {
+      "go_id": "GO:0005739",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:12826667"
+    },
+    {
+      "go_id": "GO:0005794",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:7844141"
+    },
+    {
+      "go_id": "GO:0005829",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005856",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0014069",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    },
+    {
+      "go_id": "GO:0014069",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0014069",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:24069373"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007322",
+      "reference": "GO_REF:0000044"
+    },
+    {
+      "go_id": "GO:0030425",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0042734",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0042734",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0043005",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0043005",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0043197",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0045202",
+      "go_name": null,
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    }
+  ],
+  "ols4_terms": []
+}

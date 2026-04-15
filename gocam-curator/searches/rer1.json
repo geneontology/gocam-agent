@@ -1,0 +1,258 @@
+{
+  "gene": "rer1",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-17T12:46:33",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "Q9CQU3",
+    "protein_name": "Protein RER1",
+    "gene_names": [
+      "Rer1"
+    ],
+    "function": "Involved in the retrieval of endoplasmic reticulum membrane proteins from the early Golgi compartment",
+    "go_mf": [
+      {
+        "id": "GO:0033130",
+        "term": "acetylcholine receptor binding",
+        "evidence": "IPI:MGI"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0007528",
+        "term": "neuromuscular junction development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:1903078",
+        "term": "positive regulation of protein localization to plasma membrane",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0006621",
+        "term": "protein retention in ER lumen",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0006890",
+        "term": "retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0071340",
+        "term": "skeletal muscle acetylcholine-gated channel clustering",
+        "evidence": "IMP:MGI"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0009986",
+        "term": "cell surface",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0005783",
+        "term": "endoplasmic reticulum",
+        "evidence": "IEA:GOC"
+      },
+      {
+        "id": "GO:0005793",
+        "term": "endoplasmic reticulum-Golgi intermediate compartment",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0005794",
+        "term": "Golgi apparatus",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0000139",
+        "term": "Golgi membrane",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "IEA:GOC"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": false,
+    "symbol": "rer1",
+    "canonical": "rer1"
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0007528",
+      "go_name": "neuromuscular junction development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21187406"
+    },
+    {
+      "go_id": "GO:0071340",
+      "go_name": "skeletal muscle acetylcholine-gated channel clustering",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21187406"
+    },
+    {
+      "go_id": "GO:1903078",
+      "go_name": "positive regulation of protein localization to plasma membrane",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21187406"
+    },
+    {
+      "go_id": "GO:0033130",
+      "go_name": "acetylcholine receptor binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000353",
+      "reference": "PMID:20956802"
+    },
+    {
+      "go_id": "GO:0006621",
+      "go_name": "protein retention in ER lumen",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0006890",
+      "go_name": "retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0006890",
+      "go_name": "retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0006890",
+      "go_name": "retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0035437",
+      "go_name": "maintenance of protein localization in endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0035437",
+      "go_name": "maintenance of protein localization in endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0035437",
+      "go_name": "maintenance of protein localization in endoplasmic reticulum",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0000139",
+      "go_name": "Golgi membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0000139",
+      "go_name": "Golgi membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0000139",
+      "go_name": "Golgi membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005737",
+      "go_name": "cytoplasm",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0005783",
+      "go_name": "endoplasmic reticulum",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005793",
+      "go_name": "endoplasmic reticulum-Golgi intermediate compartment",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:21187406"
+    },
+    {
+      "go_id": "GO:0005794",
+      "go_name": "Golgi apparatus",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005794",
+      "go_name": "Golgi apparatus",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005801",
+      "go_name": "cis-Golgi network",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000265",
+      "reference": "GO_REF:0000107"
+    },
+    {
+      "go_id": "GO:0005801",
+      "go_name": "cis-Golgi network",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000364",
+      "reference": "GO_REF:0000108"
+    },
+    {
+      "go_id": "GO:0009986",
+      "go_name": "cell surface",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:21187406"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    }
+  ],
+  "ols4_terms": []
+}

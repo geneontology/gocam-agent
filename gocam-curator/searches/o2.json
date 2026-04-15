@@ -1,0 +1,68 @@
+{
+  "gene": "o2",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-12T09:27:30",
+  "uniprot": {
+    "status": "NOT_FOUND"
+  },
+  "syngo": {
+    "available": true,
+    "found": false,
+    "symbol": "o2",
+    "canonical": "o2"
+  },
+  "quickgo_annotations": [],
+  "ols4_terms": [
+    {
+      "id": "GO:0016175",
+      "label": "superoxide-generating NAD(P)H oxidase activity",
+      "description": "Catalysis of the reaction: NAD(P)H + O2 = NAD(P)H + O2-."
+    },
+    {
+      "id": "GO:0019825",
+      "label": "oxygen binding",
+      "description": "Binding to oxygen (O2)."
+    },
+    {
+      "id": "GO:0043799",
+      "label": "glycine oxidase activity",
+      "description": "Catalysis of the reactions: (1) glycine + H2O + O2 = glyoxylate + NH3 + hydrogen peroxide; (2) D-alanine + H2O + O2 = pyruvate + NH3 + hydrogen peroxide; (3) sarcosine + H2O + O2 = glyoxylate + methylamine + hydrogen peroxide; (4) N-ethylglycine + H2O + O2 = glyoxylate + ethylamine + hydrogen peroxide."
+    },
+    {
+      "id": "GO:0033715",
+      "label": "nucleoside oxidase activity",
+      "description": "Catalysis of the reactions: inosine + O2 = 9-riburonosylhypoxanthine + 2 H2O; (1a) 2 inosine + O2 = 2 5'-dehydroinosine + 2 H2O, and (1b) 2 5'-dehydroinosine + O2 = 2 9-riburonosylhypoxanthine + 2 H2O."
+    },
+    {
+      "id": "GO:0033758",
+      "label": "clavaminate synthase activity",
+      "description": "Catalysis of the reactions: deoxyamidinoproclavaminate + 2-oxoglutarate + O2 = amidinoproclavaminate + succinate + CO2 + H2O; proclavaminate + 2-oxoglutarate + O2 = dihydroclavaminate + succinate + CO2 + 2 H2O; and dihydroclavaminate + 2-oxoglutarate + O2 = clavaminate + succinate + CO2 + 2 H2O."
+    },
+    {
+      "id": "GO:0050587",
+      "label": "chlorite O2-lyase activity",
+      "description": "Catalysis of the reaction: chloride + O2 = chlorite."
+    },
+    {
+      "id": "GO:0043823",
+      "label": "spheroidene monooxygenase activity",
+      "description": "Catalysis of the reaction: spheroidene + O2 = spheroidenone + H2O."
+    },
+    {
+      "id": "GO:0050237",
+      "label": "pyridoxine 4-oxidase activity",
+      "description": "Catalysis of the reaction: pyridoxine + O2 = pyridoxal + H2O2."
+    },
+    {
+      "id": "GO:0050581",
+      "label": "D-mannitol oxidase activity",
+      "description": "Catalysis of the reaction: mannitol + O2 = mannose + H2O2."
+    },
+    {
+      "id": "GO:0047719",
+      "label": "indole 2,3-dioxygenase activity",
+      "description": "Catalysis of the reaction: indole + O2 = 2-formamidobenzaldehyde."
+    }
+  ]
+}

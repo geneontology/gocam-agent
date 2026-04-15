@@ -1,0 +1,656 @@
+{
+  "gene": "scn2a",
+  "taxon_id": "10090",
+  "species": "Mus musculus",
+  "timestamp": "2026-03-17T12:50:48",
+  "uniprot": {
+    "status": "FOUND",
+    "uniprot_id": "B1AWN6",
+    "protein_name": "Sodium channel protein type 2 subunit alpha",
+    "gene_names": [
+      "Scn2a",
+      "Scn2a1"
+    ],
+    "function": "Mediates the voltage-dependent sodium ion permeability of excitable membranes. Assuming opened or closed conformations in response to the voltage difference across the membrane, the protein forms a sodium-selective channel through which Na(+) ions may pass in accordance with their electrochemical gradient (PubMed:10827969, PubMed:11166117, PubMed:28137877). Implicated in the regulation of hippocampal replay occurring within sharp wave ripples (SPW-R) important for memory (PubMed:29867081)",
+    "go_mf": [
+      {
+        "id": "GO:0005516",
+        "term": "calmodulin binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0043522",
+        "term": "leucine zipper domain binding",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005272",
+        "term": "sodium channel activity",
+        "evidence": "TAS:Reactome"
+      },
+      {
+        "id": "GO:0099508",
+        "term": "voltage-gated monoatomic ion channel activity involved in regulation of presynaptic membrane potential",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0005248",
+        "term": "voltage-gated sodium channel activity",
+        "evidence": "IDA:MGI"
+      }
+    ],
+    "go_bp": [
+      {
+        "id": "GO:0071456",
+        "term": "cellular response to hypoxia",
+        "evidence": "ISS:UniProtKB"
+      },
+      {
+        "id": "GO:0021542",
+        "term": "dentate gyrus development",
+        "evidence": "IGI:MGI"
+      },
+      {
+        "id": "GO:0008340",
+        "term": "determination of adult lifespan",
+        "evidence": "IGI:MGI"
+      },
+      {
+        "id": "GO:0008627",
+        "term": "intrinsic apoptotic signaling pathway in response to osmotic stress",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0086010",
+        "term": "membrane depolarization during action potential",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0007613",
+        "term": "memory",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0021675",
+        "term": "nerve development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0007399",
+        "term": "nervous system development",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0051402",
+        "term": "neuron apoptotic process",
+        "evidence": "IMP:MGI"
+      },
+      {
+        "id": "GO:0019228",
+        "term": "neuronal action potential",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0019233",
+        "term": "sensory perception of pain",
+        "evidence": "IBA:GO_Central"
+      },
+      {
+        "id": "GO:0035725",
+        "term": "sodium ion transmembrane transport",
+        "evidence": "IMP:UniProtKB"
+      },
+      {
+        "id": "GO:0006814",
+        "term": "sodium ion transport",
+        "evidence": "IDA:MGI"
+      }
+    ],
+    "go_cc": [
+      {
+        "id": "GO:0030424",
+        "term": "axon",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0043194",
+        "term": "axon initial segment",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0098978",
+        "term": "glutamatergic synapse",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0014704",
+        "term": "intercalated disc",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0016020",
+        "term": "membrane",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0033268",
+        "term": "node of Ranvier",
+        "evidence": "ISO:GO_Central"
+      },
+      {
+        "id": "GO:0033270",
+        "term": "paranode region of axon",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0005886",
+        "term": "plasma membrane",
+        "evidence": "IDA:UniProtKB"
+      },
+      {
+        "id": "GO:0042734",
+        "term": "presynaptic membrane",
+        "evidence": "IDA:SynGO"
+      },
+      {
+        "id": "GO:0030315",
+        "term": "T-tubule",
+        "evidence": "IDA:MGI"
+      },
+      {
+        "id": "GO:0001518",
+        "term": "voltage-gated sodium channel complex",
+        "evidence": "ISO:GO_Central"
+      }
+    ]
+  },
+  "syngo": {
+    "available": true,
+    "found": true,
+    "symbol": "SCN2A",
+    "bp": [
+      {
+        "id": "533",
+        "uniprot_id": "P04775",
+        "hgnc_id": "HGNC:10588",
+        "hgnc_symbol": "SCN2A",
+        "pubmed_id": "25615535",
+        "go_id": "GO:0099508",
+        "go_name": "voltage-gated ion channel activity involved in regulation of presynaptic membrane potential",
+        "go_domain": "BP",
+        "evidence_biological_system": "non-neuronal cells",
+        "evidence_protein_targeting": "overexpression",
+        "evidence_experiment_assay": "patch-clamp",
+        "evidence_nontracable_author_statement": "True"
+      }
+    ],
+    "cc": [
+      {
+        "id": "531",
+        "uniprot_id": "Q68V27",
+        "hgnc_id": "HGNC:10588",
+        "hgnc_symbol": "SCN2A",
+        "pubmed_id": "22528969",
+        "go_id": "GO:0099056",
+        "go_name": "integral component of presynaptic membrane",
+        "go_domain": "CC",
+        "evidence_biological_system": "intact tissue",
+        "evidence_protein_targeting": "antibody",
+        "evidence_experiment_assay": "electron microscopy",
+        "evidence_nontracable_author_statement": "False"
+      }
+    ],
+    "total": 2
+  },
+  "quickgo_annotations": [
+    {
+      "go_id": "GO:0006814",
+      "go_name": "sodium ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0007399",
+      "go_name": "nervous system development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0008340",
+      "go_name": "determination of adult lifespan",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:21156207"
+    },
+    {
+      "go_id": "GO:0008340",
+      "go_name": "determination of adult lifespan",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:21156207"
+    },
+    {
+      "go_id": "GO:0008627",
+      "go_name": "intrinsic apoptotic signaling pathway in response to osmotic stress",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0021542",
+      "go_name": "dentate gyrus development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:16464983"
+    },
+    {
+      "go_id": "GO:0021675",
+      "go_name": "nerve development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:16464983"
+    },
+    {
+      "go_id": "GO:0021675",
+      "go_name": "nerve development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:21156207"
+    },
+    {
+      "go_id": "GO:0021675",
+      "go_name": "nerve development",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000316",
+      "reference": "PMID:21156207"
+    },
+    {
+      "go_id": "GO:0051402",
+      "go_name": "neuron apoptotic process",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0005216",
+      "go_name": "monoatomic ion channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0005248",
+      "go_name": "voltage-gated sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0005261",
+      "go_name": "monoatomic cation channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0005272",
+      "go_name": "sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000117"
+    },
+    {
+      "go_id": "GO:0005272",
+      "go_name": "sodium channel activity",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000304",
+      "reference": "Reactome:R-MMU-9717445"
+    },
+    {
+      "go_id": "GO:0005516",
+      "go_name": "calmodulin binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0043522",
+      "go_name": "leucine zipper domain binding",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0099508",
+      "go_name": "voltage-gated monoatomic ion channel activity involved in regulation of presynaptic membrane potential",
+      "aspect": "molecular_function",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0006811",
+      "go_name": "monoatomic ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0006814",
+      "go_name": "sodium ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0006814",
+      "go_name": "sodium ion transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0007613",
+      "go_name": "memory",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:29867081"
+    },
+    {
+      "go_id": "GO:0019228",
+      "go_name": "neuronal action potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0019228",
+      "go_name": "neuronal action potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0019228",
+      "go_name": "neuronal action potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0019233",
+      "go_name": "sensory perception of pain",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0035725",
+      "go_name": "sodium ion transmembrane transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0035725",
+      "go_name": "sodium ion transmembrane transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0035725",
+      "go_name": "sodium ion transmembrane transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000315",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0055085",
+      "go_name": "transmembrane transport",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0071456",
+      "go_name": "cellular response to hypoxia",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000250",
+      "reference": "GO_REF:0000024"
+    },
+    {
+      "go_id": "GO:0071456",
+      "go_name": "cellular response to hypoxia",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0086010",
+      "go_name": "membrane depolarization during action potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0099505",
+      "go_name": "regulation of presynaptic membrane potential",
+      "aspect": "biological_process",
+      "evidence_code": "ECO:0000364",
+      "reference": "GO_REF:0000108"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000119"
+    },
+    {
+      "go_id": "GO:0030424",
+      "go_name": "axon",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0042734",
+      "go_name": "presynaptic membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:22528969"
+    },
+    {
+      "go_id": "GO:0042734",
+      "go_name": "presynaptic membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:22528969"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0006003",
+      "reference": "PMID:22528969"
+    },
+    {
+      "go_id": "GO:0098978",
+      "go_name": "glutamatergic synapse",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0007719",
+      "reference": "PMID:22528969"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000501",
+      "reference": "GO_REF:0000120"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0005886",
+      "go_name": "plasma membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000304",
+      "reference": "Reactome:R-MMU-9717445"
+    },
+    {
+      "go_id": "GO:0014704",
+      "go_name": "intercalated disc",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:15746173"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:10827969"
+    },
+    {
+      "go_id": "GO:0016020",
+      "go_name": "membrane",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:17537961"
+    },
+    {
+      "go_id": "GO:0030315",
+      "go_name": "T-tubule",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:15746173"
+    },
+    {
+      "go_id": "GO:0030424",
+      "go_name": "axon",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0030424",
+      "go_name": "axon",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:17928448"
+    },
+    {
+      "go_id": "GO:0033268",
+      "go_name": "node of Ranvier",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0033270",
+      "go_name": "paranode region of axon",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000314",
+      "reference": "PMID:16723544"
+    },
+    {
+      "go_id": "GO:0043194",
+      "go_name": "axon initial segment",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0001518",
+      "go_name": "voltage-gated sodium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000256",
+      "reference": "GO_REF:0000002"
+    },
+    {
+      "go_id": "GO:0001518",
+      "go_name": "voltage-gated sodium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000318",
+      "reference": "GO_REF:0000033"
+    },
+    {
+      "go_id": "GO:0001518",
+      "go_name": "voltage-gated sodium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0001518",
+      "go_name": "voltage-gated sodium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000266",
+      "reference": "GO_REF:0000096"
+    },
+    {
+      "go_id": "GO:0001518",
+      "go_name": "voltage-gated sodium channel complex",
+      "aspect": "cellular_component",
+      "evidence_code": "ECO:0000304",
+      "reference": "PMID:10827969"
+    }
+  ],
+  "ols4_terms": []
+}
