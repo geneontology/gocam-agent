@@ -1,3 +1,8 @@
+---
+name: go-cam-user-guide
+description: Use when starting a completely new GO-CAM model from scratch, deciding whether a GO-CAM is needed vs standard annotations, or following the official GO Consortium workflow for model creation. Covers the conceptual structure of GO-CAMs, when to use them, and the step-by-step creation workflow.
+---
+
 # GO-CAM annotation guidelines
 
 [Standard GO annotation versus GO-CAM	1](#standard-go-annotation-versus-go-cam)
