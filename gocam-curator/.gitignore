@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+
+# Process data and search results — not versioned
+processes/
+searches/
+
+# SynGO data files (large binaries — download from syngoportal.org)
+data/syngo/*.xlsx
+# Office temp lock files
+data/~$*
+
+# Large downloaded archives
+*.tar.gz
+*.tar.bz2
+*.zip
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.env

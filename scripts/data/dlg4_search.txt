@@ -1,0 +1,141 @@
+Querying UniProt + QuickGO + OLS4 for DLG4 (Mus musculus, taxon:10090)…
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────── Search: DLG4 ──────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  UniProt ID        Q62108                                                                                                                                                                                                       │
+│  Protein name      Disks large homolog 4                                                                                                                                                                                        │
+│  Gene names        Dlg4 / Dlgh4 / Psd95                                                                                                                                                                                         │
+│  Species           Mus musculus                                                                                                                                                                                                 │
+│  Function          Postsynaptic scaffolding protein that plays a critical role in synaptogenesis and synaptic plasticity by providing a platform for the postsynaptic clustering of crucial synaptic proteins                   │
+│                    (PubMed:15358775, PubMed:9853749). Interacts with the cytoplasmic tail of NMDA receptor subunits and shaker-type …                                                                                           │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+GO Annotations from UniProt (82 total)
+Aspect    GO ID           Term                                                                              Evidence            
+MF        GO:0033130      acetylcholine receptor binding                                                    ISS:BHF-UCL         
+MF        GO:0031697      beta-1 adrenergic receptor binding                                                ISS:BHF-UCL         
+MF        GO:0031698      beta-2 adrenergic receptor binding                                                ISO:GO_Central      
+MF        GO:0031748      D1 dopamine receptor binding                                                      ISS:BHF-UCL         
+MF        GO:0005109      frizzled binding                                                                  ISO:GO_Central      
+MF        GO:0035254      glutamate receptor binding                                                        ISO:GO_Central      
+MF        GO:0035255      ionotropic glutamate receptor binding                                             IPI:BHF-UCL         
+MF        GO:0019900      kinase binding                                                                    ISO:MGI             
+MF        GO:0019894      kinesin binding                                                                   ISO:GO_Central      
+MF        GO:0042043      neurexin family protein binding                                                   NAS:UniProtKB       
+MF        GO:0097109      neuroligin family protein binding                                                 ISS:BHF-UCL         
+MF        GO:0031812      P2Y1 nucleotide receptor binding                                                  ISS:BHF-UCL         
+MF        GO:0030165      PDZ domain binding                                                                ISS:BHF-UCL         
+MF        GO:0019901      protein kinase binding                                                            ISO:GO_Central      
+MF        GO:0019903      protein phosphatase binding                                                       ISS:BHF-UCL         
+MF        GO:0044877      protein-containing complex binding                                                ISS:BHF-UCL         
+MF        GO:0097110      scaffold protein binding                                                          IPI:BHF-UCL         
+MF        GO:0005102      signaling receptor binding                                                        ISO:GO_Central      
+MF        GO:0098919      structural constituent of postsynaptic density                                    ISO:GO_Central      
+MF        GO:0005198      structural molecule activity                                                      NAS:UniProtKB       
+BP        GO:0097113      AMPA glutamate receptor clustering                                                ISS:BHF-UCL         
+BP        GO:0098609      cell-cell adhesion                                                                IBA:GO_Central      
+BP        GO:0035865      cellular response to potassium ion                                                IDA:ARUK-UCL        
+BP        GO:0007268      chemical synaptic transmission                                                    IBA:GO_Central      
+BP        GO:0060997      dendritic spine morphogenesis                                                     IDA:BHF-UCL         
+BP        GO:0097061      dendritic spine organization                                                      ISO:GO_Central      
+BP        GO:0045184      establishment of protein localization                                             ISS:BHF-UCL         
+BP        GO:0007626      locomotory behavior                                                               NAS:UniProtKB       
+BP        GO:0035641      locomotory exploration behavior                                                   IMP:BHF-UCL         
+BP        GO:0002091      negative regulation of receptor internalization                                   ISS:BHF-UCL         
+BP        GO:0007399      nervous system development                                                        IBA:GO_Central      
+BP        GO:0050885      neuromuscular process controlling balance                                         IMP:BHF-UCL         
+BP        GO:0099645      neurotransmitter receptor localization to postsynaptic specialization membrane    IDA:SynGO           
+BP        GO:0098989      NMDA selective glutamate receptor signaling pathway                               ISS:BHF-UCL         
+BP        GO:1904719      positive regulation of AMPA glutamate receptor clustering                         ISO:GO_Central      
+BP        GO:0007204      positive regulation of cytosolic calcium ion concentration                        ISS:BHF-UCL         
+BP        GO:0050775      positive regulation of dendrite morphogenesis                                     ISO:GO_Central      
+BP        GO:2000463      positive regulation of excitatory postsynaptic potential                          ISS:BHF-UCL         
+BP        GO:0150012      positive regulation of neuron projection arborization                             ISO:GO_Central      
+BP        GO:0051965      positive regulation of synapse assembly                                           ISO:GO_Central      
+BP        GO:0050806      positive regulation of synaptic transmission                                      IDA:UniProtKB       
+BP        GO:0035418      protein localization to synapse                                                   IDA:MGI             
+BP        GO:0065003      protein-containing complex assembly                                               ISS:BHF-UCL         
+BP        GO:0097120      receptor localization to synapse                                                  ISS:BHF-UCL         
+BP        GO:2000821      regulation of grooming behavior                                                   IMP:BHF-UCL         
+BP        GO:0048169      regulation of long-term neuronal synaptic plasticity                              IGI:MGI             
+BP        GO:0048168      regulation of neuronal synaptic plasticity                                        ISO:GO_Central      
+BP        GO:0099072      regulation of postsynaptic membrane neurotransmitter receptor levels              IBA:GO_Central      
+BP        GO:0042220      response to cocaine                                                               NAS:UniProtKB       
+BP        GO:0035176      social behavior                                                                   IMP:BHF-UCL         
+BP        GO:0016188      synaptic vesicle maturation                                                       IDA:MGI             
+BP        GO:0071625      vocalization behavior                                                             IMP:BHF-UCL         
+CC        GO:0032281      AMPA glutamate receptor complex                                                   IDA:MGI             
+CC        GO:0030054      cell junction                                                                     IDA:MGI             
+CC        GO:0071944      cell periphery                                                                    IDA:MGI             
+CC        GO:0005911      cell-cell junction                                                                ISO:GO_Central      
+CC        GO:0044300      cerebellar mossy fiber                                                            IDA:MGI             
+CC        GO:0030863      cortical cytoskeleton                                                             ISO:GO_Central      
+CC        GO:0005737      cytoplasm                                                                         IDA:MGI             
+CC        GO:0030425      dendrite                                                                          IDA:MGI             
+CC        GO:0032839      dendrite cytoplasm                                                                ISS:BHF-UCL         
+CC        GO:0044307      dendritic branch                                                                  ISO:GO_Central      
+CC        GO:0043197      dendritic spine                                                                   IDA:ParkinsonsUK-UCL
+CC        GO:0005783      endoplasmic reticulum                                                             IDA:MGI             
+CC        GO:0060076      excitatory synapse                                                                IDA:BHF-UCL         
+CC        GO:0098978      glutamatergic synapse                                                             IDA:MGI             
+CC        GO:0044224      juxtaparanode region of axon                                                      IDA:MGI             
+CC        GO:0016020      membrane                                                                          IDA:MGI             
+CC        GO:0031594      neuromuscular junction                                                            IBA:GO_Central      
+CC        GO:0043005      neuron projection                                                                 IBA:GO_Central      
+CC        GO:0044306      neuron projection terminus                                                        IDA:MGI             
+CC        GO:0044309      neuron spine                                                                      IDA:BHF-UCL         
+CC        GO:0005886      plasma membrane                                                                   IDA:MGI             
+CC        GO:0098794      postsynapse                                                                       IDA:MGI             
+CC        GO:0014069      postsynaptic density                                                              IDA:ParkinsonsUK-UCL
+CC        GO:0098839      postsynaptic density membrane                                                     ISO:GO_Central      
+CC        GO:0045211      postsynaptic membrane                                                             ISO:MGI             
+CC        GO:1990635      proximal dendrite                                                                 ISO:GO_Central      
+CC        GO:0045202      synapse                                                                           IDA:MGI             
+CC        GO:0097060      synaptic membrane                                                                 IDA:MGI             
+CC        GO:0008021      synaptic vesicle                                                                  IDA:MGI             
+CC        GO:0008076      voltage-gated potassium channel complex                                           ISO:GO_Central      
+
+QuickGO Annotations — 100 annotation(s) found for Q62108
+GO ID           Term                                                    Aspect    ECO            Reference     
+GO:0016188      synaptic vesicle maturation                             BI        ECO:0000314    PMID:15603741 
+GO:0016188      synaptic vesicle maturation                             BI        ECO:0000316    PMID:15603741 
+GO:0035418      protein localization to synapse                         BI        ECO:0000314    PMID:15978582 
+GO:0048169      regulation of long-term neuronal synaptic plasticity    BI        ECO:0000316    PMID:12427827 
+GO:0008076      voltage-gated potassium channel complex                 CE        ECO:0000250    GO_REF:0000024
+GO:0045211      postsynaptic membrane                                   CE        ECO:0000314    PMID:15207857 
+GO:0005102      signaling receptor binding                              MO        ECO:0000266    GO_REF:0000096
+GO:0005109      frizzled binding                                        MO        ECO:0000266    GO_REF:0000096
+GO:0005198      structural molecule activity                            MO        ECO:0000303    PMID:14980210 
+GO:0005515      protein binding                                         MO        ECO:0000250    GO_REF:0000024
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:10827173 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:10827173 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:10862698 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:10862698 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:11483650 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:11925566 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:12067714 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:12067714 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:15082773 
+GO:0005515      protein binding                                         MO        ECO:0000353    PMID:15663482 
+  … and 80 more (see saved JSON)
+╭──────────────────────────────────────────────────────────────────────────────── SynGO Annotations  expert-curated synaptic  ·  3 annotation(s) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  BP: structural constituent of postsynaptic density (GO:0098919)                                                                                                                                                                │
+│      Evidence: intact tissue, cultured neurons, RNAi, antibody, electron microscopy, confocal microscopy                                                                                                                        │
+│      PMID: 21525273                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: neurotransmitter receptor localization to postsynaptic specialization membrane (GO:0099645)                                                                                                                                │
+│      Evidence: intact tissue, cultured neurons, knockout, RNAi, overexpression, antibody, confocal microscopy, patch-clamp, field recording, electrophysiology, western blot, fractionation                                     │
+│      PMID: 17046693                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  CC: anchored component of postsynaptic density membrane (GO:0099031)                                                                                                                                                           │
+│      Evidence: intact tissue, cultured neurons, antibody, electron microscopy, confocal microscopy                                                                                                                              │
+│      PMID: 20357126                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Related GO Terms from OLS4 (query: 'DLG4')
+GO ID           Label                                                       Description                                                                   
+GO:0097119      postsynaptic density protein 95 clustering                  The clustering process in which postsynaptic density protein 95 (PSD-95) mole…
+GO:1902897      regulation of postsynaptic density protein 95 clustering    Any process that modulates the frequency, rate or extent of postsynaptic dens…
+INFO  Saved → dlg4.md  dlg4.json

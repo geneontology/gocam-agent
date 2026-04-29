@@ -1,0 +1,523 @@
+"""gocam enrich — discover new literature via PubMed and extract from it.
+
+Enrichment data is kept strictly separate from the main pipeline:
+  input/enrichment/          PubMed abstract text files
+  extractions/enrichment/    Extraction JSONs for enrichment files
+  extractions/enrichment/ENRICHMENT_REPORT.md
+
+The original REPORT.md, validated_claims.json, and narrative files are never modified.
+"""
+
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+
+import click
+
+from gocam.commands.extract import _process_text
+from gocam.config import PROCESSES_DIR
+from gocam.services import pubmed as pubmed_svc
+from gocam.services.file_processor import FileContent
+from gocam.services.llm import get_llm_client
+from gocam.services.syngo import get_syngo
+from gocam.utils.display import console, print_error, print_info, print_success, print_warning, timed_status
+from gocam.utils.io import read_json, write_json
+from gocam.utils.process import load_meta
+
+_MAX_PAPERS_DEFAULT = 10
+_PUBMED_RETMAX = 5  # results per query
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _collect_existing_pmids(process_dir: Path) -> set[str]:
+    """Return all PMIDs already in validated claims or extraction JSONs."""
+    pmids: set[str] = set()
+
+    # From validated_claims.json (primary pipeline output)
+    validated_path = process_dir / "validation" / "validated_claims.json"
+    if validated_path.exists():
+        try:
+            data = read_json(validated_path)
+            for node in data.get("nodes", []):
+                ev = node.get("evidence") or {}
+                p = ev.get("pmid")
+                if p and str(p).strip():
+                    pmids.add(str(p).strip())
+            for edge in data.get("edges", []):
+                ev = edge.get("evidence") or {}
+                p = ev.get("pmid")
+                if p and str(p).strip():
+                    pmids.add(str(p).strip())
+        except Exception:
+            pass
+
+    # From extraction JSONs (claims may have pmid_from_text)
+    ext_dir = process_dir / "extractions"
+    if ext_dir.exists():
+        for jf in ext_dir.glob("*.json"):
+            if jf.stem in ("REPORT",) or jf.stem.endswith("_summary"):
+                continue
+            try:
+                data = read_json(jf)
+                for claim in data.get("claims", []):
+                    p = claim.get("pmid_from_text")
+                    if p and str(p).strip():
+                        pmids.add(str(p).strip())
+                # Also use source_pmid (from filename) if present
+                sp = data.get("source_pmid")
+                if sp and str(sp).strip():
+                    pmids.add(str(sp).strip())
+            except Exception:
+                pass
+
+    return pmids
+
+
+def _build_queries(validation_data: dict) -> list[tuple[str, str]]:
+    """Build PubMed query strings from validated claims.
+
+    Returns list of (query_string, human_label) tuples.
+    Deduplicates and skips entries without enough info for a useful query.
+    """
+    _STOPWORDS = {
+        "protein", "activity", "complex", "subunit", "receptor",
+        "signaling", "pathway", "regulation", "the", "a", "of", "and",
+    }
+
+    seen: set[str] = set()
+    queries: list[tuple[str, str]] = []
+
+    # Gene-based queries from nodes
+    for node in validation_data.get("nodes", []):
+        gene = (node.get("gene_symbol") or node.get("protein_name") or "").strip()
+        if not gene:
+            continue
+
+        # Add a focused gene query
+        if gene not in seen:
+            seen.add(gene)
+            queries.append((gene, gene))
+
+    # Gene-pair queries from edges
+    for edge in validation_data.get("edges", []):
+        subject = (edge.get("subject") or "").strip()
+        obj = (edge.get("object") or "").strip()
+        if not subject or not obj:
+            continue
+
+        # Build query from subject and object (strip generic words)
+        subj_words = [w for w in subject.split() if w.lower() not in _STOPWORDS]
+        obj_words = [w for w in obj.split() if w.lower() not in _STOPWORDS]
+        subj_term = " ".join(subj_words[:2]) if subj_words else subject
+        obj_term = " ".join(obj_words[:2]) if obj_words else obj
+
+        if not subj_term or not obj_term:
+            continue
+
+        s = f'"{subj_term}"' if " " in subj_term else subj_term
+        o = f'"{obj_term}"' if " " in obj_term else obj_term
+        query = f"{s} AND {o}"
+
+        if query in seen:
+            continue
+        seen.add(query)
+        label = f"{subject} → {obj}"
+        queries.append((query, label))
+
+    return queries
+
+
+def _already_enriched(enrich_ext_dir: Path, pmid: str) -> bool:
+    return (enrich_ext_dir / f"pubmed_{pmid}.json").exists()
+
+
+def _extract_enrichment_file(
+    client,
+    txt_file: Path,
+    enrich_ext_dir: Path,
+) -> int:
+    """Extract from a single enrichment text file. Returns number of claims."""
+    try:
+        content = FileContent(
+            source_path=txt_file,
+            source_type="text",
+            text=txt_file.read_text(encoding="utf-8"),
+        )
+    except Exception as exc:
+        print_warning(f"  Could not read {txt_file.name}: {exc}")
+        return 0
+
+    try:
+        with timed_status(f"Extracting {txt_file.name}..."):
+            extraction = _process_text(client, content)
+        out = enrich_ext_dir / f"{txt_file.stem}.json"
+        write_json(out, extraction)
+        claims = extraction.get("claims", [])
+        nodes = [c for c in claims if c.get("type") == "node"]
+        edges = [c for c in claims if c.get("type") == "edge"]
+        print_success(
+            f"  {txt_file.name}: {len(nodes)} node(s), "
+            f"{len(edges)} edge(s) → {out.name}"
+        )
+        return len(claims)
+    except Exception as exc:
+        print_warning(f"  Extraction failed for {txt_file.name}: {exc}")
+        return 0
+
+
+def _generate_enrichment_report(
+    enrich_ext_dir: Path,
+    validation_data: dict,
+    process_name: str,
+) -> Path:
+    """Generate ENRICHMENT_REPORT.md comparing new findings against existing validated claims."""
+    # Build a set of known gene symbols for quick matching
+    existing_genes: set[str] = set()
+    for node in validation_data.get("nodes", []):
+        gene = (node.get("gene_symbol") or node.get("protein_name") or "").lower().strip()
+        if gene:
+            existing_genes.add(gene)
+
+    # Load enrichment extractions
+    ext_files = sorted(enrich_ext_dir.glob("pubmed_*.json"))
+    if not ext_files:
+        return enrich_ext_dir / "ENRICHMENT_REPORT.md"
+
+    lines: list[str] = [
+        f"# Enrichment Report — {process_name}",
+        f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+        "",
+        f"Sources analysed: {len(ext_files)} PubMed abstract(s)",
+        "",
+        "---",
+        "",
+    ]
+
+    total_new = total_confirming = 0
+
+    for ext_file in ext_files:
+        pmid = ext_file.stem.replace("pubmed_", "")
+        try:
+            data = read_json(ext_file)
+        except Exception:
+            continue
+
+        claims = data.get("claims", [])
+        nodes = [c for c in claims if c.get("type") == "node"]
+        edges = [c for c in claims if c.get("type") == "edge"]
+
+        lines.append(f"## PMID: {pmid}  ({ext_file.name})")
+        lines.append("")
+        lines.append(f"Node claims: {len(nodes)}")
+        lines.append(f"Edge claims: {len(edges)}")
+        lines.append("")
+
+        if nodes:
+            lines.append("### Proteins / Molecular Functions")
+            lines.append("")
+            for node in nodes:
+                gene = (node.get("gene_symbol") or node.get("protein_name") or "").strip()
+                mf = node.get("molecular_function") or ""
+                bp = node.get("biological_process") or ""
+                quote = node.get("quote") or ""
+
+                gene_lower = gene.lower()
+                confirms = any(
+                    gene_lower and (gene_lower in eg or eg in gene_lower)
+                    for eg in existing_genes
+                )
+
+                if confirms:
+                    tag = "**CONFIRMS** — gene already in validated claims"
+                    total_confirming += 1
+                else:
+                    tag = "**NEW** — gene not in original extraction"
+                    total_new += 1
+
+                parts = [f"- **{gene}**"]
+                if mf:
+                    parts[0] += f": {mf}"
+                if bp:
+                    parts.append(f"  Process: {bp}")
+                if quote:
+                    q = quote[:150] + ("…" if len(quote) > 150 else "")
+                    parts.append(f"  Quote: \"{q}\"")
+                parts.append(f"  → {tag}")
+                lines.extend(parts)
+                lines.append("")
+
+        if edges:
+            lines.append("### Interactions")
+            lines.append("")
+            for edge in edges:
+                subject = (edge.get("subject") or "").strip()
+                relation = (edge.get("relation") or "").strip()
+                obj = (edge.get("object") or "").strip()
+                mechanism = edge.get("mechanism") or ""
+                quote = edge.get("quote") or ""
+                figure = edge.get("figure") or ""
+
+                subj_lower = subject.lower()
+                obj_lower = obj.lower()
+                confirms = any(
+                    (subj_lower and (subj_lower in eg or eg in subj_lower)) or
+                    (obj_lower and (obj_lower in eg or eg in obj_lower))
+                    for eg in existing_genes
+                )
+
+                if confirms:
+                    tag = "**CONFIRMS** — involves a known gene"
+                    total_confirming += 1
+                else:
+                    tag = "**NEW** — genes not in original extraction"
+                    total_new += 1
+
+                parts = [f"- {subject} —[{relation}]→ {obj}"]
+                if mechanism:
+                    parts.append(f"  Mechanism: {mechanism}")
+                if figure:
+                    parts.append(f"  Figure: {figure}")
+                if quote:
+                    q = quote[:150] + ("…" if len(quote) > 150 else "")
+                    parts.append(f"  Quote: \"{q}\"")
+                parts.append(f"  → {tag}")
+                lines.extend(parts)
+                lines.append("")
+
+        lines.append("---")
+        lines.append("")
+
+    # Summary
+    lines.insert(4, f"Summary: {total_new} new claim(s), {total_confirming} confirming existing genes")
+    lines.insert(5, "")
+
+    out = enrich_ext_dir / "ENRICHMENT_REPORT.md"
+    out.write_text("\n".join(lines), encoding="utf-8")
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Command
+# ---------------------------------------------------------------------------
+
+@click.command("enrich")
+@click.argument("process_name", metavar="PROCESS")
+@click.option(
+    "--max-papers",
+    default=_MAX_PAPERS_DEFAULT,
+    show_default=True,
+    type=int,
+    help="Maximum number of new PubMed abstracts to add.",
+)
+@click.option(
+    "--queries-only",
+    is_flag=True,
+    default=False,
+    help="Print PubMed queries but do not fetch or extract.",
+)
+def enrich_command(process_name: str, max_papers: int, queries_only: bool) -> None:
+    """Discover additional literature via PubMed and extract from it.
+
+    Builds PubMed queries from validated claims, fetches new abstracts,
+    extracts claims, and generates a separate enrichment report. The
+    original pipeline outputs (REPORT.md, validated_claims.json,
+    narrative files) are never modified.
+
+    \b
+    SEPARATED OUTPUT PATHS
+      input/enrichment/                   PubMed abstract text files
+      extractions/enrichment/             Extraction JSONs for enrichment
+      extractions/enrichment/ENRICHMENT_REPORT.md
+
+    \b
+    RATE LIMITING
+      Respects PubMed's policy of max 3 requests/sec by inserting a
+      0.4s delay between API calls. No API key required.
+
+    \b
+    EXAMPLES
+      gocam enrich ampar-endo2
+      gocam enrich ampar-endo2 --max-papers 20
+      gocam enrich ampar-endo2 --queries-only
+    """
+    process_dir = PROCESSES_DIR / process_name
+    if not process_dir.exists() or not (process_dir / "meta.json").exists():
+        print_error(f"Process '{process_name}' not found. Run 'gocam init {process_name}' first.")
+        raise SystemExit(1)
+
+    meta = load_meta(process_dir)
+    display_name = meta.get("process_name", process_name)
+
+    validated_path = process_dir / "validation" / "validated_claims.json"
+    if not validated_path.exists():
+        print_error(
+            "No validated claims found. Run 'gocam validate' first to generate validated_claims.json."
+        )
+        raise SystemExit(1)
+
+    try:
+        validation_data = read_json(validated_path)
+    except Exception as exc:
+        print_error(f"Could not read validated_claims.json: {exc}")
+        raise SystemExit(1)
+
+    node_count = len(validation_data.get("nodes", []))
+    edge_count = len(validation_data.get("edges", []))
+    console.print(f"[bold]Process:[/bold] {display_name}")
+    console.print(f"[dim]Loaded {node_count} node(s) and {edge_count} edge(s) from validated claims.[/dim]")
+
+    # Build queries
+    queries = _build_queries(validation_data)
+    if not queries:
+        print_warning("No usable genes/interactions found in validated_claims.json — cannot build PubMed queries.")
+        raise SystemExit(1)
+
+    console.print(f"[bold]PubMed queries:[/bold] {len(queries)}")
+    for q, label in queries:
+        console.print(f"  [dim]{label}:[/dim] {q}")
+
+    if queries_only:
+        return
+
+    # Collect existing PMIDs to filter
+    existing_pmids = _collect_existing_pmids(process_dir)
+    print_info(f"Already have {len(existing_pmids)} PMID(s) in this process")
+
+    # --- SynGO priority pass -------------------------------------------
+    syngo = get_syngo()
+    syngo_pmids: dict[str, str] = {}  # pmid -> gene label
+    if syngo.available:
+        console.print("\n[bold magenta]Checking SynGO for expert-curated references…[/bold magenta]")
+        genes_seen: set[str] = set()
+        for node in validation_data.get("nodes", []):
+            gene = (node.get("gene_symbol") or node.get("protein_name") or "").strip()
+            if not gene or gene in genes_seen:
+                continue
+            genes_seen.add(gene)
+            pmids = syngo.get_pmids_for_gene(gene)
+            new = [p for p in pmids if p not in existing_pmids]
+            if new:
+                print_info(f"  {gene}: {len(new)} SynGO PMID(s) found")
+                for p in new:
+                    syngo_pmids[p] = f"{gene} (SynGO)"
+        if syngo_pmids:
+            print_success(
+                f"SynGO contributed {len(syngo_pmids)} unique reference(s) as priority sources."
+            )
+        else:
+            print_info("No new SynGO references found (all already in process or gene not in SynGO).")
+    # ------------------------------------------------------------------
+
+    # Search PubMed
+    console.print("\n[bold]Searching PubMed…[/bold]")
+    found_pmids: set[str] = set()
+    for query, label in queries:
+        pmids = pubmed_svc.search(query, retmax=_PUBMED_RETMAX)
+        new = [p for p in pmids if p not in existing_pmids and p not in found_pmids]
+        found_pmids.update(new)
+        status = f"  {label}: {len(pmids)} hits, {len(new)} new"
+        print_info(status)
+
+        if len(found_pmids) >= max_papers:
+            print_info(f"Reached --max-papers limit ({max_papers}). Stopping search.")
+            break
+
+    # Merge SynGO PMIDs (priority) with PubMed results — SynGO first
+    all_new_pmids: list[str] = []
+    seen_merged: set[str] = set()
+    for p in sorted(syngo_pmids.keys()):
+        if p not in seen_merged:
+            all_new_pmids.append(p)
+            seen_merged.add(p)
+    for p in sorted(found_pmids):
+        if p not in seen_merged:
+            all_new_pmids.append(p)
+            seen_merged.add(p)
+
+    pmids_to_fetch = all_new_pmids[:max_papers]
+
+    print_info(
+        f"Found {len(found_pmids)} new PubMed paper(s) + {len(syngo_pmids)} SynGO reference(s). "
+        f"Fetching {len(pmids_to_fetch)} abstract(s) (limit: {max_papers})."
+    )
+
+    if not pmids_to_fetch:
+        print_warning("No new papers found. Enrichment complete (nothing to add).")
+        return
+
+    # Create enrichment directories
+    enrich_input_dir = process_dir / "input" / "enrichment"
+    enrich_ext_dir = process_dir / "extractions" / "enrichment"
+    enrich_input_dir.mkdir(parents=True, exist_ok=True)
+    enrich_ext_dir.mkdir(parents=True, exist_ok=True)
+
+    # Fetch and save abstracts
+    console.print(f"\n[bold]Fetching {len(pmids_to_fetch)} abstract(s)…[/bold]")
+    saved_files: list[Path] = []
+    for pmid in pmids_to_fetch:
+        out = enrich_input_dir / f"pubmed_{pmid}.txt"
+        if out.exists():
+            print_info(f"  Already downloaded: {out.name}")
+            saved_files.append(out)
+            continue
+
+        abstract = pubmed_svc.fetch_abstract(pmid)
+        if not abstract.strip():
+            print_warning(f"  PMID {pmid}: empty abstract, skipping")
+            continue
+
+        source_label = syngo_pmids.get(pmid)
+        if source_label:
+            header = f"[Source: SynGO (expert-curated) — {source_label}]\n\n"
+        else:
+            header = ""
+        out.write_text(header + abstract, encoding="utf-8")
+        tag = " [SynGO]" if source_label else ""
+        print_success(f"  Saved PMID {pmid}{tag} → {out.name}")
+        saved_files.append(out)
+
+    if not saved_files:
+        print_warning("No abstracts could be downloaded.")
+        return
+
+    # Extract from enrichment files
+    console.print(f"\n[bold]Extracting from {len(saved_files)} enrichment file(s)…[/bold]")
+    already_done = sum(
+        1 for f in saved_files
+        if _already_enriched(enrich_ext_dir, f.stem.replace("pubmed_", ""))
+    )
+    if already_done:
+        print_info(
+            f"Resuming — {already_done}/{len(saved_files)} abstract(s) already extracted, "
+            f"{len(saved_files) - already_done} remaining"
+        )
+
+    client = get_llm_client()
+    total_claims = 0
+
+    for txt_file in saved_files:
+        pmid = txt_file.stem.replace("pubmed_", "")
+        if _already_enriched(enrich_ext_dir, pmid):
+            print_info(f"  {txt_file.name}: already extracted, skipping")
+            continue
+        n = _extract_enrichment_file(client, txt_file, enrich_ext_dir)
+        total_claims += n
+
+    # Generate enrichment report
+    console.print("\n[bold]Generating enrichment report…[/bold]")
+    report_path = _generate_enrichment_report(enrich_ext_dir, validation_data, display_name)
+    print_success(f"Enrichment report → {report_path}")
+
+    console.print()
+    print_success(
+        f"Enrichment complete: {len(pmids_to_fetch)} new paper(s), "
+        f"{total_claims} claim(s) extracted."
+    )
+    console.print(
+        "\n[dim]Review[/dim] [bold]extractions/enrichment/ENRICHMENT_REPORT.md[/bold] "
+        "[dim]and manually promote findings to the main pipeline if appropriate.[/dim]"
+    )

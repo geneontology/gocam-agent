@@ -1,0 +1,57 @@
+{
+  "ampar-synthesis-assembly": [
+    "16815334",
+    "19265014",
+    "14622580"
+  ],
+  "ampar-secretory-trafficking": [
+    "23838184",
+    "11986669",
+    "28875935"
+  ],
+  "ampar-synaptic-insertion": [
+    "20434989",
+    "28355182",
+    "15297461"
+  ],
+  "ampar-lateral-diffusion": [
+    "19483686",
+    "17329211",
+    "33990590"
+  ],
+  "ampar-anchoring": [
+    "25843401",
+    "19968761",
+    "17329211"
+  ],
+  "ampar-unanchoring": [
+    "24418105",
+    "23100425",
+    "15664178"
+  ],
+  "ampar-endocytic-priming": [
+    "28855251",
+    "20547133",
+    "16138078"
+  ],
+  "ampar-endocytosis": [
+    "28855251",
+    "12441055",
+    "34369573"
+  ],
+  "ampar-postendocytic-sorting": [
+    "20098723",
+    "15629704",
+    "26565907"
+  ],
+  "ampar-recycling": [
+    "18984164",
+    "32329391",
+    "20098723"
+  ],
+  "ampar-lysosomal-degradation": [
+    "21338354",
+    "36051867",
+    "11144360"
+  ]
+}

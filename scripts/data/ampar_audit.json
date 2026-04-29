@@ -1,0 +1,70 @@
+{
+  "ampar-recycling": {},
+  "ampar-endocytic-priming": {
+    "20547133": "AMPA receptor signaling through BRAG2 and Arf6 critical for long-term synaptic depression.",
+    "16102532": "Hippocalcin functions as a calcium sensor in hippocampal LTD.",
+    "24217640": "Stargazin regulates AMPA receptor trafficking through adaptor protein complexes during long-term depression.",
+    "21496646": "The AAA+ ATPase Thorase regulates AMPA receptor-dependent synaptic plasticity and behavior.",
+    "16138078": "PICK1 is a calcium-sensor for NMDA-induced AMPA receptor trafficking.",
+    "11100150": "Regulation of AMPA receptor endocytosis by a signaling mechanism shared with LTD.",
+    "30364226": "The Regulation of AMPA Receptor Endocytosis by Dynamic Protein-Protein Interactions.",
+    "30359599": "The AMPA Receptor Code of Synaptic Plasticity.",
+    "33990590": "NMDAR-dependent long-term depression is associated with increased short term plasticity through autophagy mediated loss of PSD-95.",
+    "16510716": "cAMP-dependent protein kinase postsynaptic localization regulated by NMDA receptor activation through translocation of an A-kinase anchoring protein scaffold protein.",
+    "28855251": "PICK1 regulates AMPA receptor endocytosis via direct interactions with AP2 &#x3b1;-appendage and dynamin.",
+    "20357110": "Loss of GluN2B-containing NMDA receptors in CA1 hippocampus and cortex impairs long-term depression, reduces dendritic spine density, and disrupts learning.",
+    "17302911": "NSF binds calcium to regulate its interaction with AMPA receptor subunit GluR2."
+  },
+  "ampar-endocytosis": {
+    "16102532": "Hippocalcin functions as a calcium sensor in hippocampal LTD.",
+    "12441055": "Clathrin adaptor AP2 and NSF interact with overlapping sites of GluR2 and play distinct roles in AMPA receptor trafficking and hippocampal LTD.",
+    "24217640": "Stargazin regulates AMPA receptor trafficking through adaptor protein complexes during long-term depression.",
+    "21496646": "The AAA+ ATPase Thorase regulates AMPA receptor-dependent synaptic plasticity and behavior.",
+    "16138078": "PICK1 is a calcium-sensor for NMDA-induced AMPA receptor trafficking.",
+    "11100150": "Regulation of AMPA receptor endocytosis by a signaling mechanism shared with LTD.",
+    "32895399": "Mechanism underlying hippocampal long-term potentiation and depression based on competition between endocytosis and exocytosis of AMPA receptors.",
+    "30364226": "The Regulation of AMPA Receptor Endocytosis by Dynamic Protein-Protein Interactions.",
+    "30359599": "The AMPA Receptor Code of Synaptic Plasticity.",
+    "28855251": "PICK1 regulates AMPA receptor endocytosis via direct interactions with AP2 &#x3b1;-appendage and dynamin.",
+    "39946237": "Loss of the proton-activated chloride channel in neurons impairs AMPA receptor endocytosis and LTD via endosomal hyper-acidification.",
+    "34369573": "Phosphorylation of the AMPA receptor subunit GluA1 regulates clathrin-mediated receptor internalization."
+  },
+  "ampar-unanchoring": {},
+  "ampar-lysosomal-degradation": {},
+  "ampar-secretory-trafficking": {},
+  "ampar-postendocytic-sorting": {
+    "24217640": "Stargazin regulates AMPA receptor trafficking through adaptor protein complexes during long-term depression.",
+    "32895399": "Mechanism underlying hippocampal long-term potentiation and depression based on competition between endocytosis and exocytosis of AMPA receptors.",
+    "30364226": "The Regulation of AMPA Receptor Endocytosis by Dynamic Protein-Protein Interactions.",
+    "30359599": "The AMPA Receptor Code of Synaptic Plasticity.",
+    "18045925": "Functional compartmentalization of endosomal trafficking for the synaptic delivery of AMPA receptors during long-term potentiation.",
+    "25753037": "LTP-triggered cholesterol redistribution activates Cdc42 and drives AMPA receptor synaptic delivery.",
+    "39946237": "Loss of the proton-activated chloride channel in neurons impairs AMPA receptor endocytosis and LTD via endosomal hyper-acidification.",
+    "20098723": "Neuron specific Rab4 effector GRASP-1 coordinates membrane specialization and maturation of recycling endosomes.",
+    "18984164": "Myosin Vb mobilizes recycling endosomes and AMPA receptors for postsynaptic plasticity."
+  },
+  "ampar-synthesis-assembly": {},
+  "ampar-anchoring": {
+    "32029829": "PSD-95 Serine 73 phosphorylation is not required for induction of NMDA-LTD.",
+    "15664178": "Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs.",
+    "11931741": "NSF ATPase and alpha-/beta-SNAPs disassemble the AMPA receptor-PICK1 complex.",
+    "30359599": "The AMPA Receptor Code of Synaptic Plasticity.",
+    "10571232": "Hippocampal LTD expression involves a pool of AMPARs regulated by the NSF-GluR2 interaction.",
+    "11986669": "Glutamate-receptor-interacting protein GRIP1 directly steers kinesin to dendrites.",
+    "17329211": "The interaction between Stargazin and PSD-95 regulates AMPA receptor surface trafficking."
+  },
+  "ampar-synaptic-insertion": {
+    "24217640": "Stargazin regulates AMPA receptor trafficking through adaptor protein complexes during long-term depression.",
+    "32895399": "Mechanism underlying hippocampal long-term potentiation and depression based on competition between endocytosis and exocytosis of AMPA receptors.",
+    "30364226": "The Regulation of AMPA Receptor Endocytosis by Dynamic Protein-Protein Interactions.",
+    "34369573": "Phosphorylation of the AMPA receptor subunit GluA1 regulates clathrin-mediated receptor internalization.",
+    "17928453": "Real-time imaging of discrete exocytic events mediating surface delivery of AMPA receptors."
+  },
+  "ampar-lateral-diffusion": {
+    "15664178": "Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs.",
+    "30364226": "The Regulation of AMPA Receptor Endocytosis by Dynamic Protein-Protein Interactions.",
+    "30359599": "The AMPA Receptor Code of Synaptic Plasticity.",
+    "33990590": "NMDAR-dependent long-term depression is associated with increased short term plasticity through autophagy mediated loss of PSD-95.",
+    "17329211": "The interaction between Stargazin and PSD-95 regulates AMPA receptor surface trafficking."
+  }
+}
