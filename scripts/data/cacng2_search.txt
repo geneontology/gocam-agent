@@ -1,0 +1,89 @@
+Querying UniProt + QuickGO + OLS4 for CACNG2 (Mus musculus, taxon:10090)…
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────── Search: CACNG2 ─────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  UniProt ID        O88602                                                                                                                                                                                                       │
+│  Protein name      Voltage-dependent calcium channel gamma-2 subunit                                                                                                                                                            │
+│  Gene names        Cacng2 / Stg                                                                                                                                                                                                 │
+│  Species           Mus musculus                                                                                                                                                                                                 │
+│  Function          Regulates the trafficking and gating properties of AMPA-selective glutamate receptors (AMPARs). Promotes their targeting to the cell membrane and synapses and modulates their gating properties by slowing  │
+│                    their rates of activation, deactivation and desensitization. Does not show subunit-specific AMPA…                                                                                                            │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+GO Annotations from UniProt (27 total)
+Aspect    GO ID           Term                                                                              Evidence      
+MF        GO:0016247      channel regulator activity                                                        IBA:GO_Central
+MF        GO:0035255      ionotropic glutamate receptor binding                                             ISO:GO_Central
+MF        GO:0005245      voltage-gated calcium channel activity                                            IMP:MGI       
+BP        GO:0060082      eye blink reflex                                                                  IEA:Ensembl   
+BP        GO:0051899      membrane depolarization                                                           IMP:MGI       
+BP        GO:0060081      membrane hyperpolarization                                                        IMP:MGI       
+BP        GO:0050877      nervous system process                                                            IMP:MGI       
+BP        GO:0007528      neuromuscular junction development                                                IMP:MGI       
+BP        GO:0099645      neurotransmitter receptor localization to postsynaptic specialization membrane    IDA:SynGO     
+BP        GO:1904510      positive regulation of protein localization to basolateral plasma membrane        ISO:GO_Central
+BP        GO:0051968      positive regulation of synaptic transmission, glutamatergic                       IBA:GO_Central
+BP        GO:0098970      postsynaptic neurotransmitter receptor diffusion trapping                         IDA:SynGO     
+BP        GO:0006612      protein targeting to membrane                                                     ISO:GO_Central
+BP        GO:2000311      regulation of AMPA receptor activity                                              ISS:UniProtKB 
+BP        GO:0042391      regulation of membrane potential                                                  IMP:MGI       
+BP        GO:0099072      regulation of postsynaptic membrane neurotransmitter receptor levels              IDA:SynGO     
+BP        GO:0051592      response to calcium ion                                                           IEA:Ensembl   
+BP        GO:0019226      transmission of nerve impulse                                                     IGI:MGI       
+CC        GO:0032281      AMPA glutamate receptor complex                                                   IDA:MGI       
+CC        GO:0009986      cell surface                                                                      ISO:GO_Central
+CC        GO:0044300      cerebellar mossy fiber                                                            ISO:GO_Central
+CC        GO:0098978      glutamatergic synapse                                                             IDA:SynGO     
+CC        GO:0098686      hippocampal mossy fiber to CA3 synapse                                            IDA:SynGO     
+CC        GO:0098839      postsynaptic density membrane                                                     IDA:SynGO     
+CC        GO:0098685      Schaffer collateral - CA1 synapse                                                 IDA:SynGO     
+CC        GO:0036477      somatodendritic compartment                                                       IDA:UniProtKB 
+CC        GO:0005891      voltage-gated calcium channel complex                                             IEA:InterPro  
+
+QuickGO Annotations — 100 annotation(s) found for O88602
+GO ID           Term                                                           Aspect    ECO            Reference     
+GO:0007528      neuromuscular junction development                             BI        ECO:0000315    PMID:17320843 
+GO:0019226      transmission of nerve impulse                                  BI        ECO:0000316    PMID:15677329 
+GO:0042391      regulation of membrane potential                               BI        ECO:0000315    PMID:12151514 
+GO:0050877      nervous system process                                         BI        ECO:0000315    PMID:9293489  
+GO:0051899      membrane depolarization                                        BI        ECO:0000315    PMID:9065835  
+GO:0060081      membrane hyperpolarization                                     BI        ECO:0000315    PMID:9065835  
+GO:0005245      voltage-gated calcium channel activity                         MO        ECO:0000256    GO_REF:0000002
+GO:0005245      voltage-gated calcium channel activity                         MO        ECO:0000318    GO_REF:0000033
+GO:0005245      voltage-gated calcium channel activity                         MO        ECO:0000315    PMID:12151514 
+GO:0005515      protein binding                                                MO        ECO:0000353    PMID:20805473 
+GO:0016247      channel regulator activity                                     MO        ECO:0000318    GO_REF:0000033
+GO:0035255      ionotropic glutamate receptor binding                          MO        ECO:0000266    GO_REF:0000096
+GO:0035255      ionotropic glutamate receptor binding                          MO        ECO:0000265    GO_REF:0000107
+GO:0006612      protein targeting to membrane                                  BI        ECO:0000266    GO_REF:0000096
+GO:0006612      protein targeting to membrane                                  BI        ECO:0000265    GO_REF:0000107
+GO:0006816      calcium ion transport                                          BI        ECO:0000256    GO_REF:0000002
+GO:0019226      transmission of nerve impulse                                  BI        ECO:0000318    GO_REF:0000033
+GO:0051592      response to calcium ion                                        BI        ECO:0000265    GO_REF:0000107
+GO:0051968      positive regulation of synaptic transmission, glutamatergic    BI        ECO:0000318    GO_REF:0000033
+GO:0060082      eye blink reflex                                               BI        ECO:0000265    GO_REF:0000107
+  … and 80 more (see saved JSON)
+╭──────────────────────────────────────────────────────────────────────────────── SynGO Annotations  expert-curated synaptic  ·  4 annotation(s) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  BP: regulation of postsynaptic membrane neurotransmitter receptor levels (GO:0099072)                                                                                                                                          │
+│      Evidence: intact tissue, cultured neurons, knockout, overexpression, electron microscopy, confocal microscopy, patch-clamp, electrophysiology, western blot, protein–protein interaction                                   │
+│      PMID: 11140673                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: postsynaptic neurotransmitter receptor diffusion trapping (GO:0098970)                                                                                                                                                     │
+│      Evidence: cultured neurons, overexpression, wide-field fluorescence microscopy, patch-clamp                                                                                                                                │
+│      PMID: 17329211                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: neurotransmitter receptor localization to postsynaptic specialization membrane (GO:0099645)                                                                                                                                │
+│      Evidence: intact tissue, knockout, patch-clamp, electrophysiology                                                                                                                                                          │
+│      PMID: 18753375                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  CC: integral component of postsynaptic density membrane (GO:0099061)                                                                                                                                                           │
+│      Evidence: intact tissue, antibody, electron microscopy                                                                                                                                                                     │
+│      PMID: 27076426                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Related GO Terms from OLS4 (query: 'CACNG2')
+GO ID           Label                                           Description                                                                   
+GO:1990454      L-type voltage-gated calcium channel complex    Examples of this are CACNA1S, CACNA2D1, CACNB1, CACNG1 in rabbit (UniProt sym…
+INFO  Saved → cacng2.md  cacng2.json

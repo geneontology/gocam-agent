@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gocam-curator"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "click",
+    "anthropic",
+    "httpx",
+    "pydantic>=2.0",
+    "rich",
+    "python-dotenv",
+    "python-pptx",
+    "pymupdf",
+    "pillow",
+    "google-genai",
+    "openpyxl",
+]
+
+[project.scripts]
+gocam = "gocam.cli:main"
+
+[project.optional-dependencies]
+pdf = ["markdown", "weasyprint"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

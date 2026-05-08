@@ -1,0 +1,632 @@
+Nature © Macmillan Publishers Ltd 1997
+4. Weisskopf, M. G., Castillo, P . E., Zalutsky, R. A. & Nicoll, R. A. Mediation of hippocampal mossy ﬁber
+long-term potentiation by cyclic AMP .Science 265, 1878–1882 (1994).
+5. Huang, Y-Y., Li, X.-C. & Kandel, E. cAMP contributes to mossy ﬁber L TP by initiating both a
+covalently mediated early phase and macromolecular synthesis-dependent late phase. Cell 79, 69–79
+(1994).
+6. Huang, Y. Y. et al. A genetic test of the effects of mutations in PKA on mossy ﬁber LTP and its relation
+to spatial and contextual learning. Cell 83, 1211–1222 (1995).
+7. Zalutsky, R. A. & Nicoll, R. A. Comparison of two forms of long-term potentiation in single
+hippocampal neurons. Science 248, 1619–1624 (1990).
+8. Weisskopf, M. G. & Nicoll, R. A. Presynaptic changes during mossy ﬁber LTP revealed by NMDA
+receptor-mediated synaptic responses. Nature 376, 256–259 (1995)..
+9. Lo ´ pez-Garci´a, J. C., Arancio, O., Kandel, E. R. & Baranes, D. A presynaptic locus for long-term
+potentiation of elementary synaptic transmission at mossy ﬁber synapses in culture. Proc. Natl Acad.
+Sci. USA 93, 4712–4717 (1996).
+10. Xiang, Z., Greenwood, A. C., Kairiss, E. W. & Brown, T. H. Quantal mechanism of long-term
+potentiation in hippocampal mossy-ﬁber synapses. J. Neurophysiol. 71, 2552–2556 (1994).
+11. Ferro-Novick, S. & Jahn, R. Vesicle fusion from yeast to man. Nature 370, 191–193 (1994).
+12. Bennett, M. K. & Scheller, R. H. A molecular description of synaptic vesicle membrane trafﬁcking.
+Annu. Rev. Biochem. 63, 63–100 (1994).
+13. Su¨dhof, T. C. The synaptic vesicle cycle: a cascade of protein–protein interactions. Nature 375, 645–
+653 (1995).
+14. DeCamilli, P ., Benfenati, F., Valtorta, F. & Greengard, P . The synapsins.Annu. Rev. Cell Biol. 6, 433–
+460 (1990).
+15. Spillane, D. M., Rosahl, T. W., Su¨dhof, T. C. & Malenka, R. C. Long-term potentiation in mice lacking
+synapsins. Neuropharmacology 34, 1573–1579 (1995).
+16. Fykse, E. M., Li, C. & Su¨dhof, T. C. Phosphorylation of rabphilin-3A by Ca2+/calmodulin- and cAMP-
+dependent protein kinases in vitro. J. Neurosci. 15, 2385–2395 (1995).
+17. Wang, Y., Okamoto, M., Schmitz, F., Hofmann, K. & Su¨dhof, T. C. Rim is a putative Rab3 effector in
+regulating synaptic-vesicle fusion. Nature 387, 000–000 (1997).
+18. Geppert, M. et al. The role of Rab3A in neurotransmitter release. Nature 369, 493–497 (1994).
+19. Rosahl, T. W.et al. Essential functions of synapsins I and II in synaptic vesicle regulation.Nature 375,
+488–493 (1995).
+20. Fykse, E. M. et al. Relative properties and localizations of synaptic vesicle protein isoforms: the case of
+the synaptophysins. J. Neurosci. 13, 4997–5007 (1993).
+21. Kamiya, H., Shinozaki, H. & Y amamoto, C. Activation of metabotropic glutamate receptor type 2/3
+suppresses transmission at rat hippocampal mossy ﬁbre synapses. J. Physiol. (Lond.) 493, 447–455
+(1996).
+22. Y okoi, M.et al. Impairment of hippocampal mossy ﬁber LTD in mice lacking mGluR2. Science 273,
+645–647 (1996).
+23. Zucker, R. S. Short-term synaptic plasticity. Annu. Rev. Neurosci. 12, 13–31 (1989).
+24. Geppert, M., Goda, Y., Stevens, C. F. & Su¨dhof, T. C. Rab3A regulates a late step in synaptic vesicle
+fusion. Nature 387, 810–814 (1997).
+25. Regehr, W. G., Delaney, K. R. & Tank, D. W. The role of presynaptic calcium in short-term
+enhancement at the hippocampal mossy ﬁber synapse. J. Neurosci. 14, 523–537 (1994).
+26. Salin, P . A., Scanziani, M., Malenka, R. C. & Nicoll, R. A. Distinct short-term plasticity at two
+excitatory synapses in the hippocampus. Proc. Natl Acad. Sci. USA 93, 13304–13309 (1996).
+27. Seamon, K. B. & Daly, J. W. Forskolin: Its biological and chemical properties.Adv. Cyclic Nucleot. Prot.
+Phosphoryl. Res. 20, 1–150 (1986).
+28. Dixon, D. & Atwood, L. Adenylate cyclase system is essential for long-term facilitation at the crayﬁsh
+neuromuscular junction. J. Neurosci. 9, 4246–4252 (1989).
+29. Schacher, S., Castellucci, V . F. & Kandel, E. R. cAMP evokes long-term facilitation inAplysia sensory
+neurons that requires new protein synthesis. Science 240, 1667–1669 (1988).
+30. Li, C. et al. Synaptic targeting of rabphilin-3A, a synaptic vesicle Ca2+/phospholipid-binding protein,
+depends on rab3A/3C. Neuron 13, 885–898 (1994).
+Acknowledgements. We thank H. Czerwonka for secretarial assistance. R.A.N. is a member of the Keck
+Center for Integrative Neuroscience and the Silvio Conte Center for Neuroscience Research. R.C.M. is a
+member of the Center for Neurobiology and Psychiatry, and the Center for the Neurobiology of
+Addiction. R.A.N. and R.C.M. are supported by grants from the NIH. T.C.S. was supported by grants
+from the HFJP and the W.M. Keck Foundation. R.J. was supported by a postdoctoral fellowship from
+DFG.
+Correspondence and requests for materials should be addressed to R.A.N. (e-mail: nicoll@phy.ucsf.edu).
+letters to nature
+NATURE| VOL 388 | 7 AUGUST 1997 593
+Rim is a putative Rab3 effector
+inregulating synaptic-vesicle
+fusion
+Yun Wang*, Masaya Okamoto*, Frank Schmitz†,
+Kay Hofmann‡ & Thomas C. Su¨ dhof*
+* Department of Molecular Genetics and Howard Hughes Medical Institute,
+The University of Texas, Southwestern Medical Center at Dallas, Texas 75235,
+USA
+† Abteilung IX, Max-Planck-Institut fu¨r Experimentelle Medizin,
+37075 Go¨ttingen, Germany
+‡ Swiss Institute for Experimental Cancer Research, 1066 Epalinges, Switzerland
+.........................................................................................................................
+Rab3 is a neuronal GTP-binding protein that regulates fusion of
+synaptic vesicles and is essential for long-term potentiation of
+hippocampal mossy ﬁbre synapses1–5 . More than thirty Rab GTP-
+binding proteins are known to function in diverse membrane
+transport pathways, although their mechanisms of action are
+unclear. W e have now identiﬁed a putative Rab3-effector protein
+called Rim. Rim is composed of an amino-terminal zinc-ﬁnger
+motif and carboxy-terminal PDZ and C2 domains. It binds only to
+GTP (but not to GDP)-complexed Rab3, and interacts with no
+other Rab protein tested. There is enrichment of Rab3 and Rim in
+neurons, where they have complementary distributions. Rab3 is
+found only on synaptic vesicles, whereas Rim is localized to
+presynaptic active zones in conventional synapses, and to pre-
+synaptic ribbons in ribbon synapses. Transfection of PC12 cells
+with the amino-terminal domains of Rim greatly enhances regu-
+lated exocytosis in a Rab3-dependent manner. W e propose that
+Rim serves as a Rab3-dependent regulator of synaptic-vesicle
+fusion by forming a GTP-dependent complex between synaptic
+plasma membranes and docked synaptic vesicles.
+Rab3A and Rab3C are small GTP-binding proteins of synaptic
+vesicles that cycle between vesicle-associated, GTP-complexed
+forms and cytosolic, GDP-complexed forms as a function of
+exocytosis6–8 . Deletion of Rab3A in mice enhances neurotransmitter
+release without changing the docking or priming of synaptic
+vesicles, suggesting that Rab3 has a role in regulating synaptic-
+vesicle fusion4. Rab3A is also required for long-term potentiation
+(LTP) of synaptic transmission in mossy ﬁbre synapses of the
+hippocampus, indicating that Rab3 physiologically regulates the
+extent of synaptic-vesicle fusion in synaptic plasticity 5. Rab3 and
+other Rab proteins are thought to function by GTP-dependent
+interactions with effector proteins 8–10 , although the number and
+nature of these effectors are unknown: only a few candidate effectors
+have been described for more than thirty Rab proteins, including
+rabphilin-3A11. Rabphilin is colocalized with Rab3 on synaptic
+vesicles, and binds to Rab3 as a function of GTP by means of an
+N-terminal zinc-ﬁnger domain12,13. However, rabphilin on its own
+seems insufﬁcient to account for the actions of Rab3, and so Rab3
+could have multiple effectors.
+By using an activating form of Rab3C fused to the DNA-binding
+domain of LexA as a bait, we screened a rat brain cDNA library by
+yeast two-hybrid selection for proteins that interact with Rab3.
+Positive prey clones were rescued and retransformed into fresh yeast
+cells with Rab3 baits or control baits. We then evaluated the
+speciﬁcity of the prey and bait interactions by using two assays for
+transactivation, namely b-galactosidase induction and histidine
+autotrophy14. In this way we identiﬁed a class of prey clones that
+interact only with Rab3 in the yeast two-hybrid system, and encode
+part of a new protein called Rim (for Rab3-interacting molecule).
+Northern blots revealed that Rim mRNA is only detectable in brain
+(data not shown), suggesting that Rim is a candidate neuronal
+effector for the synaptic actions of Rab3.
+We obtained only partial Rim cDNA clones in the yeast two-
+hybrid screens, so we isolated full-length cDNA clones from rat
+brain libraries. Their sequences showed that Rim is a large protein
+(1,553 amino acids) with several alternatively spliced variants (Fig.
+1). We observed variable sequences in multiple independent cDNA
+clones at three positions. Two of these alternatively spliced
+sequences occur in three distinct variants, suggesting that Rim
+can be present in up to 18 forms. Databank searches identiﬁed a
+Rim homologue in Caenohhabditis elegans that is distributed over
+two cosmid sequences (T10A3 and K03A1). Because rabphilin is
+also present in C. elegans , both putative effectors for Rab3 are
+evolutionarily conserved. Analysis of the Rim sequence demon-
+strates that it is composed of multiple domains present in both the
+rat and C. elegans proteins: an N-terminal zinc-ﬁnger domain, a
+highly charged sequence followed by an alanine/proline-rich region,
+a PDZ domain, and C 2 domains separated by alternatively spliced
+sequences (Fig. 1).
+The Rab3-binding protein rabphilin also has a zinc-ﬁnger motif
+and two C 2 domains. However, the zinc-ﬁngers of Rim and
+rabphilin are only weakly homologous (42% identity over 55
+residues), and their C 2 domains belong to different classes 15.
+Furthermore, rabphilin lacks the other domains of Rim (the PDZ
+Nature © Macmillan Publishers Ltd 1997
+letters to nature
+594 NATURE | VOL 388 | 7 AUGUST 1997
+domain, alternatively spliced sequences, and alanine/proline-rich
+domain), making the two proteins quite different. The homologous
+zinc-ﬁngers of Rim and rabphilin are found in their N-terminal
+Rab3-binding domains11–13 (Fig. 1). Rabphilin binds to Rab3 but
+not to other Rab proteins11–13, so we investigated whether Rim
+exhibits a similar Rab3-binding speciﬁcity.
+We studied the interactions of the Rim prey and of a synapto-
+tagmin control prey with wild-type and mutant forms of Rab3,
+Rab4, Rab5, Rab7, Rab17 and Rab22 by using yeast two-hybrid
+assays (Table 1). Most of the mutations locked the Rab proteins in
+either the GTP- or the GDP-bound states, and are referred to as
+activating and inactivating, respectively. We found that Rab3 bound
+to Rim, whereas the other Rab proteins were inactive (Table 1).
+Binding of wild-type Rab3A to Rim, as measured by b-galactosidase
+activation, was low. However, binding of Rab3A was greatly
+enhanced by independent activating mutations (such as
+Rab3A(Q81L) and Rab3A(S31V,S37P)). Corresponding mutations
+in other Rab proteins (such as Rab5(Q79L), Rab5(I53M) and
+Rab7(Q67L)) had no effect, even though the Rab5 mutants exhib-
+ited strong activation of b-galactosidase with rabaptin preys in the
+same assays (data not shown). Finally, an inactivating mutant of
+Rab3A that stabilizes its GDP-bound forms (Rab3A(T36N)) did not
+induce b-galactosidase above background levels (Table 1). To
+conﬁrm that Rim interacts with only GTP-bound Rab3, we also
+studied it biochemically. Glutathione S-transferase (GST) fusion
+proteins of the N terminus of Rim containing the zinc-ﬁnger
+domain were immobilized on glutathione beads and incubated
+with solubilized brain proteins in the presence of GTP-gS or
+GDP-bS. Rab3A bound to immobilized GST–Rim only with
+GTP-gS (Fig. 1d); control GST proteins or the column matrix
+itself did not bind (data not shown), conﬁrming the speciﬁcity of
+binding.
+Thus Rim binds exclusively to Rab3 as a function of GTP by
+means of a zinc-ﬁnger-containing sequence. We investigated
+whether similar sequences are present in other potential Rab-
+binding proteins by searching databanks with reiterative proﬁles
+constructed from the rat and C. elegans Rim and rabphilin zinc-
+ﬁnger sequences, and were able to identify a class of related zinc-
+Figure 1 a, Domain structure of Rim. The following domains are marked: Zn2+,
+zinc-ﬁnger;++/- -,charged sequence (33%charged aminoacids in186residues);
+A/P, alanine/proline-rich sequence (57% alanines and prolines over 69 amino
+acids); PDZ, PDZ domain; C2A and C2B, ﬁrst and second C2 domains. A, B and C,
+positions of alternative splicing. b, Sequence of Rim. Domains are identiﬁed on
+the right. Alternatively spliced sequences are underlined. In addition to the full-
+length sequences, variants lacking the following residues were observed: site A,
+83–105 and 83–106; site B, 1032–1106 and 1083–1106; site C, 1145–1316. c,
+Alignment of sequences related to the zinc-ﬁnger domain of Rim. The rat and
+C. elegans Rim and rabphilin zinc-ﬁnger sequences are aligned with each other
+and a set of zinc-ﬁnger sequences from GenBank that is characterized by a
+polybasic motif (R-R/K-H-H-C-R-X-C-G; see ref.17). Conserved cysteine residues
+are shaded. Proteins are identiﬁed on the left. Species abbreviations: Rn, rat; Ce,
+C. elegans; Hs, human; Sc, Saccharomyces cerevisiae; Mm, mouse. d, GTP-
+dependent binding of Rab3A to immobilized Rim. Rat brain homogenate (lane 5)
+was afﬁnitychromatographed on a glutathione control column (lanes1 and 3) ora
+glutathione column with immobilized GST–Rim containing the N-terminal zinc-
+ﬁngerof Rim (lanes 2 and 4) in the presence of GDP-bS or GTP-gS. Fractions were
+immunoblotted, with ECL detection.
+
+Nature © Macmillan Publishers Ltd 1997
+letters to nature
+NATURE | VOL 388 | 7 AUGUST 1997 595
+ﬁnger sequences with signiﬁcant homology to the Rim/rabphilin
+zinc-ﬁnger (Fig. 1c). This class forms a separate subset of zinc-
+ﬁngers that is present in proteins from yeast to mammals, some of
+which (Vac1, Fab1 and Hrs-2) function in membrane transport16–18.
+Statistical analysis showed that the probability that the different
+zinc-ﬁngers in Fig. 1c are not related to each other is P , 0:06. By
+contrast, no other zinc-ﬁnger domain reached scores of P , 0:50.
+Therefore, the zinc-ﬁnger domains of Rim and Rabphilin deﬁne a
+zinc-ﬁnger motif present in multiple proteins, some of which may
+function physiologically as Rab targets in membrane transport.
+The N-terminal zinc-ﬁnger domain of Rim is followed by a highly
+charged sequence containing phosphorylation consensus sequences
+for cyclic AMP- and Ca2+/calmodulin-dependent protein kinases,
+an alanine/proline-rich sequence, a PDZ domain, and two degen-
+erate C2 domains, which are separated by alternatively spliced
+sequences. In other proteins, PDZ domains recruit proteins to
+intercellular junctions. For example, the postsynaptic density
+protein PSD95 is thought to localize K+ channels, NMDA (N-
+methyl-D-aspartate) receptors and nitric oxide synthase to synaptic
+junctions, and ZO-1 and ZO-2 are thought to organize tight
+junctions (reviewed in ref. 19). The presence of a PDZ domain
+in Rim is surprising because no other known membrane transport
+protein contains a PDZ domain, and no protein described has both
+PDZ and C2 domains. Rabphilin and synaptotagmins are mem-
+brane transport proteins that contain C2 domains which bind Ca2+
+by a deﬁned consensus sequence15. In Rim, however, the C2 domain
+consensus sequence and their Ca2+-binding sites are mutated.
+Furthermore, rabphilin and synaptotagmins have a conserved C-
+terminal sequence following the C2 domains15 that is absent from
+Rim. Thus, although both Rim and rabphilin have C2 domains,
+those of Rim occur in a different domain context and are structu-
+rally distinct, setting Rim apart from the vesicular C2 domain
+proteins rabphilin and synaptotagmins.
+Rabphilin levels are decreased by ,70% in Rab3A-knockout
+mice, probably because Rab3A recruits rabphilin to synaptic vesicles
+and mediates its transport from the cell body to synapses12. To test
+whether Rim exhibits a similar dependence on Rab3A, we measured
+Rim levels in Rab3A-knockout mice. No change in Rim was
+observed in Rab3A-knockout mice in spite of a decrease in rabphilin
+and the similar Rab3-binding properties of the two proteins (data
+not shown). This result raises the possibility that Rim may not only
+be structurally different from rabphilin, but may also be subject to a
+different intracellular targeting pathway.
+We used subcellular fractionation to address this question.
+Preliminary experiments suggested that Rim is enriched in synap-
+tosomes and that it is particulate (data not shown). We therefore
+subfractionated synaptosomes into synaptic plasma membranes,
+synaptic vesicles, and mitochondria. Immunoblotting showed Rim
+to be highly enriched in synaptic plasma membranes, together with
+PSD95 and neuroligins (Fig. 2). Rim was absent from mitochondria,
+myelin and synaptic vesicles, whereas most of the Rab3A and
+rabphilin was associated with synaptic vesicles. Rim was also not
+detectable in highly puriﬁed synaptic vesicles, which did, however,
+contain abundant amounts of Rab3A and rabphilin (data not
+shown). In addition to the vesicle fraction, Rab3A and other vesicle
+proteins were also enriched in synaptic plasma membranes because
+they contain tightly docked synaptic vesicles. Taken together, these
+data suggest that Rim is coenriched with the PDZ-domain protein
+PSD95 in synaptic junctions but is absent from synaptic vesicles.
+The biochemical results raise the possibility that Rim as a Rab3
+target may be localized to the presynaptic plasma membrane, the
+target of synaptic vesicles that carry Rab3. This localization would
+agree well with the presence of a PDZ domain in Rim, a domain that
+is normally found in junctional plasma-membrane proteins19. We
+tested this hypothesis by immunocytochemistry of nerve terminals
+using immunoﬂuorescence staining and silver-enhanced immuno-
+gold labelling. Immunoﬂuorescence in spinal-cord motor neurons
+revealed a punctate staining pattern for Rim, with abundant
+labelling of synapses on the cell bodies of the motor neurons (Fig.
+3A,a). Silver-enhanced immunogold labelling of the same synapses
+showed that Rim is exclusively presynaptic with no labelling outside
+nerve terminals. In the nerve terminals, we observed silver deposits
+close to the active zone but nowhere else; synaptic vesicles, the
+cytoplasm of the nerve terminals, and the plasma membrane out-
+side the presynaptic active zone were not consistently labelled.
+(Fig. 3A,b).
+Our data suggest that Rim may be speciﬁc for active zones in
+Table 1 Quantiﬁcation of the interaction of Rim prey and Rab bait clones
+Bait vector pPreyRim-100 pPreyRim-52 pVP16-SytIC2A/B.............................................................................................................................................................................
+pLexNRab3A 37:2 6 3:9 13:4 6 2:5 9:7 6 4:8
+pLexNRab3AT36N 5:2 6 2:8 5:6 6 1:3 4:5 6 2:3
+pLexNRab3AS31V,S37P 513:2 6 16:7 199:8 6 27:0 3:2 6 1:7
+pLexNRab3AQ81L 601:6 6 15:4 204:8 6 20:4 5:0 6 2:6
+pLexNRab3AN135I 205:3 6 12:4 55:6 6 7:8 5:4 6 2:7
+pLexNRab3C* 583:3 6 27:3 1;068:8 6 16:6 4:1 6 1:0
+pLexNRab4B 6:7 6 3:2 2:6 6 0:7 2:9 6 0:6
+pLexNRab5 5:5 6 3:1 4:3 6 0:8 0:9 6 0:5
+pLexNRab5S34N 6:4 6 3:6 6:2 6 1:3 4:2 6 2:4
+pLexNRab5I53M 6:7 6 3:3 7:2 6 1:7 5:5 6 2:9
+pLexNRab5Q79L 6:8 6 2:3 6:4 6 3:3 4:5 6 3:0
+pLexNRab7 4:1 6 2:5 3:9 6 0:6 6:5 6 3:2
+pLexNRab7Q67L 5:9 6 3:1 3:4 6 0:7 8:4 6 4:2
+pLexNRab17 4:0 6 2:7 3:7 6 1:4 4:8 6 2:8
+pLexNRab22 1:2 6 0:8 2:2 6 1:2 1:3 6 0:8.............................................................................................................................................................................
+Results are obtained from yeast two-hybrid assays by transactivation of b-galactosidase
+activity. The two Rim prey vectors and the synaptotagmin 1 control prey vector (pVP16-
+SytIC2A/B) were co-transformed with the indicated bait vectors into yeast and plated on -
+UTL plates. Single colonies were grown in liquid culture for 40h before collection, and the b-
+galactosidase activityand protein content of each culture were determined.Data shown are
+mean 6 s:e:m: nmolper minand mg protein from triplicatedeterminations.The sequence of
+rate pLexNRab3C* exhibits 7 amino-acid changes compared to the bovine sequence30:
+Y17F, D24V, Q89R, V141A, V153I, H160R and N121S. These probably represent evolutionary
+changes, except for the Q89R mutation, which corresponds to the critical glutamine residue
+that is mutated in Rab-activating mutations.
+Figure 2 Localization of Rim to synaptic plasma membranes by subcellular
+fractionation. Rat brain homogenate (lane 1) was used to purify synaptosomes
+(lane 4), which were subfractionated into synaptic vesicles (lne 6), synaptic
+plasma membranes (lane 7), mitochondria (lane 8) and myelin (lane 9). Equivalent
+amounts of protein from each fraction were analysed by immunoblotting with
+antibodies to the proteins indicated in ﬁve independent blots: a, Rim/neuroligins;
+b, PSD95; c, rabphilin; d, synaptotagmin; e, Rab3A and Rab3C.
+Nature © Macmillan Publishers Ltd 1997
+letters to nature
+596 NATURE | VOL 388 | 7 AUGUST 1997
+nerve terminals. However, the small size of active zones in conven-
+tional synapses and the limited spatial resolution of silver-enhanced
+immunogold labelling make it difﬁcult to determine whether the
+label is directly associated with the active zone. To resolve this, we
+studied ribbon synapses of retinal photoreceptor cells that contain
+synaptic ribbons instead of active zones. Ribbons are relatively large
+structures attached to the presynaptic plasma membrane, and can
+be easily visualized. Ribbons appear to dock synaptic vesicles and
+prepare them for exocytosis, in a manner analogous to the active
+zone of conventional synapses20. Although ribbon synapses are
+structurally distinct from conventional synapses, they are probably
+similar mechanistically and contain the same synaptic proteins.
+We performed double immunoﬂuorescence labelling of retinae
+with antibodies to Rim and to the synaptic-vesicle protein synapto-
+brevin II (Fig. 3b). Both proteins were highly enriched in synapses
+but were distributed in strikingly different patterns. Synaptobrevin
+was present throughout the synaptic layer because it is localized in
+all synaptic vesicles of the entire nerve terminal. In contrast, Rim
+was found only in a small area within the synapses. The pattern of
+Rim immunoﬂuorescence in photoreceptor nerve terminals sug-
+gests that its localization is restricted to ribbons. We conﬁrmed this
+localization by immuno-electron microscopy and by biochemical
+isolation of ribbons. Silver-enhanced immunogold labelling
+revealed strong labelling of the surface of the entire synaptic ribbons
+(Fig. 3C). Synaptic vesicles or the adjacent plasma membranes,
+similar to conventional synapses, were largely unlabelled. Biochem-
+ical isolation of synaptic ribbons also demonstrated a high degree of
+enrichment of Rim with the detergent-insoluble ribbons (data not
+shown). Taken together, these data establish that Rim is present
+exclusively on ribbons in ribbon synapses and, to our knowledge, it
+is the ﬁrst protein to be identiﬁed with such a localization.
+By every indication, Rim should be involved in exocytosis. It is
+strategically localized to the active zone and to synaptic ribbons, and
+it speciﬁcally interacts with GTP-bound Rab3, which is localized to
+synaptic vesicles that dock to these structures. To conﬁrm that Rim
+is involved in exocytosis, we investigated the effect of the N-terminal
+zinc-ﬁnger domain of Rim on the regulated secretion of growth
+hormone in transfected PC12 cells2. When we co-transfected human
+growth hormone with mutant inactive tetanus toxin as a control
+into PC cells, we observed efﬁcient Ca2+-dependent growth-hormone
+Figure 3 A, Localization of Rim in spinal-cord motor neurons. a, Confocal
+micrograph of rat spinal-cordcrysostat section stained with Rim primaryand Cy2-
+conjugated secondary antibodies. Arrows point to synapses on motor-neuron
+cell bodies (mo). Scale bar, 50 mm. b, Electron micrograph of a presynaptic
+terminal (pr) synapsing onto a postsynaptic neuron (po) stained for Rim by silver-
+enhanced immunogold labelling. Signals appear as black deposits found only in
+presynaptic nerve terminals close to the active zone. Scale bar, 0.2 mm. B,
+Localization of synaptobrevin-2 and Rim in the outer plexiform layer of the retina
+by immunoﬂuorescence microscopy. Confocal micrograph of a bovine retina
+cryostat section double-labelled with monoclonal antibodies to synaptobrevin-2
+(a, red) and polyclonal antibodies to Rim (b, green). c, Images in a and b are
+merged, with areas positivefor both antigens shown inyellow. Layersof the retina
+are identiﬁed on the left and right: ONL, outer nuclear layer; OPL, outer plexiform
+layer; INL, inner nuclear layer. Scale bar,10 mm. C, Immunoelectron microscopy of
+Rim in photoreceptor synapses. Electron micrograph of retinal synapses labelled
+for Rim by silver-enhanced immunogold staining. Ribbons (arrows) are shown in
+proﬁle (a) or cross-section (b). Labelling is enriched on the surface of the ribbons
+but absent from synaptic vesiclesand the plasmamembraneoutside the ribbons.
+Scale bar, 0.1 mm.
+
+Nature © Macmillan Publishers Ltd 1997
+letters to nature
+NATURE | VOL 388 | 7 AUGUST 1997 597
+secretion triggered by membrane depolarization (Fig. 4a). In con-
+trast, when we co-transfected wild-type tetanus toxin, Ca2+-depen-
+dent secretion was largely suppressed. This conﬁrms that the
+secretion observed is vesicular.
+Co-transfection of the N-terminal domain of Rim with growth
+hormone, with or without the mutant tetanus toxin, resulted in a
+large increase in Ca2+-dependent secretion that was not observed
+with any other co-transfected protein (Fig. 4a). The increase in
+secretion caused by Rim transfection was fully suppressed by wild-
+type tetanus toxin, showing that it is also due to vesicular exocytosis.
+Co-transfection of wild-type Rab4A with growth hormone, how-
+ever, leads to a mild inhibition of triggered secretion2 (Fig. 4b). The
+Rab3A inhibition and the Rim enhancement neutralize each other if
+both proteins are co-transfected. These data suggest that Rim has a
+functional role in secretion, although they do not establish whether
+Rim acts directly or indirectly. In agreement with the enhanced
+neurotransmitter release in the absence of Rab3A in hippocampal
+synapses4, our results indicate that interference with Rab3 function
+by expression of a truncated Rim protein promotes vesicular
+secretion.
+Rab3A regulates synaptic-vesicle exocytosis by limiting the extent
+of Ca2+-triggered membrane fusion4. This regulation is physiologi-
+cally important for mossy ﬁbre LTP, and possibly other forms of
+synaptic plasticity5. Rim is a candidate effector protein for Rab3 that
+may mediate the actions of Rab3 in membrane fusion. In Rim and
+rabphilin, a previously described putative Rab3 effector11,12, Rab3
+may have two distinct effector proteins. Although both of these
+effectors interact with Rab3 through related zinc-ﬁnger sequences,
+they are composed of different domains and localized to distinct
+subcellular compartments. Thus Rab3, and possibly other Rab
+proteins, could have multiple downstream functions mediated by
+diverse effectors. Rab3 and rabphilin are colocalized on synaptic
+vesicles12,13. In contrast, Rim is only found on presynaptic active
+zones and synaptic ribbons, and is the ﬁrst protein known to have
+this restricted localization. Other proteins of the synaptic plasma
+membrane, such as syntaxin and munc18-1, are distributed all over
+the plasma membrane, without enrichment in active zones. Because
+Rab3 is on synaptic vesicles, Rim can only bind to Rab3 when
+synaptic vesicles carrying GTP-Rab3 move to the active zone. As a
+consequence, the Rim–Rab3 complex forms only during or after
+docking of synaptic vesicles. The localization of Rim positions it for
+a role in synaptic-vesicle docking and fusion, in contrast to the
+localization of rabphilin, which is present on free vesicles long
+before they reach the active zone12. One possible model for Rab3
+function is that the Rab3–Rim complex might serve as a clamp for
+Ca2+-dependent exocytosis. Stochastic or regulated inactivation of
+this clamp by GTP hydrolysis or protein phosphorylation would
+then regulate the availability of vesicles for fusion, thereby deter-
+mining how many vesicles fuse. Genetic and biochemical tests of
+this model are in progress. M
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Methods
+Molecularbiology. Yeast-two hybrid bait vectors were constructed by standard
+techniques21 in pLexN using full-length Rab sequences with the indicated
+mutations. Yeast two-hybrid screens of a rat brain cDNA library in pVP16-3
+were performed and evaluated as described14,22. Two independent Rim prey
+clones encoding residues 1–345 (pPreyRim-100) and 11–399 (pPreyRim-52)
+were isolated. Liquid b-galactosidase assays were normalized for protein
+content22. A rat brain cDNA library in lZAPII was screened by standard
+methods21 using the Rim prey clone as a probe. Multiple overlapping clones
+covering the entire coding were sequenced to assemble the full-length sequence
+(GenBank accession number: AF007836). Rim–GST fusion protein vectors
+were obtained by cloning the EcoRI fragment from pPreyRim-52 into pGEX-
+KG23 (pGexRIM52; N-terminal zinc-ﬁnger construct) or the 0.84-kilobase
+SmaI–PvuII fragment into the SmaI site (pGexRim-PDZ; this encodes residues
+492–772).
+Sequenceanalysis. Initial databank searches using BLASTsoftware identiﬁed
+the domains in Rim (N-terminal zinc-ﬁnger, PDZ domain, and C2 domains).
+The complete Rim C. elegans sequence was assembled from two cosmid
+sequences (T10A3 and K03A1; acc. nos U41035 and U41625, respectively). In
+order to deﬁne the relation of the Rim zinc-ﬁnger to other databank zinc-
+ﬁngers, we applied the generalized proﬁle method24. A proﬁle was constructed
+from a weighted multiple alignment of the zinc-ﬁnger regions from rat and C.
+elegans Rim and rabphilin using the BLOSUM45 substitution matrix25 with a
+gap-creation penalty of 2.1 and gap-extension penalty of 0.2. Statistical
+signiﬁcance of proﬁle-matching scores was derived from the analysis of the
+score distribution of a locally shufﬂed database26. Signiﬁcant matches
+(P , 0:08) were incorporated into subsequent rounds of proﬁle construction
+for iterative proﬁle reﬁnement. The initial proﬁle search found signiﬁcant
+matches to the zinc-ﬁnger regions of the nematode open reading frames
+C33D9.1 (P , 0:06) and ZK632.12 (P , 0:08). The two sequences were
+considered related to the Rim zinc-ﬁnger domain family and incorporated
+into the alignment for the next round of proﬁle reﬁnement. Three more proﬁle
+reﬁnement cycles, accepting only proteins with error probabilities of P , 0:01,
+Figure 4 Rab3-dependent regulation of Ca2+-dependent secretion in transfected
+PC12 cells. PC12 cells were co-transfected with plasmids encoding human
+growth hormone (GH) and the proteins indicated: TeTxWT, light chain of wild-type
+tetanus toxin; TeTxMut, light chain of mutant inactive tetanus toxin28; Rim-N term.,
+N-terminal domains of Rim; LDLR, LDL receptors. Graphs show K+-stimulated
+release of growth hormone plotted as a percentage of total growth hormone
+expressed. Basal release was 6.5–8.5% of total, and did not change signiﬁcantly
+as a function of transfection, except for wild-type tetanus toxin, which also
+decreased basal release. The increase in stimulated exocytosis induced by
+Rim remains sensitive to tetanus toxin and is reversed by Rab3A expression.
+
+Nature © Macmillan Publishers Ltd 1997
+letters to nature
+598 NATURE | VOL 388 | 7 AUGUST 1997
+resulted in the protein family shown in Fig. 1c. The highest-scoring non-related
+sequences after those shown consisted of trithorax family members that reached
+error probabilities of P . 0:5 in all of the proﬁle iterations.
+Immunocytochemistry. Antibodies were raised in rabbits against the puriﬁed
+GST fusion proteins encoded by pGEX-RIM-52 and pGEX-Rim-PDZ. Double
+and single immunoﬂuorescence labelling of cryostat sections from rat spinal
+cord and bovine retinae was performed27 with two independent polyclonal Rim
+antibodies and multiple monoclonal antibodies to synaptic vesicle proteins.
+Staining was visualized by Cy2- and Cy3-conjugated secondary antibodies and
+viewed in a BioRad MRC1024 confocal microscope. Immuno-electron micro-
+scopy was performed by a pre-embedding protocol with silver enhancement27.
+Controls for all immunocytochemistry experiments included the use of two
+independent antibodies, control stains with other antibodies, and experiments
+in which the ﬁrst antibody was omitted.
+PC12 cell transfections. PC12 cells (ATCC) were plated in collagen-coated 6-
+well dishes with 106 cells per well. Cells were transfected on day 1 with 0.2 mg of
+Qiagen-puriﬁed pCMV5-hGH encoding human growth hormone and 1 mg of
+the indicated expression plasmids using Lipofectamine (Life Technologies).
+Expression plasmids encoded the light chains of wild-type and mutant tetanus
+toxin in pCMV5 (ref. 28), LDL receptor and Rab3A in pCMV5, and residues
+1–399 of Rim in pME18sf(-). On day 3, cells were collected, washed, and split
+into two portions, one of which was incubated for 20 min at 37 8C in control
+buffer (in mM) (145 NaCl, 5.6 KCl, 2.2 CaCl2, 0.5 MgCl2, 5.6 glucose, 0.5
+ascorbate, 20 HEPES-NaOH, pH 7.4) and the other was incubated in the same
+buffer containing 56 KCl and 95 NaCl. After incubation, growth hormone in
+the medium and the cells was determined by radioimmunoassay (Nichols
+Institute). Secretion was calculated as the percentage growth hormone released
+as a function of stimulation. All experiments were done in triplicate at least
+three times.
+Rimafﬁnitychromatography. Glutathione–agarose columns without protein,
+with GST–Rim fusion protein encoded by pGEX-Rim-52, or with various
+control GST fusion proteins, were reacted with total rat brain homogenate
+prepared in 0.5% Triton X-100, 1 mM EDTA, 0.1 M NaCl, 0.1 g l-1 PMSF, and
+50 mM HEPES-NaOH, pH 7.4, with either 0.5 mM GDP-bS or GTP-gS at 4 8C
+overnight. Samples were washed 5 times in the same buffer without nucleotides
+before analysis by SDS–PAGE and immunoblotting.
+Otherprocedures. RNA blotting experiments were done using multiple tissue
+blots (Clontech). SDS–PAGE and immunoblotting were performed using
+standard procedures and antibodies described previously1,12,28,29. Signals were
+detected by ECL and quantiﬁed by 125I-labelled secondary antibodies. Protein
+assays were performed with the BioRad kit. Subcellular fractionations were
+performed as described29 and veriﬁed by immunoblotting against a series of
+synaptic-vesicle, plasma-membrane and cytosolic antigens.
+Received 19 February; accepted 22 May 1997.
+1. Geppert, M. et al. The role of Rab3A in neurotransmitter release. Nature 369, 493–497 (1994).
+2. Holz, R. W., Brondyk, W. H., Senter, R. A., Kuizon, L. & Macara, I. G. Evidence for the involvement of
+Rab3A in Ca2+-dependent exocytosis from adrenal chromafﬁn cells. J. Biol. Chem. 269, 10229–10234
+(1994).
+3. Johannes, L. et al. The GTPase Rab3a negatively controls calcium-dependent exocytosis in neuroen-
+drocrine cels. EMBO J. 13, 2029–2037 (1994).
+4. Geppert, M., Goda, Y., Stevens, C. F. & Su¨dhof, T. C. Rab3A regulates a late step in synaptic vesicle
+fusion. Nature 387, 810–814 (1997).
+5. Castillo, P. E., Janz, R., Su¨dhof, T. C., Tzounopoulos, T., Malenka, R. C. & Nicoll, R. A. Rab3A is
+essential for mossy ﬁbre long-term potentiation in the hippocampus. Nature 388, 590–593 (1997).
+6. Burstein, E. S., Brondyk, W. H., Macara, I. G., Kaibuchi, K. & Takai, Y. Regulation of the GTPase cycle
+of the neuronally expressed Ras-like GTP-bindign protein Rab3A. J. Biol. Chem. 268, 22247–22250
+(1993).
+7. Fischer von Mollard, G., Stahl, B., Khokhlatchev, A., Su¨dhof, T. C. & Jahn, R. Rab3C is a synaptic
+vesicle protein that dissociates from synaptic vesicles after stimulation of exocytosis. J. Biol. Chem.
+269, 10971–10974 (1994).
+8. Su¨dhof, T. C. Function of Rab3A GDP/GTP exchange. Neuron 18, 519–522 (1997).
+9. Bourne, H. R., Sanders, D. A. & McCormick, F. The GTPase superfamily: a conserved switch for
+diverse cel functions. Nature 348, 125–132 (1990).
+10. Nuoffer, C. & Balch, W. E. GTPases: multifunctional molecular switches regulating vesicular trafﬁc.
+Annu. Rev. Biochem. 63, 949–990 (1994).
+11. Shirataki, H. et al. Rabphilin-3A, a putative target protein for smg p25A/rab3A p25 small GTP-
+binding protein related to synaptotagmin. Mol. Cell. Biol. 13, 2061–2068 (1993).
+12. Li, C. et al. Synaptic targeting of rabphilin-3A, a synaptic vesicle Ca2+/phospholipid-binding protein,
+depends on rab3A/3C. Neuron 13, 885–898 (1994).
+13. Stahl, B., Chou, J. H., Li, C., Su¨dhof, T. C. & Jahn, R. Rab3 reversibly recruits rabphilin to synaptic
+vesicles by a mechanism analogous to raf recruitment by ras. EMBO J. 15, 1799–1809 (1996).
+14. Vojtek, A. B., Hollenberg, S. M. & Cooper, J. A. Mammalian ras interacts directly with the serin/
+threonine kinase raf. Cell 74, 205–214 (1993).
+15. Su¨dhof, T. C. & Rizo, J. Synaptotagmins: C2-domain proteins that regulate membrane trafﬁc. Neuron
+17, 379–388 (1996).
+16. Weisman, L. S. & Wickner, W. Molecular characterization of VAC1, a gene required for vacuole
+inheritance and vacuole protein sorting. J. Biol. Chem. 267, 618–623 (1992).
+17. Yamamoto, A. et al. Novel PI(4)P 5-kinase homologue, Fablp, essential for normal vacuole function
+and morphology in yeast. Mol. Biol. Cell 6, 525–539 (1995).
+18. Bean, A. J., Seifert, R., Chen, Y. A., Sacks, R. & Scheller, R. H. Hrs-2 is an ATPase implicated in Ca2+-
+regulated secretion. Nature 385, 826–829 (1997).
+19. Sheng, M. PDZs and receptor/channel clustering: rounding up the latest suspects. Neuron 17, 575–
+578 (1996).
+20. Dowling, J. E. The Retina. An Approachable Part of the Brain (Belknap, Cambridge, MA, 1987).
+21. Sambrook, J., Fritsch, E. F. & Maniatis, T. Molecular Cloning: A Laboratory Manual (Cold Spring
+Harbor Laboratory Press, New York, 1989).
+22. Hata, Y. & Su¨dhof, T. C. A novel ubiquitous form of munc18 interacts with multiple syntaxins. J. Biol.
+Chem. 270, 13022–13028 (1991).
+23. Guan, K. L. & Dixon, J. E. Eukaryotic proteins expressed in Escherischia coli: an improved thrombin
+cleavage and puriﬁcation procedure of fusion proteins with glutathione S-transferase. Anal. Biochem.
+192, 262–267 (1991).
+24. Bucher, P., Karplus, K., Moeri, N. & Hofmann, K. A ﬂexible motif search technique based on
+generalized proﬁles. Comput. Chem. 20, 3–23 (1996).
+25. Henikoff, S. & Henikoff, J. G. Amino acid substitution matrices from protein blocks. Proc. Natl Acad.
+USA 89, 10915–10919 (1992).
+26. Hofmann, K. & Bucher, P. The FHA domain: a putative nuclear signalling domain found in protein
+kinases and transcription factors. Trends Biochem. Sci. 20, 347–349 (1995).
+27. Schmitz, F., Bechmann, M. & Drenckhahn, D. Puriﬁcation of synaptic ribbons, structural components
+of the photoreceptor active zone complex. J. Neurosci. 15, 7109–7116 (1996).
+28. McMahon, H. et al. Cellubrevin: a ubiquitous tetanus-toxin substrate homologous to a putative
+synaptic vesicle fusion protein. Nature 364, 346–349 (1993).
+29. Ichtchenko, K. et al. Neuroligin 1: A splice-site speciﬁc ligand for b-neurexins. Cell 81, 435–443
+(1995).
+30. Matsui, Y. et al. Nucleotide and deduced amino acid sequences of a GTP-binding protein family with
+molecular weights of 25,000 from bovine brain. J. Biol. Chem. 263, 11071–11074 (1988).
+Acknowledgements. We thank R. Janz, R. Jahn, M. Zerial and S. Butz for reagents, and J. L. Goldstein and
+M. S. Brown for advice and support. This work was partially supported by a grant from the HFSP.
+Correspondence and requests for materials should be addressed to T.C.S. (e-mail: tsudho@mednet.
+swmed.edu).
+Chromatin-remodellingfactor
+CHRACcontainstheATPases
+ISWIandtopoisomeraseII
+Patrick D. Varga-Weisz, Matthias Wilm, Edgar Bonte,
+Katia Dumas, Matthias Mann & Peter B. Becker
+European Molecular Biology Laboratory, Meyerhofstrasse 1, 69117 Heidelberg,
+Germany
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Repressive chromatin structures need to be unravelled to allow
+DNA-binding proteins access to their target sequences. This
+de-repression constitutes an important point at which transcrip-
+tion and presumably other nuclear processes can be regulated1,2.
+Energy-consuming enzyme complexes that facilitate the inter-
+action of transcription factors with chromatin by modifying
+nucleosome structure are involved in this regulation3–5. One
+such factor, nucleosome-remodelling factor (NURF), has been
+isolated from Drosophila embryo extracts4,6,7. We have now iden-
+tiﬁed a chromatin-accessibility complex (CHRAC) which uses
+energy to increase the general accessibility of DNA in chromatin.
+However, unlike other known chromatin remodelling factors,
+CHRAC can also function during chromatin assembly: it uses
+ATP to convert irregular chromatin into a regular array of
+nucleosomes with even spacing. CHRAC combines enzymes that
+modulate nucleosome structure and DNA topology. Using mass
+spectrometry, we identiﬁed two of the ﬁve CHRAC subunits as the
+ATPase ISWI, which is also part of NURF6,8, and topoisomerase II.
+The presence of ISWI in different contexts suggests that chromatin
+remodelling machines have a modular nature and that ISWI has a
+central role in different chromatin remodelling reactions.
+Chromatin reconstituted in the cell-free assembly system from
+Drosophila embryos9,10 is maintained in a dynamic state character-
+ized by increased nucleosome mobility and overall DNA acces-
+sibility in the presence of ATP11. Using ATP-dependent
+endonuclease cleavage of chromatin to assay for DNA accessibility11,
+we puriﬁed and characterized a new type of chromatin remodelling
