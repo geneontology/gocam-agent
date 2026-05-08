@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from datetime import datetime
-from pathlib import Path
 
 import click
 import httpx
@@ -529,7 +528,7 @@ def verify_command(process: str | None) -> None:
     )
 
     print_success(f"Verification report → {report_path}")
-    print_success(f"records.json updated with verified IDs")
+    print_success("records.json updated with verified IDs")
     console.print(
         "\nNext step: [bold]gocam narrative[/bold] — generate expert-readable claims"
     )

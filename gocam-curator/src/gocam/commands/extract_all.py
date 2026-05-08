@@ -7,7 +7,6 @@ from pathlib import Path
 import click
 
 from gocam.commands.extract import (
-    _build_extraction,
     _count_claims,
     _process_image,
     _process_pdf,
@@ -132,7 +131,7 @@ def extract_all_command(process: str | None) -> None:
         print_info(f"Processing file {i}/{len(input_files)}: {file.name}")
 
         if _already_extracted(extractions_dir, file):
-            print_info(f"  Skipping — already extracted")
+            print_info("  Skipping — already extracted")
             skipped += 1
             continue
 

@@ -51,6 +51,11 @@ fallback-version = "0.0.0"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
+[tool.ruff]
+extend-exclude = [
+  "scripts",
+]
+
 # Ref.: https://github.com/codespell-project/codespell
 [tool.codespell]
 skip = [

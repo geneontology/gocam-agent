@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
 
@@ -227,7 +226,6 @@ def _display_summary(
 
     # Pipeline count log
     if n_report_interactions:
-        ratio = f"{len(records)}/{n_report_interactions}"
         colour = "green" if len(records) >= n_report_interactions else "yellow"
         print_info(
             f"Report contained [bold]{n_report_interactions}[/bold] interactions → "

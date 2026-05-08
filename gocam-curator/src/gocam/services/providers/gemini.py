@@ -15,7 +15,7 @@ from gocam.config import (
     GEMINI_FALLBACK_MODELS,
     GEMINI_MODEL,
 )
-from gocam.services.llm import LLMClient, _is_retryable
+from gocam.services.llm import LLMClient
 
 _MAX_TOKENS = 65536
 

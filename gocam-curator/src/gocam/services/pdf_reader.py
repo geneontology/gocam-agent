@@ -116,7 +116,7 @@ def _page_is_references(page_text: str, has_header: bool = False) -> bool:
       (lowered to 40% if a previous page already had the header).
     """
     lines = page_text.split("\n")
-    non_empty = [l for l in lines if l.strip()]
+    non_empty = [line for line in lines if line.strip()]
 
     if not non_empty:
         return False
@@ -127,7 +127,7 @@ def _page_is_references(page_text: str, has_header: bool = False) -> bool:
             return True
 
     # Score each line
-    scores = [_reference_score(l) for l in non_empty]
+    scores = [_reference_score(line) for line in non_empty]
     avg_score = sum(scores) / len(scores)
 
     # If we already found the header on a previous page, be more lenient
@@ -177,7 +177,7 @@ def read_pdf(path: Path) -> tuple[str, list[bytes], str | None]:
             # On the first hit, check if the header is on this page
             if not header_found:
                 lines = text.split("\n")
-                header_found = any(_is_ref_header_line(l) for l in lines[:8])
+                header_found = any(_is_ref_header_line(line) for line in lines[:8])
 
                 # If this page has a header but also substantial non-reference
                 # content above it, the references start on this page but we

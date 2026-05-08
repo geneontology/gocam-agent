@@ -1,6 +1,5 @@
 import pypdf
 import glob
-import os
 
 pdf_files = glob.glob("gocam_models/priming-docking-exocytosis/literature/*.pdf")
 

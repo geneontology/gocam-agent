@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from datetime import datetime
-from pathlib import Path
 
 import click
 import httpx
@@ -26,7 +25,7 @@ from gocam.services.pubmed import resolve_doi_from_title, resolve_pmid_from_doi,
 from gocam.services.quickgo import get_protein_annotations, search_go_terms, verify_go_term
 from gocam.services.syngo import get_syngo
 from gocam.services.uniprot import verify_protein
-from gocam.utils.display import console, print_error, print_info, print_success, print_warning
+from gocam.utils.display import console, print_error, print_success, print_warning
 from gocam.utils.io import read_json, write_json
 from gocam.utils.process import load_meta, resolve_process
 

@@ -47,7 +47,7 @@ def get_title(pmid):
         citation = f"{first_author} {year}" if first_author else "Citation"
         titles_cache[pmid] = (citation, title)
         return titles_cache[pmid]
-    except Exception as e:
+    except Exception:
         return ("Citation", "Unknown Title")
 
 with open('gocam_models/AMPAR/gemini-analysis/project_definitions-gemini.md', 'r') as f:
@@ -56,7 +56,7 @@ with open('gocam_models/AMPAR/gemini-analysis/project_definitions-gemini.md', 'r
 for process, pmids in top_pmids.items():
     # Find the grounding line for this process
     # Search from the process header to the next double hash
-    start_idx = content.find(f"## ")
+    start_idx = content.find("## ")
     proc_idx = content.find(process, start_idx)
     if proc_idx == -1:
         continue

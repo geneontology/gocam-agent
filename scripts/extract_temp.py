@@ -1,5 +1,4 @@
 import fitz
-import sys
 
 pdf_paths = [
     "gocam_models/AMPAR/ampar-postendocytic-sorting/literature/20098723.pdf",
