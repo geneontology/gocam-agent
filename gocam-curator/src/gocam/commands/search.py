@@ -420,13 +420,13 @@ def _build_markdown(
 
     lines: list[str] = [
         f"# Search: {gene.upper()}",
-        f"",
+        "",
         f"**Species:** {species_label} (taxon:{taxon_id})  ",
         f"**Date:** {ts}  ",
         f"**UniProt ID:** [{uid}](https://www.uniprot.org/uniprotkb/{uid})  ",
         f"**Protein name:** {pname}  ",
         f"**Gene names:** {gnames}",
-        f"",
+        "",
     ]
 
     if func:

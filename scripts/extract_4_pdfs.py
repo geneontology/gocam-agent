@@ -1,6 +1,5 @@
 import pypdf
 import glob
-import os
 
 directories = [
     "gocam_models/AMPAR/ampar-synthesis-assembly/literature",

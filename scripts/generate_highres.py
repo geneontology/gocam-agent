@@ -27,7 +27,7 @@ def generate_process_def(sub):
     
     # Extract baseline block for this sub
     try:
-        baseline_start = baseline_defs.find(f"## ")
+        baseline_start = baseline_defs.find("## ")
         block_start = baseline_defs.find(sub, baseline_start)
         block_end = baseline_defs.find("## ", block_start)
         if block_end == -1:

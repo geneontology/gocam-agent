@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 from datetime import datetime
-from pathlib import Path
 
 import click
 
-from gocam.utils.display import console, print_error, print_info, print_success, print_warning
+from gocam.utils.display import console, print_success, print_warning
 from gocam.utils.process import resolve_process
 
 
@@ -81,7 +80,7 @@ def run_command(ctx: click.Context, process: str | None) -> None:
     process_name = process_dir.name
 
     log_lines: list[str] = [
-        f"gocam pipeline run",
+        "gocam pipeline run",
         f"Process:  {process_name}",
         f"Started:  {_now()}",
     ]

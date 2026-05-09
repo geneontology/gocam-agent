@@ -202,9 +202,6 @@ class SynGOService:
 
     def _load_annotations(self, path: Path) -> None:
         headers, rows = _read_xlsx(path)
-        sym_col = _col(headers, "hgnc_symbol")
-        go_col = _col(headers, "go_id")
-
         _evidence_cols = (
             "evidence_biological_system",
             "evidence_protein_targeting",

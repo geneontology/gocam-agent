@@ -8,7 +8,6 @@ from pathlib import Path
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
-from rich.text import Text
 
 console = Console()
 
@@ -71,5 +70,5 @@ def print_process_created(name: str, process_dir: Path) -> None:
     console.print()
     console.print("Next steps:")
     console.print(f"  1. Drop input files into [bold]{process_dir / 'input'}[/bold]")
-    console.print(f"  2. Run [bold]gocam extract <file>[/bold] for each input file")
-    console.print(f"  3. Run [bold]gocam report[/bold] to synthesize all extractions")
+    console.print("  2. Run [bold]gocam extract <file>[/bold] for each input file")
+    console.print("  3. Run [bold]gocam report[/bold] to synthesize all extractions")

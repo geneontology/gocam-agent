@@ -7,7 +7,7 @@ import click
 
 from gocam.config import PROCESS_SUBDIRS, PROCESSES_DIR
 from gocam.models import Expert, Paper, ProcessMeta
-from gocam.utils.display import console, print_error, print_process_created
+from gocam.utils.display import print_error, print_process_created
 from gocam.utils.io import write_json
 
 

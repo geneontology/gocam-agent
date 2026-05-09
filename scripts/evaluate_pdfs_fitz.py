@@ -29,7 +29,7 @@ def extract_text(pdf_path):
         doc = fitz.open(pdf_path)
         for page in doc:
             text += page.get_text()
-    except Exception as e:
+    except Exception:
         pass
     return text.lower()
 

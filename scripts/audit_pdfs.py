@@ -1,6 +1,4 @@
-import os
 import json
-import re
 
 # Load abstracts
 with open('local_pdf_abstracts.json', 'r') as f:

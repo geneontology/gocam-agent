@@ -1,5 +1,4 @@
 import json
-import os
 
 with open('local_pdf_abstracts.json', 'r') as f:
     abstracts = json.load(f)

@@ -48,7 +48,7 @@ def extract_text(pdf_path):
         # Read first 3 pages to get abstract, intro, and keywords
         for page in doc[:3]:
             text += page.get_text()
-    except Exception as e:
+    except Exception:
         pass
     return text.lower()
 
