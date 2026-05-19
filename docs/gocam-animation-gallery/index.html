@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GO-CAM Receptor Animation Gallery Prototype</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5c6975;
+      --line: #d7dde3;
+      --panel: #ffffff;
+      --page: #f5f7f9;
+      --extra: #eef6ff;
+      --cyto: #fff8ed;
+      --membrane: #f7d56f;
+      --membrane-edge: #c7941f;
+      --protein: #d6eaf8;
+      --protein-stroke: #2980b9;
+      --ligand: #fcf3cf;
+      --ligand-stroke: #d68910;
+      --signal: #d5f5e3;
+      --signal-stroke: #229954;
+      --endpoint: #f8d7da;
+      --endpoint-stroke: #c0392b;
+      --active: #16a085;
+      --active-soft: rgba(22, 160, 133, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .mast {
+      padding: 28px 0 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 880px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .notice {
+      margin-top: 16px;
+      padding: 11px 13px;
+      border: 1px solid #c6d8ea;
+      background: #eef6ff;
+      border-radius: 6px;
+      color: #244766;
+      font-size: 0.94rem;
+    }
+
+    main {
+      padding: 24px 0 36px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    }
+
+    .meta {
+      padding: 16px 16px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta h2 {
+      margin: 0;
+      font-size: 1.03rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .model {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 7px;
+      color: #425466;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+    }
+
+    .summary {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .stage-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .stage-list span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      color: #394956;
+      background: #fafbfc;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #edf0f3;
+    }
+
+    .timeline span {
+      position: relative;
+      min-height: 26px;
+      padding: 5px 6px 5px 18px;
+      border: 1px solid #dce3ea;
+      border-radius: 6px;
+      background: #ffffff;
+      color: #4d5c68;
+      font-size: 0.74rem;
+      font-weight: 650;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .timeline span::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #b7c3cf;
+      transform: translateY(-50%);
+      animation: timeline-dot 7.5s ease-in-out infinite;
+    }
+
+    .timeline span:nth-child(2)::before {
+      animation-delay: 1.7s;
+    }
+
+    .timeline span:nth-child(3)::before {
+      animation-delay: 3.3s;
+    }
+
+    .timeline span:nth-child(4)::before {
+      animation-delay: 4.8s;
+    }
+
+    .viz {
+      padding: 12px;
+      background: #fbfcfd;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 760 / 360;
+      border: 1px solid #e7ebef;
+      background: #ffffff;
+      border-radius: 6px;
+    }
+
+    .zone-label {
+      fill: #52616f;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .label {
+      fill: var(--ink);
+      font-size: 13px;
+      font-weight: 750;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .sub {
+      fill: var(--muted);
+      font-size: 10px;
+      font-weight: 560;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .small-label {
+      fill: #44515f;
+      font-size: 11px;
+      font-weight: 700;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .membrane-band {
+      fill: var(--membrane);
+      stroke: var(--membrane-edge);
+      stroke-width: 1.5;
+    }
+
+    .membrane-line {
+      stroke: #ba8a1d;
+      stroke-width: 2;
+      stroke-linecap: round;
+      opacity: 0.45;
+    }
+
+    .ligand {
+      animation: ligand-dock 7.5s ease-in-out infinite;
+    }
+
+    .ligand circle,
+    .ligand ellipse {
+      fill: var(--ligand);
+      stroke: var(--ligand-stroke);
+      stroke-width: 2;
+    }
+
+    .binding-pocket {
+      fill: #ffffff;
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      animation: pocket-active 7.5s ease-in-out infinite;
+    }
+
+    .helix {
+      fill: var(--protein);
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .helix-a {
+      animation: helix-a-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-b {
+      animation: helix-b-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-c {
+      animation: helix-c-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-d {
+      animation: helix-d-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-e {
+      animation: helix-e-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-f {
+      animation: helix-f-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-g {
+      animation: helix-g-shift 7.5s ease-in-out infinite;
+    }
+
+    .helix-label {
+      fill: #3b4b58;
+      font-size: 8px;
+      font-weight: 800;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .odor-plume {
+      fill: none;
+      stroke: #8fa7b8;
+      stroke-width: 2;
+      stroke-linecap: round;
+      opacity: 0.55;
+      stroke-dasharray: 4 7;
+      animation: plume-drift 7.5s ease-in-out infinite;
+    }
+
+    .peptide {
+      fill: none;
+      stroke: var(--ligand-stroke);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: peptide-dock 7.5s ease-in-out infinite;
+    }
+
+    .ecd {
+      fill: #e8f1fb;
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      animation: pocket-active 7.5s ease-in-out infinite;
+    }
+
+    .rtk-left,
+    .rtk-right,
+    .single-pass {
+      fill: var(--protein);
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .rtk-left {
+      animation: rtk-left-dimer 7.5s ease-in-out infinite;
+    }
+
+    .rtk-right {
+      animation: rtk-right-dimer 7.5s ease-in-out infinite;
+    }
+
+    .phospho {
+      fill: #fff4c2;
+      stroke: #d68910;
+      stroke-width: 1.5;
+      opacity: 0;
+      animation: phospho-on 7.5s ease-in-out infinite;
+    }
+
+    .adaptor {
+      animation: adaptor-dock 7.5s ease-in-out infinite;
+    }
+
+    .adaptor rect,
+    .adaptor ellipse {
+      fill: var(--signal);
+      stroke: var(--signal-stroke);
+      stroke-width: 2;
+    }
+
+    .ubiquitin {
+      fill: #f7dcff;
+      stroke: #8e44ad;
+      stroke-width: 1.6;
+      animation: ubiquitin-transfer 7.5s ease-in-out infinite;
+    }
+
+    .ubiquitin.two {
+      animation-delay: 0.25s;
+    }
+
+    .ubiquitin.three {
+      animation-delay: 0.5s;
+    }
+
+    .contact-cell {
+      fill: #eef4f8;
+      stroke: #95a5a6;
+      stroke-width: 2;
+    }
+
+    .contact-pair {
+      animation: contact-tighten 7.5s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .contact-signal {
+      fill: none;
+      stroke: var(--active);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 28 190;
+      opacity: 0;
+      animation: contact-signal 7.5s ease-in-out infinite;
+    }
+
+    .cleavage-fragment {
+      fill: #e8f1fb;
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      animation: fragment-release 7.5s ease-in-out infinite;
+    }
+
+    .nucleus {
+      fill: #eef4ff;
+      stroke: #6f8fb3;
+      stroke-width: 2;
+    }
+
+    .transcription-signal {
+      fill: none;
+      stroke: var(--active);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 26 210;
+      opacity: 0;
+      animation: transcription-signal 7.5s ease-in-out infinite;
+    }
+
+    .cilium {
+      fill: #eaf2f8;
+      stroke: #6e8fa8;
+      stroke-width: 2;
+    }
+
+    .ciliary-receptor {
+      animation: cilium-shift 7.5s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .cyto-tail {
+      fill: none;
+      stroke: var(--protein-stroke);
+      stroke-width: 5;
+      stroke-linecap: round;
+      animation: tail-open 7.5s ease-in-out infinite;
+    }
+
+    .cyto-site {
+      fill: #ffffff;
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      animation: site-active 7.5s ease-in-out infinite;
+    }
+
+    .effector {
+      animation: effector-dock 7.5s ease-in-out infinite;
+    }
+
+    .effector rect,
+    .effector ellipse {
+      fill: var(--signal);
+      stroke: var(--signal-stroke);
+      stroke-width: 2;
+    }
+
+    .messenger {
+      animation: messenger-active 7.5s ease-in-out infinite;
+    }
+
+    .messenger rect,
+    .messenger ellipse {
+      fill: var(--endpoint);
+      stroke: var(--endpoint-stroke);
+      stroke-width: 2;
+    }
+
+    .cyto-pulse {
+      fill: none;
+      stroke: var(--active);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 32 260;
+      opacity: 0;
+      animation: cyto-pulse 7.5s ease-in-out infinite;
+    }
+
+    .ca-ion {
+      fill: #cce7ff;
+      stroke: #2b79b8;
+      stroke-width: 1.5;
+      opacity: 0;
+      animation: ca-drop 7.5s ease-in-out infinite;
+    }
+
+    .ca-ion.two {
+      animation-delay: 0.35s;
+    }
+
+    .ca-ion.three {
+      animation-delay: 0.7s;
+    }
+
+    .gate-left,
+    .gate-right {
+      fill: var(--protein);
+      stroke: var(--protein-stroke);
+      stroke-width: 2;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .gate-left {
+      animation: gate-left-open 7.5s ease-in-out infinite;
+    }
+
+    .gate-right {
+      animation: gate-right-open 7.5s ease-in-out infinite;
+    }
+
+    .state-note {
+      opacity: 0;
+      animation: note-in 7.5s ease-in-out infinite;
+    }
+
+    .badge {
+      fill: #ffffff;
+      stroke: var(--active);
+      stroke-width: 1.5;
+      opacity: 0;
+      animation: note-in 7.5s ease-in-out infinite;
+      animation-delay: 0.3s;
+    }
+
+    .badge-text {
+      fill: var(--active);
+      font-size: 10px;
+      font-weight: 800;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      opacity: 0;
+      animation: note-in 7.5s ease-in-out infinite;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes ligand-dock {
+      0%, 12% { transform: translate(0, 0); opacity: 1; }
+      30%, 82% { transform: translate(185px, 34px); opacity: 1; }
+      92%, 100% { transform: translate(185px, 34px); opacity: 0; }
+    }
+
+    @keyframes pocket-active {
+      0%, 24%, 92%, 100% { stroke: var(--protein-stroke); filter: none; }
+      34%, 78% { stroke: var(--active); filter: drop-shadow(0 0 5px rgba(22, 160, 133, 0.55)); }
+    }
+
+    @keyframes helix-a-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(-5px, 4px) rotate(-5deg); }
+    }
+
+    @keyframes helix-b-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(2px, -3px) rotate(4deg); }
+    }
+
+    @keyframes helix-c-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(6px, 5px) rotate(6deg); }
+    }
+
+    @keyframes helix-d-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(3px, -2px) rotate(-3deg); }
+    }
+
+    @keyframes helix-e-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(5px, 3px) rotate(4deg); }
+    }
+
+    @keyframes helix-f-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(9px, 7px) rotate(7deg); }
+    }
+
+    @keyframes helix-g-shift {
+      0%, 28%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      40%, 78% { transform: translate(-3px, 4px) rotate(-4deg); }
+    }
+
+    @keyframes tail-open {
+      0%, 30%, 92%, 100% { stroke: var(--protein-stroke); transform: translate(0, 0); }
+      42%, 78% { stroke: var(--active); transform: translate(10px, 7px); filter: drop-shadow(0 0 4px rgba(22, 160, 133, 0.5)); }
+    }
+
+    @keyframes site-active {
+      0%, 30%, 92%, 100% { stroke: var(--protein-stroke); fill: #ffffff; }
+      42%, 78% { stroke: var(--active); fill: var(--active-soft); }
+    }
+
+    @keyframes effector-dock {
+      0%, 34%, 92%, 100% { transform: translate(44px, 24px); opacity: 0.56; }
+      50%, 80% { transform: translate(0, 0); opacity: 1; }
+    }
+
+    @keyframes messenger-active {
+      0%, 50%, 92%, 100% { opacity: 0.62; filter: none; }
+      62%, 82% { opacity: 1; filter: drop-shadow(0 0 5px rgba(192, 57, 43, 0.45)); }
+    }
+
+    @keyframes cyto-pulse {
+      0%, 48% { stroke-dashoffset: 0; opacity: 0; }
+      58% { opacity: 1; }
+      80% { stroke-dashoffset: -230; opacity: 1; }
+      90%, 100% { stroke-dashoffset: -260; opacity: 0; }
+    }
+
+    @keyframes gate-left-open {
+      0%, 30%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      42%, 80% { transform: translate(-8px, 0) rotate(-5deg); }
+    }
+
+    @keyframes gate-right-open {
+      0%, 30%, 92%, 100% { transform: translate(0, 0) rotate(0deg); }
+      42%, 80% { transform: translate(8px, 0) rotate(5deg); }
+    }
+
+    @keyframes ca-drop {
+      0%, 45% { transform: translateY(-42px); opacity: 0; }
+      54% { opacity: 1; }
+      78% { transform: translateY(84px); opacity: 1; }
+      88%, 100% { transform: translateY(105px); opacity: 0; }
+    }
+
+    @keyframes note-in {
+      0%, 54%, 92%, 100% { opacity: 0; }
+      64%, 84% { opacity: 1; }
+    }
+
+    @keyframes timeline-dot {
+      0%, 32%, 100% { background: #b7c3cf; box-shadow: none; }
+      10%, 24% { background: var(--active); box-shadow: 0 0 0 4px rgba(22, 160, 133, 0.16); }
+    }
+
+    @keyframes plume-drift {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.35; }
+      30%, 78% { stroke-dashoffset: -26; opacity: 0.72; }
+    }
+
+    @keyframes peptide-dock {
+      0%, 12% { transform: translate(0, 0); opacity: 1; }
+      30%, 82% { transform: translate(154px, 33px); opacity: 1; }
+      92%, 100% { transform: translate(154px, 33px); opacity: 0; }
+    }
+
+    @keyframes rtk-left-dimer {
+      0%, 24%, 92%, 100% { transform: translate(0, 0); }
+      38%, 80% { transform: translate(18px, 0); }
+    }
+
+    @keyframes rtk-right-dimer {
+      0%, 24%, 92%, 100% { transform: translate(0, 0); }
+      38%, 80% { transform: translate(-18px, 0); }
+    }
+
+    @keyframes phospho-on {
+      0%, 42%, 92%, 100% { opacity: 0; transform: scale(0.7); }
+      52%, 82% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes adaptor-dock {
+      0%, 34%, 92%, 100% { transform: translate(48px, 28px); opacity: 0.58; }
+      50%, 80% { transform: translate(0, 0); opacity: 1; }
+    }
+
+    @keyframes ubiquitin-transfer {
+      0%, 20% { transform: translate(0, 0); opacity: 0.88; }
+      42%, 82% { transform: translate(-168px, 68px); opacity: 1; }
+      92%, 100% { transform: translate(-168px, 68px); opacity: 0; }
+    }
+
+    @keyframes contact-tighten {
+      0%, 26%, 92%, 100% { transform: translate(0, 0); }
+      40%, 80% { transform: translate(-10px, 0); }
+    }
+
+    @keyframes contact-signal {
+      0%, 44% { stroke-dashoffset: 0; opacity: 0; }
+      56% { opacity: 1; }
+      80% { stroke-dashoffset: -170; opacity: 1; }
+      92%, 100% { stroke-dashoffset: -190; opacity: 0; }
+    }
+
+    @keyframes fragment-release {
+      0%, 40% { transform: translate(0, 0); opacity: 0; }
+      50% { opacity: 1; }
+      78% { transform: translate(215px, 68px); opacity: 1; }
+      92%, 100% { transform: translate(215px, 68px); opacity: 0; }
+    }
+
+    @keyframes transcription-signal {
+      0%, 52% { stroke-dashoffset: 0; opacity: 0; }
+      62% { opacity: 1; }
+      82% { stroke-dashoffset: -190; opacity: 1; }
+      92%, 100% { stroke-dashoffset: -210; opacity: 0; }
+    }
+
+    @keyframes cilium-shift {
+      0%, 32%, 92%, 100% { transform: translate(0, 0); filter: none; }
+      46%, 80% { transform: translate(0, -12px); filter: drop-shadow(0 0 4px rgba(22, 160, 133, 0.5)); }
+    }
+
+    @media (max-width: 820px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wrap {
+        width: min(100vw - 20px, 720px);
+      }
+
+      .mast {
+        padding-top: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap mast">
+      <h1>GO-CAM Receptor Animation Gallery Prototype</h1>
+      <p class="lead">Sixteen receptor-centered animation sketches for ligand binding, membrane-spanning conformational change, cytosolic-side activation, adaptor recruitment, post-translational modification, cell-cell signaling, cytokine signaling, Notch cleavage, ciliary signaling, death receptor signaling, integrin adhesion, intracellular pattern recognition, and synaptic scaffolding. These are presentation prototypes; the next step is to regenerate the labels and edges from Barista model exports.</p>
+      <div class="notice">Model export is currently blocked by a bad BARISTA_TOKEN. Model IDs and production titles are included so the gallery can be rewired to exported GO-CAM YAML once a fresh token is available.</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid" aria-label="Animated GO-CAM receptor candidates">
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:69ea894900000468</div>
+          <h2>Activation of OXGR1 by 2-oxoglutarate via G-alpha-q signaling</h2>
+          <p class="summary">A GPCR cartoon: extracellular ligand docks, transmembrane helices shift, and the cytosolic face recruits G-alpha-q.</p>
+          <div class="stage-list">
+            <span>2-oxoglutarate</span><span>OXGR1</span><span>cytosolic opening</span><span>G-alpha-q</span><span>IP3 / DAG</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>bind</span><span>7TM shift</span><span>Gq dock</span><span>IP3/DAG</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="oxgr1-title oxgr1-desc">
+            <title id="oxgr1-title">Animated OXGR1 receptor mechanism sketch</title>
+            <desc id="oxgr1-desc">2-oxoglutarate binds the extracellular side of OXGR1, the receptor changes conformation through the membrane, and G-alpha-q docks on the cytosolic side.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80" rx="0"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <circle cx="102" cy="62" r="18"></circle>
+              <text class="small-label" x="102" y="94">2-OG</text>
+            </g>
+            <ellipse class="binding-pocket" cx="287" cy="96" rx="48" ry="25"></ellipse>
+            <text class="sub" x="287" y="96">ligand pocket</text>
+            <rect class="helix helix-a" x="232" y="128" width="18" height="124" rx="9"></rect>
+            <rect class="helix helix-b" x="256" y="120" width="18" height="138" rx="9"></rect>
+            <rect class="helix helix-c" x="280" y="126" width="18" height="130" rx="9"></rect>
+            <rect class="helix helix-d" x="304" y="122" width="18" height="136" rx="9"></rect>
+            <rect class="helix helix-e" x="328" y="128" width="18" height="124" rx="9"></rect>
+            <rect class="helix helix-f" x="352" y="120" width="18" height="138" rx="9"></rect>
+            <rect class="helix helix-g" x="376" y="126" width="18" height="130" rx="9"></rect>
+            <text class="helix-label" x="241" y="188">1</text>
+            <text class="helix-label" x="265" y="188">2</text>
+            <text class="helix-label" x="289" y="188">3</text>
+            <text class="helix-label" x="313" y="188">4</text>
+            <text class="helix-label" x="337" y="188">5</text>
+            <text class="helix-label" x="361" y="188">6</text>
+            <text class="helix-label" x="385" y="188">7</text>
+            <text class="label" x="313" y="215">OXGR1 7TM</text>
+            <path class="cyto-tail" d="M 304 254 C 322 286, 370 288, 396 260"></path>
+            <circle class="cyto-site" cx="396" cy="260" r="17"></circle>
+            <g class="effector">
+              <ellipse cx="498" cy="275" rx="58" ry="30"></ellipse>
+              <text class="label" x="498" y="268">G-alpha-q</text>
+              <text class="sub" x="498" y="288">docks</text>
+            </g>
+            <path class="cyto-pulse" d="M 540 276 C 575 276, 596 276, 625 276"></path>
+            <g class="messenger">
+              <rect x="624" y="246" width="88" height="58" rx="12"></rect>
+              <text class="label" x="668" y="268">IP3</text>
+              <text class="sub" x="668" y="288">DAG</text>
+            </g>
+            <g class="state-note">
+              <rect x="392" y="56" width="250" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="517" y="75">ligand-bound receptor exposes cytosolic site</text>
+            </g>
+            <circle class="badge" cx="606" cy="318" r="14"></circle>
+            <text class="badge-text" x="606" y="318">1</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:67369e7600001410</div>
+          <h2>Acetylcholine-gated CHRNA7/CHRNB2 receptor and calcium transport</h2>
+          <p class="summary">A ligand-gated channel cartoon: acetylcholine binds outside, the pore opens across the membrane, and calcium enters the cytosol.</p>
+          <div class="stage-list">
+            <span>acetylcholine</span><span>CHRNA7/CHRNB2</span><span>open pore</span><span>Ca2+ influx</span><span>cytosolic calcium</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>ACh bind</span><span>gate opens</span><span>Ca2+ flux</span><span>response</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="chrna7-title chrna7-desc">
+            <title id="chrna7-title">Animated CHRNA7 channel mechanism sketch</title>
+            <desc id="chrna7-desc">Acetylcholine binds the extracellular side of a CHRNA7 and CHRNB2 receptor complex, the channel gate opens, and calcium ions move into the cytosol.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <circle cx="104" cy="62" r="18"></circle>
+              <text class="small-label" x="104" y="94">ACh</text>
+            </g>
+            <circle class="binding-pocket" cx="288" cy="92" r="22"></circle>
+            <circle class="binding-pocket" cx="256" cy="104" r="18"></circle>
+            <circle class="binding-pocket" cx="320" cy="104" r="18"></circle>
+            <circle class="binding-pocket" cx="268" cy="72" r="18"></circle>
+            <circle class="binding-pocket" cx="308" cy="72" r="18"></circle>
+            <text class="sub" x="288" y="92">sites</text>
+            <rect class="gate-left" x="270" y="122" width="34" height="138" rx="15"></rect>
+            <rect class="gate-right" x="326" y="122" width="34" height="138" rx="15"></rect>
+            <rect x="305" y="126" width="20" height="128" rx="10" fill="#ffffff" opacity="0.85"></rect>
+            <text class="label" x="315" y="190">ion pore</text>
+            <text class="sub" x="315" y="216">CHRNA7/CHRNB2</text>
+            <circle class="ca-ion" cx="315" cy="126" r="9"></circle>
+            <circle class="ca-ion two" cx="315" cy="110" r="9"></circle>
+            <circle class="ca-ion three" cx="315" cy="94" r="9"></circle>
+            <g class="messenger">
+              <ellipse cx="474" cy="279" rx="62" ry="30"></ellipse>
+              <text class="label" x="474" y="272">Ca2+</text>
+              <text class="sub" x="474" y="292">cytosolic rise</text>
+            </g>
+            <path class="cyto-pulse" d="M 523 279 C 565 279, 594 279, 642 279"></path>
+            <g class="messenger">
+              <rect x="642" y="250" width="82" height="58" rx="12"></rect>
+              <text class="label" x="683" y="272">cell</text>
+              <text class="sub" x="683" y="292">response</text>
+            </g>
+            <g class="state-note">
+              <rect x="398" y="56" width="226" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="511" y="75">binding opens the transmembrane pore</text>
+            </g>
+            <circle class="badge" cx="610" cy="318" r="14"></circle>
+            <text class="badge-text" x="610" y="318">2</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:69ea894900000425</div>
+          <h2>OR51E2 olfactory signaling after activation by propionate</h2>
+          <p class="summary">A sensory GPCR cartoon: propionate binds the extracellular pocket, the receptor rearranges, and G-alpha-olf engages in the cytosol.</p>
+          <div class="stage-list">
+            <span>propionate</span><span>OR51E2</span><span>cytosolic opening</span><span>G-alpha-olf</span><span>ADCY / cAMP</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>odorant</span><span>7TM shift</span><span>Golf dock</span><span>cAMP</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="or51e2-title or51e2-desc">
+            <title id="or51e2-title">Animated OR51E2 receptor mechanism sketch</title>
+            <desc id="or51e2-desc">Propionate binds OR51E2, causing a transmembrane conformational change and cytosolic G-alpha-olf engagement.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <ellipse cx="102" cy="62" rx="24" ry="16"></ellipse>
+              <text class="small-label" x="102" y="94">propionate</text>
+            </g>
+            <path class="odor-plume" d="M 46 54 C 78 36, 116 42, 150 28"></path>
+            <path class="odor-plume" d="M 44 84 C 84 72, 118 80, 162 62"></path>
+            <path class="odor-plume" d="M 64 118 C 96 106, 132 112, 166 96"></path>
+            <ellipse class="binding-pocket" cx="287" cy="96" rx="48" ry="25"></ellipse>
+            <text class="sub" x="287" y="96">odorant pocket</text>
+            <rect class="helix helix-a" x="236" y="132" width="17" height="118" rx="8.5"></rect>
+            <rect class="helix helix-b" x="260" y="122" width="17" height="136" rx="8.5"></rect>
+            <rect class="helix helix-c" x="284" y="130" width="17" height="126" rx="8.5"></rect>
+            <rect class="helix helix-d" x="308" y="122" width="17" height="136" rx="8.5"></rect>
+            <rect class="helix helix-e" x="332" y="130" width="17" height="126" rx="8.5"></rect>
+            <rect class="helix helix-f" x="356" y="122" width="17" height="136" rx="8.5"></rect>
+            <rect class="helix helix-g" x="380" y="132" width="17" height="118" rx="8.5"></rect>
+            <text class="label" x="316" y="215">OR51E2</text>
+            <path class="cyto-tail" d="M 304 254 C 318 282, 366 288, 394 260"></path>
+            <circle class="cyto-site" cx="394" cy="260" r="17"></circle>
+            <g class="effector">
+              <ellipse cx="500" cy="275" rx="60" ry="30"></ellipse>
+              <text class="label" x="500" y="268">G-alpha-olf</text>
+              <text class="sub" x="500" y="288">docks</text>
+            </g>
+            <path class="cyto-pulse" d="M 548 276 C 580 276, 600 276, 628 276"></path>
+            <g class="messenger">
+              <rect x="628" y="246" width="90" height="58" rx="12"></rect>
+              <text class="label" x="673" y="268">ADCY</text>
+              <text class="sub" x="673" y="288">cAMP</text>
+            </g>
+            <g class="state-note">
+              <rect x="398" y="56" width="230" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="513" y="75">odorant-bound receptor activates G protein</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">3</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:66b5638000001772</div>
+          <h2>Calcitonin ligand activating CALCR receptor</h2>
+          <p class="summary">A hormone receptor cartoon: calcitonin binds the extracellular face, CALCR changes shape, and the cytosolic side initiates signaling.</p>
+          <div class="stage-list">
+            <span>CALCA/CT</span><span>CALCR</span><span>cytosolic opening</span><span>signal relay</span><span>cell response</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>peptide bind</span><span>ECD closes</span><span>cytosol opens</span><span>response</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="calcr-title calcr-desc">
+            <title id="calcr-title">Animated CALCR receptor mechanism sketch</title>
+            <desc id="calcr-desc">Calcitonin binds CALCR outside the cell, the receptor changes conformation through the membrane, and cytosolic signaling begins.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <path class="peptide" d="M 82 62 C 98 42, 124 80, 146 58 C 164 40, 184 70, 204 52"></path>
+            <text class="small-label" x="135" y="96">CALCA/CT peptide</text>
+            <ellipse class="ecd" cx="286" cy="96" rx="72" ry="35"></ellipse>
+            <text class="label" x="286" y="89">CALCR</text>
+            <text class="sub" x="286" y="108">extracellular domain</text>
+            <rect class="helix helix-a" x="254" y="134" width="20" height="116" rx="10"></rect>
+            <rect class="helix helix-b" x="282" y="124" width="20" height="134" rx="10"></rect>
+            <rect class="helix helix-c" x="310" y="124" width="20" height="134" rx="10"></rect>
+            <rect class="helix helix-f" x="338" y="134" width="20" height="116" rx="10"></rect>
+            <text class="sub" x="306" y="190">7TM core</text>
+            <path class="cyto-tail" d="M 286 254 C 306 286, 356 290, 386 260"></path>
+            <circle class="cyto-site" cx="386" cy="260" r="17"></circle>
+            <g class="effector">
+              <ellipse cx="496" cy="275" rx="56" ry="30"></ellipse>
+              <text class="label" x="496" y="268">signal</text>
+              <text class="sub" x="496" y="288">relay</text>
+            </g>
+            <path class="cyto-pulse" d="M 540 276 C 574 276, 596 276, 628 276"></path>
+            <g class="messenger">
+              <rect x="628" y="246" width="90" height="58" rx="12"></rect>
+              <text class="label" x="673" y="268">cell</text>
+              <text class="sub" x="673" y="288">response</text>
+            </g>
+            <g class="state-note">
+              <rect x="398" y="56" width="224" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="510" y="75">hormone binding opens cytosolic face</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">4</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:62b4ffe300004795</div>
+          <h2>Insulin receptor signaling pathway</h2>
+          <p class="summary">A receptor tyrosine kinase archetype: insulin brings receptor halves together, cytosolic tails phosphorylate, and IRS signaling docks.</p>
+          <div class="stage-list">
+            <span>insulin</span><span>INSR dimer</span><span>phosphorylation</span><span>IRS docking</span><span>PI3K/AKT</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>insulin</span><span>dimerize</span><span>pY sites</span><span>IRS dock</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="insr-title insr-desc">
+            <title id="insr-title">Animated insulin receptor dimerization sketch</title>
+            <desc id="insr-desc">Insulin binds extracellular receptor domains, INSR dimerizes, cytosolic tyrosine sites are phosphorylated, and IRS docks.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <ellipse cx="104" cy="64" rx="28" ry="18"></ellipse>
+              <text class="small-label" x="104" y="98">insulin</text>
+            </g>
+            <g class="rtk-left">
+              <ellipse cx="272" cy="92" rx="38" ry="28"></ellipse>
+              <rect x="260" y="124" width="24" height="130" rx="12"></rect>
+              <path class="cyto-tail" d="M 272 254 C 264 278, 248 292, 230 306"></path>
+            </g>
+            <g class="rtk-right">
+              <ellipse cx="360" cy="92" rx="38" ry="28"></ellipse>
+              <rect x="348" y="124" width="24" height="130" rx="12"></rect>
+              <path class="cyto-tail" d="M 360 254 C 372 278, 388 292, 410 306"></path>
+            </g>
+            <text class="label" x="316" y="190">INSR</text>
+            <circle class="phospho" cx="246" cy="287" r="8"></circle>
+            <circle class="phospho" cx="392" cy="287" r="8"></circle>
+            <circle class="phospho" cx="414" cy="304" r="8"></circle>
+            <g class="effector">
+              <rect x="466" y="258" width="86" height="46" rx="13"></rect>
+              <text class="label" x="509" y="274">IRS</text>
+              <text class="sub" x="509" y="292">docks</text>
+            </g>
+            <path class="cyto-pulse" d="M 552 281 C 586 281, 606 281, 638 281"></path>
+            <g class="messenger">
+              <rect x="638" y="252" width="84" height="58" rx="12"></rect>
+              <text class="label" x="680" y="274">PI3K</text>
+              <text class="sub" x="680" y="294">AKT</text>
+            </g>
+            <g class="state-note">
+              <rect x="405" y="56" width="224" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="517" y="75">dimerization exposes phosphotyrosine docking sites</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">5</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:6413ac9800000256</div>
+          <h2>MYD88-dependent TLR4 signaling leading to autophagy activation</h2>
+          <p class="summary">An innate immune adaptor archetype: ligand-bound TLR4 exposes a cytosolic TIR surface and recruits MYD88 to launch downstream signaling.</p>
+          <div class="stage-list">
+            <span>LPS-like ligand</span><span>TLR4</span><span>TIR surface</span><span>MYD88</span><span>autophagy</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>ligand</span><span>TIR opens</span><span>MYD88</span><span>signal</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="tlr4-title tlr4-desc">
+            <title id="tlr4-title">Animated TLR4 adaptor recruitment sketch</title>
+            <desc id="tlr4-desc">A ligand binds TLR4 outside the cell, a cytosolic TIR site is exposed, MYD88 docks, and downstream autophagy signaling is activated.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <rect x="74" y="50" width="58" height="28" rx="14" fill="var(--ligand)" stroke="var(--ligand-stroke)" stroke-width="2"></rect>
+              <text class="small-label" x="103" y="96">LPS</text>
+            </g>
+            <ellipse class="binding-pocket" cx="288" cy="88" rx="70" ry="32"></ellipse>
+            <text class="label" x="288" y="84">TLR4</text>
+            <text class="sub" x="288" y="104">ectodomain</text>
+            <rect class="single-pass helix-c" x="278" y="124" width="24" height="130" rx="12"></rect>
+            <ellipse class="cyto-site" cx="290" cy="270" rx="42" ry="23"></ellipse>
+            <text class="sub" x="290" y="270">TIR</text>
+            <g class="adaptor">
+              <ellipse cx="438" cy="278" rx="56" ry="30"></ellipse>
+              <text class="label" x="438" y="271">MYD88</text>
+              <text class="sub" x="438" y="291">adaptor</text>
+            </g>
+            <path class="cyto-pulse" d="M 490 279 C 540 279, 570 279, 620 279"></path>
+            <g class="messenger">
+              <rect x="620" y="250" width="104" height="58" rx="12"></rect>
+              <text class="label" x="672" y="272">autophagy</text>
+              <text class="sub" x="672" y="292">activation</text>
+            </g>
+            <g class="state-note">
+              <rect x="405" y="56" width="230" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="520" y="75">ligand-bound TLR4 recruits a cytosolic adaptor</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">6</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:69d8496c00001257</div>
+          <h2>Activation of cGAS-STING signaling following STING1 ubiquitination by TRIM69</h2>
+          <p class="summary">A post-translational activation archetype: TRIM69 places ubiquitin on STING1 at the membrane, creating an active signaling state.</p>
+          <div class="stage-list">
+            <span>TRIM69</span><span>ubiquitin</span><span>STING1</span><span>TBK1</span><span>IFN response</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>E3 engages</span><span>ubiquitin</span><span>STING active</span><span>TBK1</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="sting-title sting-desc">
+            <title id="sting-title">Animated STING ubiquitination sketch</title>
+            <desc id="sting-desc">TRIM69 transfers ubiquitin marks to STING1 at a membrane, activating downstream cGAS-STING signaling.</desc>
+            <rect x="0" y="0" width="760" height="112" fill="var(--cyto)"></rect>
+            <rect x="0" y="112" width="760" height="90" fill="#f2efe8"></rect>
+            <rect x="0" y="202" width="760" height="158" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">cytosol</text>
+            <text class="zone-label" x="18" y="143">ER / signaling membrane</text>
+            <rect class="membrane-band" x="0" y="142" width="760" height="60"></rect>
+            <line class="membrane-line" x1="22" y1="158" x2="738" y2="158"></line>
+            <line class="membrane-line" x1="22" y1="188" x2="738" y2="188"></line>
+            <g class="effector">
+              <rect x="118" y="52" width="92" height="48" rx="14"></rect>
+              <text class="label" x="164" y="69">TRIM69</text>
+              <text class="sub" x="164" y="88">E3 ligase</text>
+            </g>
+            <circle class="ubiquitin" cx="346" cy="58" r="11"></circle>
+            <circle class="ubiquitin two" cx="374" cy="58" r="11"></circle>
+            <circle class="ubiquitin three" cx="402" cy="58" r="11"></circle>
+            <rect class="single-pass helix-b" x="310" y="124" width="24" height="106" rx="12"></rect>
+            <rect class="single-pass helix-c" x="350" y="124" width="24" height="106" rx="12"></rect>
+            <path class="cyto-tail" d="M 322 230 C 338 258, 374 258, 390 230"></path>
+            <ellipse class="cyto-site" cx="356" cy="236" rx="54" ry="24"></ellipse>
+            <text class="label" x="356" y="236">STING1</text>
+            <circle class="phospho" cx="316" cy="236" r="8"></circle>
+            <circle class="phospho" cx="338" cy="254" r="8"></circle>
+            <circle class="phospho" cx="378" cy="254" r="8"></circle>
+            <g class="adaptor">
+              <ellipse cx="500" cy="278" rx="50" ry="28"></ellipse>
+              <text class="label" x="500" y="271">TBK1</text>
+              <text class="sub" x="500" y="290">kinase</text>
+            </g>
+            <path class="cyto-pulse" d="M 548 278 C 582 278, 604 278, 640 278"></path>
+            <g class="messenger">
+              <rect x="640" y="250" width="86" height="58" rx="12"></rect>
+              <text class="label" x="683" y="272">IFN</text>
+              <text class="sub" x="683" y="292">response</text>
+            </g>
+            <g class="state-note">
+              <rect x="432" y="52" width="250" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="557" y="71">ubiquitin marks switch STING1 into an active scaffold</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">7</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:685de18700003315</div>
+          <h2>Stimulation of T cell receptor signaling by CD28 following binding to CD80</h2>
+          <p class="summary">A cell-cell contact archetype: CD80 on an antigen-presenting cell engages CD28 on a T cell and triggers cytosolic costimulatory signaling.</p>
+          <div class="stage-list">
+            <span>CD80</span><span>CD28</span><span>cell contact</span><span>costimulation</span><span>TCR signal</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>contact</span><span>CD80/CD28</span><span>costim</span><span>T cell</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="cd28-title cd28-desc">
+            <title id="cd28-title">Animated CD28 costimulation sketch</title>
+            <desc id="cd28-desc">An antigen-presenting cell contacts a T cell; CD80 binds CD28 and a costimulatory signal propagates into the T cell.</desc>
+            <rect x="0" y="0" width="360" height="360" fill="#f4f8fb"></rect>
+            <rect x="400" y="0" width="360" height="360" fill="#fff7ee"></rect>
+            <text class="zone-label" x="28" y="32">antigen-presenting cell</text>
+            <text class="zone-label" x="520" y="32">T cell cytosol</text>
+            <ellipse class="contact-cell" cx="238" cy="186" rx="150" ry="126"></ellipse>
+            <ellipse class="contact-cell contact-pair" cx="520" cy="186" rx="150" ry="126"></ellipse>
+            <line x1="378" y1="62" x2="378" y2="310" stroke="#c7d0d8" stroke-width="3" stroke-dasharray="7 8"></line>
+            <g class="contact-pair">
+              <rect x="320" y="146" width="70" height="46" rx="13" fill="var(--ligand)" stroke="var(--ligand-stroke)" stroke-width="2"></rect>
+              <text class="label" x="355" y="162">CD80</text>
+              <text class="sub" x="355" y="180">APC</text>
+              <rect x="392" y="146" width="70" height="46" rx="13" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <text class="label" x="427" y="162">CD28</text>
+              <text class="sub" x="427" y="180">T cell</text>
+            </g>
+            <ellipse class="cyto-site" cx="492" cy="230" rx="44" ry="22"></ellipse>
+            <text class="sub" x="492" y="230">tail</text>
+            <path class="contact-signal" d="M 512 232 C 560 238, 598 250, 646 282"></path>
+            <g class="effector">
+              <rect x="626" y="252" width="92" height="56" rx="13"></rect>
+              <text class="label" x="672" y="274">TCR</text>
+              <text class="sub" x="672" y="294">boost</text>
+            </g>
+            <g class="state-note">
+              <rect x="256" y="58" width="246" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="379" y="77">cell-cell ligand/receptor contact triggers costimulation</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">8</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:66e382fb00001606</div>
+          <h2>Hepcidin induction by BMP6 signaling</h2>
+          <p class="summary">A serine/threonine kinase receptor archetype: BMP6 bridges receptor subunits, cytosolic kinase domains activate, and SMAD carries the signal toward transcription.</p>
+          <div class="stage-list">
+            <span>BMP6</span><span>type I/II receptor</span><span>kinase domains</span><span>SMAD</span><span>hepcidin</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>BMP6 bind</span><span>receptor pair</span><span>SMAD</span><span>transcribe</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="bmp6-title bmp6-desc">
+            <title id="bmp6-title">Animated BMP6 receptor signaling sketch</title>
+            <desc id="bmp6-desc">BMP6 binds a pair of membrane receptors, activating cytosolic kinase domains and SMAD-mediated transcriptional output.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <ellipse cx="104" cy="62" rx="28" ry="18"></ellipse>
+              <text class="small-label" x="104" y="96">BMP6</text>
+            </g>
+            <g class="rtk-left">
+              <ellipse cx="260" cy="92" rx="34" ry="26"></ellipse>
+              <rect x="250" y="126" width="20" height="126" rx="10"></rect>
+              <ellipse class="cyto-site" cx="260" cy="276" rx="38" ry="22"></ellipse>
+            </g>
+            <g class="rtk-right">
+              <ellipse cx="356" cy="92" rx="34" ry="26"></ellipse>
+              <rect x="346" y="126" width="20" height="126" rx="10"></rect>
+              <ellipse class="cyto-site" cx="356" cy="276" rx="38" ry="22"></ellipse>
+            </g>
+            <text class="label" x="308" y="190">BMP receptor</text>
+            <circle class="phospho" cx="278" cy="276" r="8"></circle>
+            <circle class="phospho" cx="338" cy="276" r="8"></circle>
+            <g class="adaptor">
+              <ellipse cx="486" cy="278" rx="52" ry="28"></ellipse>
+              <text class="label" x="486" y="271">SMAD</text>
+              <text class="sub" x="486" y="290">activated</text>
+            </g>
+            <path class="transcription-signal" d="M 532 278 C 570 268, 598 246, 632 218"></path>
+            <g class="messenger">
+              <ellipse class="nucleus" cx="678" cy="198" rx="48" ry="34"></ellipse>
+              <text class="label" x="678" y="190">HAMP</text>
+              <text class="sub" x="678" y="210">hepcidin</text>
+            </g>
+            <g class="state-note">
+              <rect x="405" y="56" width="236" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="523" y="75">BMP6 promotes receptor pairing and SMAD activation</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">9</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:6205c24300001663</div>
+          <h2>IL2 signaling pathway</h2>
+          <p class="summary">A cytokine receptor/JAK-STAT archetype: IL2 binds a receptor complex, paired JAK kinases activate, and STAT moves toward the nucleus.</p>
+          <div class="stage-list">
+            <span>IL2</span><span>IL2 receptor</span><span>JAK</span><span>STAT</span><span>transcription</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>IL2 bind</span><span>JAK active</span><span>STAT</span><span>nucleus</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="il2-title il2-desc">
+            <title id="il2-title">Animated IL2 cytokine receptor signaling sketch</title>
+            <desc id="il2-desc">IL2 binds a receptor complex, activating cytosolic JAK kinases and STAT-dependent transcriptional signaling.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <circle cx="104" cy="62" r="18"></circle>
+              <text class="small-label" x="104" y="96">IL2</text>
+            </g>
+            <g class="rtk-left">
+              <rect x="252" y="88" width="38" height="166" rx="18" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <ellipse class="cyto-site" cx="271" cy="278" rx="34" ry="20"></ellipse>
+            </g>
+            <g class="rtk-right">
+              <rect x="332" y="88" width="38" height="166" rx="18" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <ellipse class="cyto-site" cx="351" cy="278" rx="34" ry="20"></ellipse>
+            </g>
+            <text class="label" x="311" y="190">IL2R</text>
+            <text class="sub" x="311" y="216">receptor complex</text>
+            <circle class="phospho" cx="271" cy="278" r="8"></circle>
+            <circle class="phospho" cx="351" cy="278" r="8"></circle>
+            <g class="adaptor">
+              <ellipse cx="470" cy="278" rx="48" ry="28"></ellipse>
+              <text class="label" x="470" y="271">STAT</text>
+              <text class="sub" x="470" y="290">docks</text>
+            </g>
+            <path class="transcription-signal" d="M 514 278 C 558 266, 596 244, 636 216"></path>
+            <ellipse class="nucleus" cx="682" cy="198" rx="48" ry="34"></ellipse>
+            <text class="label" x="682" y="190">gene</text>
+            <text class="sub" x="682" y="210">response</text>
+            <g class="state-note">
+              <rect x="408" y="56" width="224" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="520" y="75">cytokine binding activates receptor-associated JAKs</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">10</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:60ad85f700000309</div>
+          <h2>Notch signaling pathway via N-Dl</h2>
+          <p class="summary">A juxtacrine receptor archetype: Delta on a neighboring cell pulls on Notch, releasing an intracellular fragment that travels to the nucleus.</p>
+          <div class="stage-list">
+            <span>Delta</span><span>Notch</span><span>cleavage</span><span>NICD</span><span>nucleus</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>contact</span><span>pull</span><span>cleave</span><span>NICD</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="notch-title notch-desc">
+            <title id="notch-title">Animated Notch juxtacrine signaling sketch</title>
+            <desc id="notch-desc">Delta ligand on one cell contacts Notch on another cell, triggering receptor cleavage and movement of the Notch intracellular domain toward the nucleus.</desc>
+            <rect x="0" y="0" width="360" height="360" fill="#f4f8fb"></rect>
+            <rect x="400" y="0" width="360" height="360" fill="#fff7ee"></rect>
+            <text class="zone-label" x="28" y="32">Delta-expressing cell</text>
+            <text class="zone-label" x="520" y="32">Notch cell cytosol</text>
+            <ellipse class="contact-cell" cx="230" cy="186" rx="142" ry="126"></ellipse>
+            <ellipse class="contact-cell contact-pair" cx="528" cy="186" rx="150" ry="126"></ellipse>
+            <line x1="378" y1="62" x2="378" y2="310" stroke="#c7d0d8" stroke-width="3" stroke-dasharray="7 8"></line>
+            <g class="contact-pair">
+              <rect x="318" y="132" width="68" height="50" rx="13" fill="var(--ligand)" stroke="var(--ligand-stroke)" stroke-width="2"></rect>
+              <text class="label" x="352" y="150">Delta</text>
+              <text class="sub" x="352" y="169">Dl</text>
+              <rect x="392" y="112" width="38" height="106" rx="18" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <text class="sub" x="411" y="164">Notch</text>
+            </g>
+            <rect class="cleavage-fragment" x="404" y="214" width="34" height="34" rx="10"></rect>
+            <text class="sub" x="421" y="232">NICD</text>
+            <path class="transcription-signal" d="M 438 236 C 500 248, 560 238, 628 206"></path>
+            <ellipse class="nucleus" cx="682" cy="192" rx="48" ry="34"></ellipse>
+            <text class="label" x="682" y="184">CSL</text>
+            <text class="sub" x="682" y="204">targets</text>
+            <g class="state-note">
+              <rect x="250" y="58" width="266" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="383" y="77">ligand pulling releases the intracellular Notch fragment</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">11</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:6516135700000284</div>
+          <h2>Hedgehog signaling in oligodendrocyte maintenance enabled by BOC</h2>
+          <p class="summary">A primary-cilium signaling archetype: Hedgehog binds BOC/PTCH-associated receptors, SMO shifts in the cilium, and GLI output changes.</p>
+          <div class="stage-list">
+            <span>Hedgehog</span><span>BOC/PTCH</span><span>primary cilium</span><span>SMO</span><span>GLI</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>Hh bind</span><span>SMO shift</span><span>GLI</span><span>output</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="hh-title hh-desc">
+            <title id="hh-title">Animated Hedgehog ciliary signaling sketch</title>
+            <desc id="hh-desc">Hedgehog ligand binds a receptor complex at the primary cilium, SMO shifts in the cilium, and GLI signaling output is activated.</desc>
+            <rect x="0" y="0" width="760" height="138" fill="var(--extra)"></rect>
+            <rect x="0" y="210" width="760" height="150" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="232">cell body / cytosol</text>
+            <rect class="membrane-band" x="0" y="138" width="760" height="72"></rect>
+            <line class="membrane-line" x1="22" y1="158" x2="738" y2="158"></line>
+            <line class="membrane-line" x1="22" y1="194" x2="738" y2="194"></line>
+            <path class="cilium" d="M 306 138 C 294 98, 304 55, 338 32 C 374 56, 382 98, 370 138 Z"></path>
+            <g class="ligand">
+              <ellipse cx="104" cy="62" rx="28" ry="18"></ellipse>
+              <text class="small-label" x="104" y="96">Hh</text>
+            </g>
+            <rect class="single-pass helix-a" x="260" y="124" width="22" height="94" rx="11"></rect>
+            <text class="sub" x="271" y="112">BOC</text>
+            <rect class="single-pass helix-b" x="306" y="122" width="22" height="96" rx="11"></rect>
+            <text class="sub" x="317" y="112">PTCH</text>
+            <g class="ciliary-receptor">
+              <rect x="350" y="122" width="22" height="96" rx="11" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <text class="sub" x="361" y="112">SMO</text>
+            </g>
+            <path class="cyto-pulse" d="M 364 228 C 420 254, 490 270, 562 280"></path>
+            <g class="adaptor">
+              <ellipse cx="602" cy="284" rx="48" ry="28"></ellipse>
+              <text class="label" x="602" y="277">GLI</text>
+              <text class="sub" x="602" y="296">output</text>
+            </g>
+            <g class="messenger">
+              <rect x="658" y="256" width="78" height="56" rx="12"></rect>
+              <text class="label" x="697" y="277">cell</text>
+              <text class="sub" x="697" y="296">state</text>
+            </g>
+            <g class="state-note">
+              <rect x="408" y="56" width="238" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="527" y="75">ligand-bound receptor complex changes ciliary SMO signaling</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">12</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:663d668500001551</div>
+          <h2>FASL-FAS interaction leading to apoptosis</h2>
+          <p class="summary">A death receptor archetype: trimeric FASL clusters FAS, the cytosolic death domains assemble a DISC-like complex, and caspase signaling drives apoptotic output.</p>
+          <div class="stage-list">
+            <span>FASL</span><span>FAS</span><span>death domain</span><span>FADD/CASP8</span><span>apoptosis</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>FASL bind</span><span>cluster</span><span>DISC</span><span>caspase</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="fas-title fas-desc">
+            <title id="fas-title">Animated FAS death receptor signaling sketch</title>
+            <desc id="fas-desc">FASL binds and clusters FAS receptors, cytosolic death domains recruit FADD and CASP8, and apoptotic signaling is activated.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular</text>
+            <text class="zone-label" x="18" y="252">cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <g class="ligand">
+              <circle cx="84" cy="58" r="18"></circle>
+              <circle cx="116" cy="58" r="18"></circle>
+              <circle cx="100" cy="88" r="18"></circle>
+              <text class="small-label" x="100" y="122">FASL</text>
+            </g>
+            <g class="rtk-left">
+              <rect x="266" y="104" width="24" height="146" rx="12" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <ellipse class="cyto-site" cx="278" cy="274" rx="36" ry="21"></ellipse>
+            </g>
+            <g class="single-pass">
+              <rect x="316" y="104" width="24" height="146" rx="12"></rect>
+              <ellipse class="cyto-site" cx="328" cy="274" rx="36" ry="21"></ellipse>
+            </g>
+            <g class="rtk-right">
+              <rect x="366" y="104" width="24" height="146" rx="12" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <ellipse class="cyto-site" cx="378" cy="274" rx="36" ry="21"></ellipse>
+            </g>
+            <text class="label" x="328" y="182">FAS</text>
+            <text class="sub" x="328" y="217">death receptors</text>
+            <g class="effector">
+              <rect x="452" y="244" width="106" height="58" rx="13"></rect>
+              <text class="label" x="505" y="264">FADD</text>
+              <text class="sub" x="505" y="285">CASP8</text>
+            </g>
+            <path class="cyto-pulse" d="M 414 274 C 470 292, 536 300, 604 290"></path>
+            <g class="messenger">
+              <ellipse cx="666" cy="286" rx="52" ry="30"></ellipse>
+              <text class="label" x="666" y="278">apoptosis</text>
+              <text class="sub" x="666" y="298">program</text>
+            </g>
+            <g class="state-note">
+              <rect x="414" y="56" width="242" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="535" y="75">ligand clustering exposes cytosolic death-domain sites</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">13</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:645d887900000439</div>
+          <h2>FN1 activates liver autophagy via Itga5:Itgb1 integrin signaling</h2>
+          <p class="summary">An adhesion receptor archetype: extracellular fibronectin engages an integrin pair, cytosolic adaptor tension accumulates, and the downstream state points toward autophagy.</p>
+          <div class="stage-list">
+            <span>FN1</span><span>Itga5:Itgb1</span><span>integrin cluster</span><span>adaptor</span><span>autophagy</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>FN1 bind</span><span>cluster</span><span>adaptor</span><span>autophagy</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="fn1-title fn1-desc">
+            <title id="fn1-title">Animated fibronectin integrin signaling sketch</title>
+            <desc id="fn1-desc">FN1 fibers bind an Itga5:Itgb1 integrin pair, receptor legs cluster across the membrane, and a cytosolic adaptor signal leads toward autophagy.</desc>
+            <rect x="0" y="0" width="760" height="150" fill="var(--extra)"></rect>
+            <rect x="0" y="230" width="760" height="130" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">extracellular matrix</text>
+            <text class="zone-label" x="18" y="252">hepatocyte cytosol</text>
+            <rect class="membrane-band" x="0" y="150" width="760" height="80"></rect>
+            <line class="membrane-line" x1="22" y1="172" x2="738" y2="172"></line>
+            <line class="membrane-line" x1="22" y1="208" x2="738" y2="208"></line>
+            <path class="odor-plume" d="M 64 58 C 134 26, 204 92, 272 52 S 408 70, 482 42"></path>
+            <path class="peptide" d="M 70 100 C 130 82, 180 118, 238 96"></path>
+            <text class="small-label" x="116" y="132">FN1</text>
+            <g class="rtk-left">
+              <path d="M 288 112 C 264 146, 265 194, 300 250" fill="none" stroke="var(--protein-stroke)" stroke-width="12" stroke-linecap="round"></path>
+              <ellipse class="cyto-site" cx="300" cy="274" rx="36" ry="20"></ellipse>
+            </g>
+            <g class="rtk-right">
+              <path d="M 350 112 C 372 146, 371 194, 336 250" fill="none" stroke="var(--protein-stroke)" stroke-width="12" stroke-linecap="round"></path>
+              <ellipse class="cyto-site" cx="336" cy="274" rx="36" ry="20"></ellipse>
+            </g>
+            <ellipse class="binding-pocket" cx="319" cy="114" rx="58" ry="22"></ellipse>
+            <text class="label" x="319" y="176">Itga5:Itgb1</text>
+            <text class="sub" x="319" y="202">integrin pair</text>
+            <g class="adaptor">
+              <rect x="434" y="250" width="104" height="54" rx="13"></rect>
+              <text class="label" x="486" y="270">talin</text>
+              <text class="sub" x="486" y="289">adaptor</text>
+            </g>
+            <path class="cyto-pulse" d="M 368 276 C 426 294, 512 300, 590 286"></path>
+            <g class="messenger">
+              <rect x="628" y="254" width="92" height="58" rx="13"></rect>
+              <text class="label" x="674" y="275">autophagy</text>
+              <text class="sub" x="674" y="294">state</text>
+            </g>
+            <g class="state-note">
+              <rect x="414" y="56" width="246" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="537" y="75">matrix ligand engagement clusters integrin cytosolic tails</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">14</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:641ce4dc00000050</div>
+          <h2>NOD2 response to muramyl dipeptide</h2>
+          <p class="summary">An intracellular pattern-recognition archetype: MDP appears in the cytosol, NOD2 oligomerizes, RIPK2 docks, and NF-kappa-B/MAPK outputs are activated.</p>
+          <div class="stage-list">
+            <span>MDP</span><span>NOD2</span><span>oligomer</span><span>RIPK2</span><span>NF-kappa-B/MAPK</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>MDP sense</span><span>NOD2 cluster</span><span>RIPK2</span><span>output</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="nod2-title nod2-desc">
+            <title id="nod2-title">Animated NOD2 cytosolic signaling sketch</title>
+            <desc id="nod2-desc">Muramyl dipeptide in the cytosol is sensed by NOD2, which clusters and recruits RIPK2 to drive NF-kappa-B and MAPK signaling.</desc>
+            <rect x="0" y="0" width="760" height="360" fill="var(--cyto)"></rect>
+            <text class="zone-label" x="18" y="28">cytosol</text>
+            <path class="odor-plume" d="M 52 80 C 130 58, 196 86, 264 60 S 394 76, 466 54"></path>
+            <g class="ligand">
+              <rect x="86" y="220" width="42" height="28" rx="9" fill="var(--ligand)" stroke="var(--ligand-stroke)" stroke-width="2"></rect>
+              <text class="small-label" x="107" y="264">MDP</text>
+            </g>
+            <g class="rtk-left">
+              <ellipse cx="284" cy="158" rx="46" ry="32" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></ellipse>
+              <text class="label" x="284" y="156">NOD2</text>
+            </g>
+            <g class="single-pass">
+              <ellipse cx="336" cy="218" rx="46" ry="32" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></ellipse>
+              <text class="label" x="336" y="216">NOD2</text>
+            </g>
+            <g class="rtk-right">
+              <ellipse cx="388" cy="158" rx="46" ry="32" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></ellipse>
+              <text class="label" x="388" y="156">NOD2</text>
+            </g>
+            <ellipse class="binding-pocket" cx="336" cy="178" rx="86" ry="62"></ellipse>
+            <text class="sub" x="336" y="246">oligomer</text>
+            <g class="adaptor">
+              <rect x="472" y="166" width="94" height="56" rx="13"></rect>
+              <text class="label" x="519" y="187">RIPK2</text>
+              <text class="sub" x="519" y="207">docks</text>
+            </g>
+            <path class="cyto-pulse" d="M 560 192 C 606 184, 634 160, 670 126"></path>
+            <path class="transcription-signal" d="M 560 206 C 610 236, 644 260, 686 292"></path>
+            <g class="messenger">
+              <ellipse cx="690" cy="116" rx="46" ry="28"></ellipse>
+              <text class="label" x="690" y="108">MAPK</text>
+              <text class="sub" x="690" y="127">kinase</text>
+            </g>
+            <g class="messenger">
+              <rect x="646" y="266" width="88" height="50" rx="12"></rect>
+              <text class="label" x="690" y="284">NF-kB</text>
+              <text class="sub" x="690" y="302">output</text>
+            </g>
+            <g class="state-note">
+              <rect x="234" y="58" width="288" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="378" y="77">cytosolic bacterial fragment sensing builds a signaling hub</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">15</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <div class="model">gomodel:66b5638000002885</div>
+          <h2>NRXN1B-CBLN2-GRID1 trans-synaptic complex regulates NMDAR signaling</h2>
+          <p class="summary">A synaptic scaffolding archetype: presynaptic NRXN1B, cleft CBLN2, and postsynaptic GRID1 form a bridge that coordinates NMDAR-side signaling.</p>
+          <div class="stage-list">
+            <span>NRXN1B</span><span>CBLN2</span><span>GRID1</span><span>NMDAR</span><span>synaptic signal</span>
+          </div>
+          <div class="timeline" aria-label="Animation sequence">
+            <span>bridge</span><span>align</span><span>GRID1</span><span>NMDAR</span>
+          </div>
+        </div>
+        <div class="viz">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="synapse-title synapse-desc">
+            <title id="synapse-title">Animated trans-synaptic receptor scaffold sketch</title>
+            <desc id="synapse-desc">NRXN1B on the presynaptic side, CBLN2 in the synaptic cleft, and GRID1 on the postsynaptic side form a bridge that regulates NMDAR signaling.</desc>
+            <rect x="0" y="0" width="760" height="132" fill="#f4f8fb"></rect>
+            <rect x="0" y="228" width="760" height="132" fill="#fff7ee"></rect>
+            <rect x="0" y="132" width="760" height="96" fill="var(--extra)"></rect>
+            <text class="zone-label" x="18" y="28">presynaptic cell</text>
+            <text class="zone-label" x="18" y="158">synaptic cleft</text>
+            <text class="zone-label" x="18" y="252">postsynaptic cell</text>
+            <rect class="membrane-band" x="0" y="116" width="760" height="16"></rect>
+            <rect class="membrane-band" x="0" y="228" width="760" height="16"></rect>
+            <g class="contact-pair">
+              <rect x="252" y="78" width="34" height="84" rx="16" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <text class="sub" x="269" y="64">NRXN1B</text>
+              <ellipse x="0" y="0" cx="342" cy="174" rx="56" ry="24" fill="var(--ligand)" stroke="var(--ligand-stroke)" stroke-width="2"></ellipse>
+              <text class="label" x="342" y="174">CBLN2</text>
+              <rect x="402" y="196" width="34" height="84" rx="16" fill="var(--protein)" stroke="var(--protein-stroke)" stroke-width="2"></rect>
+              <text class="sub" x="419" y="294">GRID1</text>
+              <line x1="286" y1="132" x2="300" y2="158" stroke="var(--active)" stroke-width="5" stroke-linecap="round"></line>
+              <line x1="386" y1="190" x2="402" y2="228" stroke="var(--active)" stroke-width="5" stroke-linecap="round"></line>
+            </g>
+            <g class="gate-left">
+              <rect x="540" y="198" width="32" height="84" rx="15"></rect>
+            </g>
+            <g class="gate-right">
+              <rect x="590" y="198" width="32" height="84" rx="15"></rect>
+            </g>
+            <text class="label" x="581" y="250">NMDAR</text>
+            <circle class="ca-ion" cx="548" cy="202" r="9"></circle>
+            <circle class="ca-ion two" cx="582" cy="202" r="9"></circle>
+            <circle class="ca-ion three" cx="616" cy="202" r="9"></circle>
+            <path class="contact-signal" d="M 438 248 C 478 256, 514 262, 548 266"></path>
+            <g class="messenger">
+              <rect x="640" y="256" width="88" height="50" rx="12"></rect>
+              <text class="label" x="684" y="274">synaptic</text>
+              <text class="sub" x="684" y="293">output</text>
+            </g>
+            <g class="state-note">
+              <rect x="222" y="32" width="318" height="38" rx="19" fill="#ffffff" stroke="#a9bbc9"></rect>
+              <text class="small-label" x="381" y="51">trans-synaptic scaffold aligns receptors across the cleft</text>
+            </g>
+            <circle class="badge" cx="608" cy="318" r="14"></circle>
+            <text class="badge-text" x="608" y="318">16</text>
+          </svg>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
