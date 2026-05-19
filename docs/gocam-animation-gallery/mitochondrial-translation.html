@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mitochondrial translation in S. pombe — GO-CAM pathway figure</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b2530;
+      --muted: #5c6975;
+      --line: #d7dde3;
+      --panel: #ffffff;
+      --page: #f4f6f8;
+
+      /* molecular-form palette: the form a has_input / has_output
+         entity takes is read off the activity's GO function */
+      --dna: #475569;      --dna-fill: #e7ecf2;
+      --rna: #0f766e;      --rna-fill: #d3f3ee;
+      --prot: #4338ca;     --prot-fill: #e3e6fd;
+      --chem: #b45309;     --chem-fill: #fdeccb;
+
+      --act-stroke: #2b6cb0;
+      --act-fill: #ffffff;
+      --cplx-stroke: #7e22ce;  --cplx-fill: #f4e9fe;
+      --ribo-stroke: #6b7280;  --ribo-fill: #eef1f4;
+
+      --pos: #1f9d63;
+      --neg: #c0392b;
+      --flow: #9aa6b2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    header { border-bottom: 1px solid var(--line); background: #ffffff; }
+    .wrap  { width: min(1320px, calc(100vw - 32px)); margin: 0 auto; }
+    .mast  { padding: 28px 0 22px; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+      line-height: 1.14;
+      letter-spacing: -0.01em;
+    }
+
+    .lead { max-width: 940px; margin: 10px 0 0; color: var(--muted); font-size: 1rem; }
+
+    .notice {
+      margin-top: 16px; padding: 11px 14px;
+      border: 1px solid #c6d8ea; background: #eef6ff;
+      border-radius: 6px; color: #244766; font-size: 0.93rem;
+    }
+    .notice b { color: #173754; }
+
+    main { padding: 24px 0 40px; }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+    }
+
+    .meta { padding: 18px 18px 14px; border-bottom: 1px solid var(--line); }
+    .meta h2 { margin: 0; font-size: 1.06rem; line-height: 1.25; }
+
+    .model {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-bottom: 7px; color: #425466;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+    }
+    .summary { margin: 8px 0 0; color: var(--muted); font-size: 0.93rem; max-width: 1020px; }
+
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px;
+    }
+    .legend span {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--line); border-radius: 999px;
+      padding: 4px 11px 4px 9px; background: #fafbfc;
+      color: #394956; font-size: 0.78rem; white-space: nowrap;
+    }
+    .legend i {
+      width: 22px; height: 0; border-top-width: 3px; border-top-style: solid;
+      display: inline-block; border-radius: 2px;
+    }
+    .legend .sw { width: 13px; height: 13px; border-radius: 3px; border: 1px solid rgba(0,0,0,.25); }
+    .key-dna  { border-top-color: var(--dna); }
+    .key-rna  { border-top-color: var(--rna); }
+    .key-prot { border-top-color: var(--prot); }
+    .key-chem { border-top-color: var(--chem); }
+    .key-pos  { border-top-color: var(--pos); }
+    .key-neg  { border-top-color: var(--neg); }
+    .key-flow { border-top-color: var(--flow); border-top-style: dashed; }
+
+    .viz { padding: 14px; background: #fbfcfd; }
+
+    svg.figure {
+      display: block; width: 100%; height: auto;
+      aspect-ratio: 1340 / 1010;
+      border: 1px solid #e7ebef; background: #ffffff; border-radius: 8px;
+    }
+
+    .band-label {
+      fill: #56636f; font-size: 13px; font-weight: 800;
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .band-sub { fill: #8a96a1; font-size: 10.5px; font-weight: 600; }
+
+    .gene-sym  { fill: var(--ink); font-size: 14px; font-weight: 800; text-anchor: middle; }
+    .ent-name  { font-size: 11px; font-weight: 700; text-anchor: middle; }
+    .ent-id    { fill: #7c8893; font-size: 9.5px; font-weight: 600; text-anchor: middle; }
+
+    .act rect, .act .body {
+      fill: var(--act-fill); stroke: var(--act-stroke); stroke-width: 1.6;
+    }
+    .act .gp   { fill: var(--ink); font-size: 13px; font-weight: 800; text-anchor: middle; }
+    .act .mf   { fill: #41506b; font-size: 10px; font-weight: 650; text-anchor: middle; }
+    .act .go   { fill: #93a0ab; font-size: 9px; font-weight: 600; text-anchor: middle; font-family: ui-monospace, Menlo, monospace; }
+
+    .ribo .lsu, .ribo .ssu { stroke: var(--ribo-stroke); stroke-width: 1.6; }
+    .ribo .lsu { fill: #dfe5ec; }
+    .ribo .ssu { fill: #eef1f4; }
+    .ribo .rtxt { fill: #4b5563; font-weight: 800; text-anchor: middle; }
+    .ribo .rsub { fill: #6b7280; font-size: 9.5px; font-weight: 600; text-anchor: middle; }
+
+    .cplx rect { fill: var(--cplx-fill); stroke: var(--cplx-stroke); stroke-width: 1.6; }
+    .cplx .ct  { fill: #5b21b6; font-size: 12px; font-weight: 800; text-anchor: middle; }
+    .cplx .cs  { fill: #7c4bbf; font-size: 9.5px; font-weight: 600; text-anchor: middle; }
+
+    /* entity glyph fills */
+    .g-dna  { fill: var(--dna-fill);  stroke: var(--dna);  stroke-width: 1.6; }
+    .g-rna-fill { fill: var(--rna-fill); }
+    .g-prot { fill: var(--prot-fill); stroke: var(--prot); stroke-width: 1.6; }
+    .g-chem { fill: var(--chem-fill); stroke: var(--chem); stroke-width: 1.6; }
+    .strand { fill: none; stroke: var(--dna); stroke-width: 2; opacity: .8; }
+    .rna-strand { fill: none; stroke: var(--rna); stroke-width: 2.4; stroke-linecap: round; }
+    .nm-dna  { fill: var(--dna); }
+    .nm-rna  { fill: var(--rna); }
+    .nm-prot { fill: var(--prot); }
+    .nm-chem { fill: var(--chem); }
+
+    /* edges */
+    .e { fill: none; stroke-width: 2.1; }
+    .e-rna  { stroke: var(--rna); }
+    .e-prot { stroke: var(--prot); }
+    .e-chem { stroke: var(--chem); }
+    .e-dna  { stroke: var(--dna); }
+    .e-flow { stroke: var(--flow); stroke-width: 1.7; stroke-dasharray: 2 4; opacity: .85; }
+    .e-pos  { stroke: var(--pos); stroke-width: 2.1; }
+    .e-neg  { stroke: var(--neg); stroke-width: 2.1; }
+    .elab   { font-size: 9.5px; font-weight: 700; }
+
+    .spine-pulse {
+      stroke-dasharray: 5 11; opacity: .55;
+      animation: spineflow 6.5s linear infinite;
+    }
+    @keyframes spineflow { to { stroke-dashoffset: -64; } }
+
+    .act .halo {
+      fill: none; stroke: var(--act-stroke); stroke-width: 1.4;
+      opacity: 0; animation: halo 7s ease-in-out infinite;
+    }
+    @keyframes halo {
+      0%, 62%, 100% { opacity: 0; }
+      70%, 86%      { opacity: .35; }
+    }
+    .seq-badge circle { fill: #1b2530; }
+    .seq-badge text   { fill: #fff; font-size: 11px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+
+    .footnote {
+      padding: 14px 18px 18px; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .footnote code { font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; color: #44515f; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap mast">
+      <h1>Mitochondrial gene expression in <i>Schizosaccharomyces pombe</i></h1>
+      <p class="lead">
+        A single pathway figure rendered faithfully from the GO-CAM causal model. The mitochondrial central
+        dogma runs top&#8209;to&#8209;bottom: an mtDNA locus &rarr; multicistronic primary transcript &rarr; mature
+        mRNA &rarr; nascent polypeptide &rarr; respiratory&#8209;chain complex. Every <b>has_input</b> and
+        <b>has_output</b> of each molecular activity is drawn as a coloured, shaped token, so the reader can see
+        at a glance which <i>molecular form</i> of a gene each regulator acts on.
+      </p>
+      <div class="notice">
+        Edge colour encodes the molecular form of the entity, which is licensed by the activity's GO molecular
+        function rather than stored on the entity itself: a <b>translation&#8209;activator</b>, <b>mRNA&#8209;binding</b>
+        or <b>exoribonuclease</b> activity acts on the <span style="color:var(--rna)"><b>mRNA</b></span>;
+        a <b>peptidyl&#8209;transferase</b>, <b>release&#8209;factor</b> or <b>complex&#8209;assembly</b> activity acts
+        on the <span style="color:var(--prot)"><b>protein</b></span>;
+        a <b>DNA&#8209;binding transcription&nbsp;factor</b> would act on the
+        <span style="color:var(--dna)"><b>gene/DNA</b></span> (no such activity occurs in this model).
+        The same locus (e.g.&nbsp;<i>cox1</i>) therefore appears both as an mRNA input to translational
+        activators and as a protein output of the ribosome.
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="card">
+      <div class="meta">
+        <div class="model">gomodel:67086be200000519</div>
+        <h2>mitochondrial translation (GO:0032543) &middot; <i>S.&nbsp;pombe</i> (NCBITaxon:4896)</h2>
+        <p class="summary">
+          35-activity production model curated by PomBase (last modified 2026-05-17; primary reference
+          PMID:38117001). This view foregrounds the regulatory inputs and outputs &mdash; mRNA-specific
+          translational activators, the initiation/elongation/termination machinery, and the hand-off of
+          finished subunits to respiratory&#8209;chain assembly.
+        </p>
+        <div class="legend">
+          <span><i class="key-rna"></i> mRNA / transcript input&middot;output</span>
+          <span><i class="key-prot"></i> protein input&middot;output</span>
+          <span><i class="key-chem"></i> tRNA / cofactor (ChEBI)</span>
+          <span><i class="key-dna"></i> gene / DNA <span style="color:#9aa6b2">(not used here)</span></span>
+          <span><i class="key-pos"></i> directly positively regulates</span>
+          <span><i class="key-neg"></i> directly negatively regulates</span>
+          <span><i class="key-flow"></i> causal flow (upstream of / provides input for)</span>
+        </div>
+      </div>
+
+      <div class="viz">
+        <svg class="figure" viewBox="0 0 1340 1010" role="img"
+             aria-labelledby="fig-title fig-desc">
+          <title id="fig-title">Mitochondrial translation GO-CAM pathway figure</title>
+          <desc id="fig-desc">
+            Top-to-bottom mitochondrial central dogma for S. pombe. Band 1: mtDNA loci cox1, cob1, atp9.
+            Band 2: rpm1 exoribonuclease processes the primary transcript into mature mRNAs. Band 3: the
+            mitoribosome engine with mRNA-specific translational activators, initiation, elongation,
+            termination and quality-control factors. Band 4: nascent polypeptides. Band 5: respiratory
+            chain complex III and IV assembly. has_input and has_output edges are coloured by molecular form.
+          </desc>
+
+          <defs>
+            <marker id="ar-rna"  viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#0f766e"></path>
+            </marker>
+            <marker id="ar-prot" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#4338ca"></path>
+            </marker>
+            <marker id="ar-chem" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#b45309"></path>
+            </marker>
+            <marker id="ar-pos"  viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#1f9d63"></path>
+            </marker>
+            <marker id="ar-flow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#9aa6b2"></path>
+            </marker>
+            <marker id="bar-neg" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <rect x="0" y="0" width="3" height="10" fill="#c0392b"></rect>
+            </marker>
+            <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="1.4" stdDeviation="1.8" flood-color="#1b2530" flood-opacity="0.13"></feDropShadow>
+            </filter>
+          </defs>
+
+          <!-- ===================== LANE BANDS ===================== -->
+          <rect x="0" y="48"  width="1340" height="118" fill="#f3f5f8"></rect>
+          <rect x="0" y="166" width="1340" height="250" fill="#eefaf7"></rect>
+          <rect x="0" y="416" width="1340" height="372" fill="#ffffff"></rect>
+          <rect x="0" y="788" width="1340" height="104" fill="#eef0fd"></rect>
+          <rect x="0" y="892" width="1340" height="118" fill="#f6edfe"></rect>
+
+          <text class="band-label" x="22" y="76">1 &nbsp;Mitochondrial genome &mdash; DNA</text>
+          <text class="band-sub"   x="22" y="93">mtDNA loci (each gene also exists later as mRNA, then protein)</text>
+
+          <text class="band-label" x="22" y="194">2 &nbsp;Transcription &amp; RNA processing &mdash; RNA</text>
+          <text class="band-sub"   x="22" y="211">multicistronic primary transcript &rarr; mature monocistronic mRNAs</text>
+
+          <text class="band-label" x="22" y="444">3 &nbsp;Translation &mdash; the mitoribosome engine</text>
+          <text class="band-sub"   x="22" y="461">mRNA-specific activation &middot; initiation &middot; elongation &middot; termination &middot; QC</text>
+
+          <text class="band-label" x="22" y="816">4 &nbsp;Nascent polypeptides &mdash; protein</text>
+
+          <text class="band-label" x="22" y="920">5 &nbsp;Respiratory-chain complex assembly</text>
+
+          <!-- spine guide (faint, behind everything; skips the dense engine) -->
+          <line x1="670" y1="130" x2="670" y2="410" stroke="#e6ebf0" stroke-width="2"></line>
+          <line x1="670" y1="800" x2="670" y2="945" stroke="#e6ebf0" stroke-width="2"></line>
+
+          <!-- ===================== BAND 1 : DNA ===================== -->
+          <!-- cox1 locus -->
+          <g transform="translate(330,108)">
+            <rect class="g-dna" x="-78" y="-22" width="156" height="44" rx="6"></rect>
+            <line class="strand" x1="-66" y1="-9" x2="66" y2="-9"></line>
+            <line class="strand" x1="-66" y1="9"  x2="66" y2="9"></line>
+            <text class="gene-sym nm-dna" x="0" y="5">cox1</text>
+          </g>
+          <!-- cob1 locus -->
+          <g transform="translate(670,108)">
+            <rect class="g-dna" x="-78" y="-22" width="156" height="44" rx="6"></rect>
+            <line class="strand" x1="-66" y1="-9" x2="66" y2="-9"></line>
+            <line class="strand" x1="-66" y1="9"  x2="66" y2="9"></line>
+            <text class="gene-sym nm-dna" x="0" y="5">cob1</text>
+          </g>
+          <!-- atp9 locus -->
+          <g transform="translate(1010,108)">
+            <rect class="g-dna" x="-78" y="-22" width="156" height="44" rx="6"></rect>
+            <line class="strand" x1="-66" y1="-9" x2="66" y2="-9"></line>
+            <line class="strand" x1="-66" y1="9"  x2="66" y2="9"></line>
+            <text class="gene-sym nm-dna" x="0" y="5">atp9</text>
+          </g>
+          <text class="ent-id" x="1212" y="104" style="text-anchor:start">+ cox2, cox3,</text>
+          <text class="ent-id" x="1212" y="118" style="text-anchor:start">atp6, atp8, var1</text>
+          <text class="ent-id" x="1212" y="132" style="text-anchor:start">(8 mtDNA mRNAs)</text>
+
+          <!-- DNA -> primary transcript -->
+          <path class="e e-dna" d="M330 130 L330 196" marker-end="url(#ar-rna)"></path>
+          <path class="e e-dna" d="M670 130 L670 196" marker-end="url(#ar-rna)"></path>
+          <path class="e e-dna" d="M1010 130 L1010 196" marker-end="url(#ar-rna)"></path>
+
+          <!-- ===================== BAND 2 : RNA ===================== -->
+          <!-- primary transcript -->
+          <path class="rna-strand" d="M250 224 q 18 -13 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0
+                                       t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0
+                                       t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0"></path>
+          <text class="ent-name nm-rna" x="558" y="248">primary (multicistronic) transcript</text>
+
+          <!-- rpm1 processing activity -->
+          <path class="e e-rna" d="M558 256 L640 296" marker-end="url(#ar-rna)"></path>
+          <text class="elab nm-rna" x="556" y="282">has_input</text>
+          <g class="act" transform="translate(670,318)" filter="url(#soft)">
+            <rect class="body" x="-118" y="-30" width="236" height="60" rx="9"></rect>
+            <rect class="halo" x="-122" y="-34" width="244" height="68" rx="11"></rect>
+            <text class="gp" x="0" y="-9">rpm1 &nbsp;<tspan class="ent-id" style="font-size:9px">PomBase:SPCC1322.01</tspan></text>
+            <text class="mf" x="0" y="6">exoribonuclease II activity</text>
+            <text class="go" x="0" y="20">GO:0008859 &middot; mt mRNA 3&prime;-end processing</text>
+          </g>
+          <g class="seq-badge"><circle cx="565" cy="318" r="13"></circle><text x="565" y="318">1</text></g>
+
+          <!-- rpm1 -> mature mRNAs (has_output) -->
+          <path class="e e-rna" d="M610 346 C 470 370, 360 350, 332 374" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M670 348 L670 374" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M730 346 C 870 370, 980 350, 1008 374" marker-end="url(#ar-rna)"></path>
+          <text class="elab nm-rna" x="700" y="364">has_output: 8 mature mRNAs</text>
+
+          <!-- mature mRNA tokens -->
+          <g transform="translate(330,392)">
+            <rect class="g-rna-fill" x="-86" y="-18" width="172" height="38" rx="19" stroke="var(--rna)" stroke-width="1.6"></rect>
+            <path class="rna-strand" d="M-70 1 q 10 -8 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" stroke-width="1.8"></path>
+            <text class="ent-name nm-rna" x="0" y="-23">cox1 mRNA</text>
+            <text class="ent-id" x="0" y="33">PomBase:cox1.1</text>
+          </g>
+          <g transform="translate(670,392)">
+            <rect class="g-rna-fill" x="-86" y="-18" width="172" height="38" rx="19" stroke="var(--rna)" stroke-width="1.6"></rect>
+            <path class="rna-strand" d="M-70 1 q 10 -8 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" stroke-width="1.8"></path>
+            <text class="ent-name nm-rna" x="0" y="-23">cob1 mRNA</text>
+            <text class="ent-id" x="0" y="33">PomBase:cob1.1</text>
+          </g>
+          <g transform="translate(1010,392)">
+            <rect class="g-rna-fill" x="-86" y="-18" width="172" height="38" rx="19" stroke="var(--rna)" stroke-width="1.6"></rect>
+            <path class="rna-strand" d="M-70 1 q 10 -8 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" stroke-width="1.8"></path>
+            <text class="ent-name nm-rna" x="0" y="-23">atp9 mRNA</text>
+            <text class="ent-id" x="0" y="33">PomBase:atp9.1</text>
+          </g>
+
+          <!-- ===================== BAND 3 : TRANSLATION ENGINE ===================== -->
+          <!-- mRNA -> translational activators (has_input mRNA) -->
+          <path class="e e-rna" d="M300 410 C 270 470, 240 484, 232 504" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M360 410 C 392 470, 408 484, 412 504" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M636 410 C 600 462, 576 480, 572 504" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M670 412 L670 504" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M704 410 C 740 462, 762 480, 766 504" marker-end="url(#ar-rna)"></path>
+          <path class="e e-rna" d="M1010 412 L1010 504" marker-end="url(#ar-rna)"></path>
+          <text class="elab nm-rna" x="246" y="452">has_input cox1.1</text>
+          <text class="elab nm-rna" x="612" y="448">has_input cob1.1</text>
+          <text class="elab nm-rna" x="1018" y="452">has_input atp9.1</text>
+
+          <!-- activator nodes : translation activator activity GO:0008494 -->
+          <g class="act" transform="translate(232,528)" filter="url(#soft)">
+            <rect class="body" x="-72" y="-24" width="144" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">tac1</text>
+            <text class="mf" x="0" y="9">translation activator</text>
+            <text class="go" x="0" y="21">GO:0008494</text>
+          </g>
+          <g class="act" transform="translate(412,528)" filter="url(#soft)">
+            <rect class="body" x="-78" y="-24" width="156" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">Mrh5C complex</text>
+            <text class="mf" x="0" y="9">translation activator</text>
+            <text class="go" x="0" y="21">GO:0180049</text>
+          </g>
+          <g class="act" transform="translate(572,528)" filter="url(#soft)">
+            <rect class="body" x="-60" y="-24" width="120" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">ppr10</text>
+            <text class="mf" x="0" y="9">transl. activator</text>
+            <text class="go" x="0" y="21">GO:0008494</text>
+          </g>
+          <g class="act" transform="translate(670,528)" filter="url(#soft)">
+            <rect class="body" x="-46" y="-24" width="92" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">cbp7</text>
+            <text class="mf" x="0" y="9">activator</text>
+            <text class="go" x="0" y="21">GO:0008494</text>
+          </g>
+          <g class="act" transform="translate(766,528)" filter="url(#soft)">
+            <rect class="body" x="-46" y="-24" width="92" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">cbp8</text>
+            <text class="mf" x="0" y="9">activator</text>
+            <text class="go" x="0" y="21">GO:0008494</text>
+          </g>
+          <g class="act" transform="translate(1010,528)" filter="url(#soft)">
+            <rect class="body" x="-62" y="-24" width="124" height="50" rx="8"></rect>
+            <text class="gp" x="0" y="-5">ppr6</text>
+            <text class="mf" x="0" y="9">mRNA binding</text>
+            <text class="go" x="0" y="21">GO:0003729</text>
+          </g>
+          <!-- mpa1 -> ppr10 positive -->
+          <g class="act" transform="translate(572,470)">
+            <rect class="body" x="-44" y="-17" width="88" height="34" rx="7"></rect>
+            <text class="gp" x="0" y="4" style="font-size:11px">mpa1</text>
+          </g>
+          <path class="e e-pos" d="M572 487 L572 502" marker-end="url(#ar-pos)"></path>
+          <g class="seq-badge"><circle cx="120" cy="528" r="13"></circle><text x="120" y="528">2</text></g>
+
+          <!-- activators -> ribosome (causal flow) -->
+          <path class="e e-flow" d="M412 554 C 480 588, 540 600, 600 614" marker-end="url(#ar-flow)"></path>
+          <path class="e e-flow" d="M670 554 C 670 578, 670 594, 670 610" marker-end="url(#ar-flow)"></path>
+          <path class="e e-flow" d="M1010 554 C 930 596, 830 606, 760 618" marker-end="url(#ar-flow)"></path>
+
+          <!-- The mitoribosome (centerpiece) -->
+          <g class="ribo" transform="translate(670,660)" filter="url(#soft)">
+            <ellipse class="lsu" cx="0" cy="-12" rx="108" ry="36"></ellipse>
+            <ellipse class="ssu" cx="0" cy="28"  rx="82"  ry="25"></ellipse>
+            <text class="rtxt" x="0" y="-19" style="font-size:13px">mitoribosome</text>
+            <text class="rsub" x="0" y="-3">LSU &middot; peptidyl-transferase &middot; GO:0000048</text>
+            <text class="rsub" x="0" y="30">SSU &middot; GO:0005763</text>
+          </g>
+          <g class="seq-badge"><circle cx="120" cy="660" r="13"></circle><text x="120" y="660">4</text></g>
+
+          <!-- Initiation cluster (clear of the ribosome, left) -->
+          <g class="act" transform="translate(338,602)" filter="url(#soft)">
+            <rect class="body" x="-96" y="-22" width="192" height="44" rx="8"></rect>
+            <text class="gp" x="0" y="-4" style="font-size:11px">mt translation initiation complex</text>
+            <text class="go" x="0" y="10">GO:0180052 &middot; has_input mRNA</text>
+          </g>
+          <g class="act" transform="translate(322,672)" filter="url(#soft)">
+            <rect class="body" x="-66" y="-23" width="132" height="46" rx="8"></rect>
+            <text class="gp" x="0" y="-6">mti2</text>
+            <text class="mf" x="0" y="8">IF2 adaptor / GTPase</text>
+            <text class="go" x="0" y="19">GO:0030674</text>
+          </g>
+          <g class="act" transform="translate(322,734)" filter="url(#soft)">
+            <rect class="body" x="-66" y="-19" width="132" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">mti3</text>
+            <text class="go" x="0" y="12">IF3 &middot; GO:0003743</text>
+          </g>
+          <g class="act" transform="translate(470,734)" filter="url(#soft)">
+            <rect class="body" x="-58" y="-19" width="116" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">gep3</text>
+            <text class="go" x="0" y="12">SSU assembly &middot; GO:0180026</text>
+          </g>
+          <!-- mti3 -| initiation complex -->
+          <path class="e e-neg" d="M340 715 L368 626" marker-end="url(#bar-neg)"></path>
+          <text class="elab" x="476" y="650" style="fill:var(--neg)">mti3 &#8866; init.</text>
+          <!-- init complex / mti2 -> ribosome flow -->
+          <path class="e e-flow" d="M434 608 C 500 620, 540 622, 600 626" marker-end="url(#ar-flow)"></path>
+          <path class="e e-flow" d="M388 672 C 480 680, 540 672, 586 668" marker-end="url(#ar-flow)"></path>
+
+          <!-- fMet-tRNA(fMet) : local chem input of mti2 -->
+          <g class="g-chem"><rect x="118" y="656" width="112" height="32" rx="9"></rect></g>
+          <text class="ent-name nm-chem" x="174" y="676" style="font-size:10px">fMet-tRNA(fMet)</text>
+          <path class="e e-chem" d="M230 672 L254 672" marker-end="url(#ar-chem)"></path>
+          <text class="elab nm-chem" x="174" y="648">has_input</text>
+
+          <!-- Elongation cluster (clear of the ribosome, right) -->
+          <g class="act" transform="translate(905,636)" filter="url(#soft)">
+            <rect class="body" x="-68" y="-23" width="136" height="46" rx="8"></rect>
+            <text class="gp" x="0" y="-6">tuf1</text>
+            <text class="mf" x="0" y="8">EF-Tu adaptor</text>
+            <text class="go" x="0" y="19">GO:0030674</text>
+          </g>
+          <g class="act" transform="translate(1060,636)" filter="url(#soft)">
+            <rect class="body" x="-60" y="-23" width="120" height="46" rx="8"></rect>
+            <text class="gp" x="0" y="-6">tsf1</text>
+            <text class="mf" x="0" y="8">EF-Ts &middot; GEF</text>
+            <text class="go" x="0" y="19">GO:0005085</text>
+          </g>
+          <g class="act" transform="translate(905,702)" filter="url(#soft)">
+            <rect class="body" x="-52" y="-19" width="104" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">gfm1</text>
+            <text class="go" x="0" y="12">EF-G &middot; GO:0003746</text>
+          </g>
+          <g class="act" transform="translate(1025,702)" filter="url(#soft)">
+            <rect class="body" x="-52" y="-19" width="104" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">guf1</text>
+            <text class="go" x="0" y="12">elongation &middot; GO:0003746</text>
+          </g>
+          <!-- tsf1 -> tuf1 positive ; tuf1 -> ribosome flow -->
+          <path class="e e-pos" d="M1000 636 L976 636" marker-end="url(#ar-pos)"></path>
+          <path class="e e-flow" d="M837 644 C 810 652, 800 656, 782 660" marker-end="url(#ar-flow)"></path>
+
+          <!-- aminoacyl-tRNA : local chem input of tuf1 -->
+          <g class="g-chem"><rect x="848" y="566" width="118" height="32" rx="9"></rect></g>
+          <text class="ent-name nm-chem" x="907" y="586" style="font-size:10px">aminoacyl-tRNA</text>
+          <path class="e e-chem" d="M907 598 L907 611" marker-end="url(#ar-chem)"></path>
+          <text class="elab nm-chem" x="972" y="586" style="text-anchor:start">has_input</text>
+
+          <!-- Termination + recycling -->
+          <g class="act" transform="translate(670,775)" filter="url(#soft)">
+            <rect class="body" x="-94" y="-24" width="188" height="48" rx="8"></rect>
+            <text class="gp" x="0" y="-6">mrf1 &nbsp;<tspan class="ent-id" style="font-size:9px">SPAC2F7.17</tspan></text>
+            <text class="mf" x="0" y="8">translation release factor</text>
+            <text class="go" x="0" y="19">GO:0003747 &middot; has_output 8 proteins</text>
+          </g>
+          <g class="act" transform="translate(486,775)" filter="url(#soft)">
+            <rect class="body" x="-58" y="-22" width="116" height="44" rx="8"></rect>
+            <text class="gp" x="0" y="-3">mtq1</text>
+            <text class="mf" x="0" y="11">RF Q-methyltransferase</text>
+          </g>
+          <path class="e e-neg" d="M544 775 L574 775" marker-end="url(#bar-neg)"></path>
+          <text class="elab" x="486" y="746" style="fill:var(--neg)">mtq1 &#8866; mrf1</text>
+          <path class="e e-flow" d="M670 713 L670 749" marker-end="url(#ar-flow)"></path>
+
+          <g class="act" transform="translate(872,779)" filter="url(#soft)">
+            <rect class="body" x="-54" y="-19" width="108" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">rrf1</text>
+            <text class="go" x="0" y="12">recycling &middot; GO:0043022</text>
+          </g>
+          <g class="act" transform="translate(996,779)" filter="url(#soft)">
+            <rect class="body" x="-58" y="-19" width="116" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">gfm2</text>
+            <text class="go" x="0" y="12">ribosome disassembly</text>
+          </g>
+          <path class="e e-flow" d="M764 779 L816 779" marker-end="url(#ar-flow)"></path>
+          <path class="e e-flow" d="M926 779 L936 779" marker-end="url(#ar-flow)"></path>
+          <g class="act" transform="translate(1150,775)" filter="url(#soft)">
+            <rect class="body" x="-56" y="-24" width="112" height="48" rx="8"></rect>
+            <text class="gp" x="0" y="-6" style="font-size:11px">pth3 / pth4</text>
+            <text class="mf" x="0" y="8">peptidyl-tRNA</text>
+            <text class="go" x="0" y="19">hydrolase &middot; fidelity</text>
+          </g>
+
+          <!-- Chemistry inset : biosynthetic provenance of fMet-tRNA(fMet) -->
+          <rect x="1182" y="436" width="150" height="190" rx="10" fill="#fffaf2" stroke="#ecd9b8"></rect>
+          <text class="band-sub" x="1196" y="453" style="font-size:9.5px;fill:#a9854b">tRNA / cofactor chemistry</text>
+          <g class="act" transform="translate(1257,478)" filter="url(#soft)">
+            <rect class="body" x="-66" y="-17" width="132" height="34" rx="7"></rect>
+            <text class="gp" x="0" y="-2" style="font-size:11px">msm1</text>
+            <text class="go" x="0" y="11">Met-tRNA ligase &middot; GO:0004825</text>
+          </g>
+          <g class="g-chem"><rect x="1207" y="510" width="100" height="26" rx="7"></rect></g>
+          <text class="ent-name nm-chem" x="1257" y="527" style="font-size:9.5px">10-formyl-THF</text>
+          <g class="act" transform="translate(1257,566)" filter="url(#soft)">
+            <rect class="body" x="-70" y="-19" width="140" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-2" style="font-size:11px">fmt1</text>
+            <text class="go" x="0" y="11">Met-tRNA formyltransf. &middot; GO:0004479</text>
+          </g>
+          <g class="g-chem"><rect x="1199" y="598" width="116" height="22" rx="7"></rect></g>
+          <text class="ent-name nm-chem" x="1257" y="613" style="font-size:9.5px">fMet-tRNA(fMet)</text>
+          <path class="e e-flow" d="M1257 495 L1257 545" marker-end="url(#ar-flow)" opacity="0.55"></path>
+          <path class="e e-chem" d="M1257 536 L1257 545" marker-end="url(#ar-chem)"></path>
+          <path class="e e-chem" d="M1257 585 L1257 596" marker-end="url(#ar-chem)"></path>
+          <text class="elab nm-chem" x="1320" y="568" style="text-anchor:end">has_output</text>
+
+          <g class="seq-badge"><circle cx="120" cy="775" r="13"></circle><text x="120" y="775">5</text></g>
+
+          <!-- ===================== BAND 4 : PROTEIN ===================== -->
+          <!-- ribosome / mrf1 -> proteins (has_output) -->
+          <path class="e e-prot" d="M600 700 C 470 760, 360 770, 332 818" marker-end="url(#ar-prot)"></path>
+          <path class="e e-prot" d="M670 788 L670 818" marker-end="url(#ar-prot)"></path>
+          <path class="e e-prot" d="M740 700 C 880 760, 980 770, 1008 818" marker-end="url(#ar-prot)"></path>
+          <text class="elab nm-prot" x="700" y="808">has_output: nascent polypeptides</text>
+
+          <g transform="translate(330,840)">
+            <path class="g-prot" d="M-58 -16 q -12 16 0 32 q 14 10 32 6 q 22 8 40 -6 q 14 -12 6 -30 q -10 -16 -30 -12 q -28 -8 -48 10 z"></path>
+            <text class="gene-sym nm-prot" x="-2" y="4" style="font-size:13px">cox1</text>
+            <text class="ent-id" x="0" y="34">protein</text>
+          </g>
+          <g transform="translate(670,840)">
+            <path class="g-prot" d="M-58 -16 q -12 16 0 32 q 14 10 32 6 q 22 8 40 -6 q 14 -12 6 -30 q -10 -16 -30 -12 q -28 -8 -48 10 z"></path>
+            <text class="gene-sym nm-prot" x="-2" y="4" style="font-size:13px">cob1</text>
+            <text class="ent-id" x="0" y="34">protein</text>
+          </g>
+          <g transform="translate(1010,840)">
+            <path class="g-prot" d="M-58 -16 q -12 16 0 32 q 14 10 32 6 q 22 8 40 -6 q 14 -12 6 -30 q -10 -16 -30 -12 q -28 -8 -48 10 z"></path>
+            <text class="gene-sym nm-prot" x="-2" y="4" style="font-size:13px">atp9</text>
+            <text class="ent-id" x="0" y="34">protein</text>
+          </g>
+          <text class="ent-id" x="1130" y="838" style="text-anchor:start">+ var1, cox2,</text>
+          <text class="ent-id" x="1130" y="852" style="text-anchor:start">cox3, atp6, atp8</text>
+
+          <!-- ===================== BAND 5 : COMPLEX ASSEMBLY ===================== -->
+          <!-- cox1 protein -> mrx15 / mss51 -> Complex IV -->
+          <path class="e e-prot" d="M316 872 C 300 905, 280 918, 266 936" marker-end="url(#ar-prot)"></path>
+          <path class="e e-prot" d="M344 872 C 364 905, 382 918, 390 936" marker-end="url(#ar-prot)"></path>
+          <text class="elab nm-prot" x="214" y="902" style="text-anchor:start">has_input cox1 (protein)</text>
+          <g class="act" transform="translate(265,958)" filter="url(#soft)">
+            <rect class="body" x="-54" y="-19" width="108" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">mrx15</text>
+            <text class="go" x="0" y="12">CIV assembly &middot; GO:0033617</text>
+          </g>
+          <g class="act" transform="translate(390,958)" filter="url(#soft)">
+            <rect class="body" x="-54" y="-19" width="108" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">mss51</text>
+            <text class="go" x="0" y="12">CIV assembly &middot; GO:0033617</text>
+          </g>
+          <g class="cplx" transform="translate(548,958)">
+            <rect x="-68" y="-22" width="136" height="44" rx="9"></rect>
+            <text class="ct" x="0" y="-2">Complex IV</text>
+            <text class="cs" x="0" y="13">cytochrome c oxidase</text>
+          </g>
+          <path class="e e-flow" d="M444 958 L476 958" marker-end="url(#ar-flow)"></path>
+          <path class="e e-flow" d="M265 977 C 360 1000, 450 990, 478 966" marker-end="url(#ar-flow)"></path>
+
+          <!-- cob1 protein -> Cbp3p-Cbp6 -> Complex III -->
+          <path class="e e-prot" d="M676 872 C 692 905, 700 918, 704 936" marker-end="url(#ar-prot)"></path>
+          <text class="elab nm-prot" x="716" y="902" style="text-anchor:start">has_input cob1 (protein)</text>
+          <g class="act" transform="translate(705,958)" filter="url(#soft)">
+            <rect class="body" x="-75" y="-19" width="150" height="38" rx="7"></rect>
+            <text class="gp" x="0" y="-1" style="font-size:11px">Cbp3p-Cbp6 complex</text>
+            <text class="go" x="0" y="12">CIII assembly &middot; GO:0034551</text>
+          </g>
+          <g class="cplx" transform="translate(883,958)">
+            <rect x="-68" y="-22" width="136" height="44" rx="9"></rect>
+            <text class="ct" x="0" y="-2">Complex III</text>
+            <text class="cs" x="0" y="13">cytochrome bc1</text>
+          </g>
+          <path class="e e-flow" d="M781 958 L814 958" marker-end="url(#ar-flow)"></path>
+
+          <!-- mba1 co-translational membrane insertion -->
+          <g class="act" transform="translate(1090,958)" filter="url(#soft)">
+            <rect class="body" x="-78" y="-22" width="156" height="46" rx="8"></rect>
+            <text class="gp" x="0" y="-3" style="font-size:11px">mba1</text>
+            <text class="go" x="0" y="11">co-translational insertion into</text>
+            <text class="go" x="0" y="22">inner membrane &middot; GO:0032979</text>
+          </g>
+          <path class="e e-flow" d="M748 690 C 980 800, 1080 880, 1090 932" marker-end="url(#ar-flow)" opacity="0.5"></path>
+
+          <g class="seq-badge"><circle cx="120" cy="958" r="13"></circle><text x="120" y="958">6</text></g>
+        </svg>
+      </div>
+
+      <div class="footnote">
+        <b>Faithfulness &amp; provenance.</b> Rendered from Barista export of
+        <code>gomodel:67086be200000519</code> (production, modified 2026-05-17). Curated in PomBase, primarily
+        by ORCID 0000-0001-6330-7526; primary literature reference <code>PMID:38117001</code>; supporting
+        evidence is a mixture of orthology (ECO:0000266 / GO_REF:0000024), phylogenetic inference
+        (ECO:0000318), and direct experiment (ECO:0000269). All gene symbols, GO molecular functions,
+        biological processes, and the <code>has_input</code> / <code>has_output</code> / causal relations
+        shown are taken verbatim from the model. The figure foregrounds the regulatory I/O backbone (the
+        18&nbsp;<code>has_input</code>/<code>has_output</code> assertions and the directly-regulating causal
+        edges); the model contains additional <i>causally upstream of</i> / <i>provides input for</i> links
+        that are summarised here as light "causal flow" connectors for legibility.
+      </div>
+    </article>
+  </main>
+</body>
+</html>
