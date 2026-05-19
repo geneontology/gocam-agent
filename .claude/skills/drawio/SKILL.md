@@ -1,6 +1,6 @@
 ---
 name: drawio
-description: Generate a .drawio pathway diagram from a GO-CAM claims document. Use after completing the annotation pipeline (Phase 7) to produce agent-output/pathway_sketch.drawio. Reads shape styles and the Shape Palette page from gocam_models/network_template_draw.drawio.
+description: Generate a .drawio pathway diagram from a GO-CAM claims document. Use after completing the annotation pipeline (Phase 7) to produce agent-output/pathway_sketch.drawio. Reads shape styles and the Shape Palette page from workflow/network_template_draw.drawio.
 ---
 
 # Skill: GO-CAM Network Sketch (draw.io)
@@ -15,7 +15,7 @@ Output: `agent-output/pathway_sketch.drawio`.
 
 ## Dependency: template file
 
-This skill requires `gocam_models/network_template_draw.drawio`. It copies page 1 (Shape Palette) verbatim into the output file. The template is confirmed to exist at that path — read it before generating the diagram.
+This skill requires `workflow/network_template_draw.drawio`. It copies page 1 (Shape Palette) verbatim into the output file. The template is confirmed to exist at that path — read it before generating the diagram.
 
 ## File format
 
@@ -26,7 +26,7 @@ Each diagram contains an `<mxGraphModel>` with a `<root>` holding `<mxCell>` ele
 
 The file must have exactly 3 pages (diagrams):
 
-1. **Shape Palette** (`id="palette"`) — copy of the template shapes, arrows, badges, and annotation notes. Copy this verbatim from the template file at `gocam_models/network_template_draw.drawio`, page 1.
+1. **Shape Palette** (`id="palette"`) — copy of the template shapes, arrows, badges, and annotation notes. Copy this verbatim from the template file at `workflow/network_template_draw.drawio`, page 1.
 2. **Canvas** (`id="canvas"`) — the actual network diagram. You build this.
 3. **Canvas 2** (`id="canvas2"`) — overflow page. Leave empty unless the network is very large.
 
@@ -178,7 +178,7 @@ Place badges near the midpoint of their corresponding edge.
 
 ```python
 # Pseudocode for assembling the .drawio file
-palette_xml = read_page_1_from("gocam_models/network_template_draw.drawio")
+palette_xml = read_page_1_from("workflow/network_template_draw.drawio")
 canvas_xml = build_canvas(nodes, edges, badges, title)
 canvas2_xml = empty_canvas()
 

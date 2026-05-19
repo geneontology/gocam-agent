@@ -1,0 +1,115 @@
+Querying UniProt + QuickGO + OLS4 for RAB8A (Mus musculus, taxon:10090)…
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────── Search: RAB8A ─────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  UniProt ID        P55258                                                                                                                                                                                                       │
+│  Protein name      Ras-related protein Rab-8A                                                                                                                                                                                   │
+│  Gene names        Rab8a / Mel / Rab8                                                                                                                                                                                           │
+│  Species           Mus musculus                                                                                                                                                                                                 │
+│  Function          The small GTPases Rab are key regulators of intracellular membrane trafficking, from the formation of transport vesicles to their fusion with membranes. Rabs cycle between an inactive GDP-bound form and   │
+│                    an active GTP-bound form that is able to recruit to membranes different sets of downstream effect…                                                                                                           │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+GO Annotations from UniProt (57 total)
+Aspect    GO ID           Term                                                                      Evidence             
+MF        GO:0003925      G protein activity                                                        ISS:UniProtKB        
+MF        GO:0019003      GDP binding                                                               ISS:UniProtKB        
+MF        GO:0005525      GTP binding                                                               ISS:UniProtKB        
+MF        GO:0003924      GTPase activity                                                           ISO:GO_Central       
+MF        GO:0046872      metal ion binding                                                         IEA:UniProtKB-KW     
+MF        GO:0031489      myosin V binding                                                          ISO:GO_Central       
+MF        GO:0019901      protein kinase binding                                                    ISO:GO_Central       
+MF        GO:1990782      protein tyrosine kinase binding                                           ISO:GO_Central       
+MF        GO:0031267      small GTPase binding                                                      ISS:UniProtKB        
+BP        GO:0006914      autophagy                                                                 IEA:UniProtKB-KW     
+BP        GO:0007409      axonogenesis                                                              ISS:UniProtKB        
+BP        GO:0032869      cellular response to insulin stimulus                                     ISS:UniProtKB        
+BP        GO:0060271      cilium assembly                                                           IMP:UniProtKB        
+BP        GO:0032456      endocytic recycling                                                       IBA:GO_Central       
+BP        GO:0006887      exocytosis                                                                IBA:GO_Central       
+BP        GO:0007030      Golgi organization                                                        ISS:UniProtKB        
+BP        GO:0048210      Golgi vesicle fusion to target membrane                                   ISO:GO_Central       
+BP        GO:0098969      neurotransmitter receptor transport to postsynaptic membrane              ISO:GO_Central       
+BP        GO:0098887      neurotransmitter receptor transport, endosome to postsynaptic membrane    ISO:GO_Central       
+BP        GO:0061512      protein localization to cilium                                            IMP:UniProtKB        
+BP        GO:0072659      protein localization to plasma membrane                                   ISS:UniProtKB        
+BP        GO:0010506      regulation of autophagy                                                   ISS:UniProtKB        
+BP        GO:0048169      regulation of long-term neuronal synaptic plasticity                      ISO:GO_Central       
+BP        GO:0032880      regulation of protein localization                                        ISO:GO_Central       
+BP        GO:0051223      regulation of protein transport                                           ISO:GO_Central       
+BP        GO:0006904      vesicle docking involved in exocytosis                                    ISO:GO_Central       
+BP        GO:0099003      vesicle-mediated transport in synapse                                     ISO:GO_Central       
+CC        GO:0015629      actin cytoskeleton                                                        ISO:GO_Central       
+CC        GO:0034451      centriolar satellite                                                      ISO:GO_Central       
+CC        GO:0005814      centriole                                                                 IEA:UniProtKB-SubCell
+CC        GO:0005813      centrosome                                                                ISS:UniProtKB        
+CC        GO:0036064      ciliary basal body                                                        IDA:UniProtKB        
+CC        GO:0097546      ciliary base                                                              IDA:MGI              
+CC        GO:0060170      ciliary membrane                                                          IDA:MGI              
+CC        GO:0005929      cilium                                                                    IDA:UniProtKB        
+CC        GO:0031410      cytoplasmic vesicle                                                       ISO:GO_Central       
+CC        GO:0030659      cytoplasmic vesicle membrane                                              TAS:Reactome         
+CC        GO:0005829      cytosol                                                                   ISO:GO_Central       
+CC        GO:0030425      dendrite                                                                  ISO:GO_Central       
+CC        GO:0005768      endosome                                                                  IBA:GO_Central       
+CC        GO:0010008      endosome membrane                                                         ISS:UniProtKB        
+CC        GO:0098978      glutamatergic synapse                                                     ISO:GO_Central       
+CC        GO:0005794      Golgi apparatus                                                           ISO:GO_Central       
+CC        GO:0005764      lysosome                                                                  IEA:UniProtKB-SubCell
+CC        GO:0030496      midbody                                                                   ISS:UniProtKB        
+CC        GO:0043025      neuronal cell body                                                        ISO:GO_Central       
+CC        GO:0097730      non-motile cilium                                                         IDA:MGI              
+CC        GO:0005730      nucleolus                                                                 ISO:GO_Central       
+CC        GO:0005654      nucleoplasm                                                               ISO:GO_Central       
+CC        GO:0045335      phagocytic vesicle                                                        ISS:UniProtKB        
+CC        GO:0030670      phagocytic vesicle membrane                                               IEA:UniProtKB-SubCell
+CC        GO:0005886      plasma membrane                                                           IDA:UniProtKB        
+CC        GO:0055037      recycling endosome                                                        IDA:UniProtKB        
+CC        GO:0055038      recycling endosome membrane                                               ISS:UniProtKB        
+CC        GO:0045202      synapse                                                                   ISO:GO_Central       
+CC        GO:0008021      synaptic vesicle                                                          IBA:GO_Central       
+CC        GO:0030140      trans-Golgi network transport vesicle                                     IDA:MGI              
+
+QuickGO Annotations — 100 annotation(s) found for P55258
+GO ID           Term                  Aspect    ECO            Reference             
+GO:0005929      cilium                CE        ECO:0000250    GO_REF:0000024        
+GO:0005929      cilium                CE        ECO:0000266    GO_REF:0000119        
+GO:0003924      GTPase activity       MO        ECO:0000318    GO_REF:0000033        
+GO:0003924      GTPase activity       MO        ECO:0000266    GO_REF:0000119        
+GO:0003924      GTPase activity       MO        ECO:0000501    GO_REF:0000120        
+GO:0003924      GTPase activity       MO        ECO:0000304    Reactome:R-MMU-1449633
+GO:0003925      G protein activity    MO        ECO:0000250    GO_REF:0000024        
+GO:0003925      G protein activity    MO        ECO:0000266    GO_REF:0000119        
+GO:0003925      G protein activity    MO        ECO:0000501    GO_REF:0000120        
+GO:0005515      protein binding       MO        ECO:0000353    PMID:11773082         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:11773082         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:11773082         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:12578829         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:12578829         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:14722103         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:18094055         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:18094055         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:18094055         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:20048263         
+GO:0005515      protein binding       MO        ECO:0000353    PMID:24983211         
+  … and 80 more (see saved JSON)
+╭──────────────────────────────────────────────────────────────────────────────── SynGO Annotations  expert-curated synaptic  ·  3 annotation(s) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  BP: neurotransmitter receptor transport to postsynaptic membrane (GO:0098969)                                                                                                                                                  │
+│      Evidence: intact tissue, cultured neurons, overexpression, confocal microscopy, patch-clamp                                                                                                                                │
+│      PMID: 15297461                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: neurotransmitter receptor transport, endosome to postsynaptic membrane (GO:0098887)                                                                                                                                        │
+│      Evidence: intact tissue, overexpression, confocal microscopy, field recording                                                                                                                                              │
+│      PMID: 18045925                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  CC: synapse (GO:0045202)                                                                                                                                                                                                       │
+│      Evidence: intact tissue, not targeted, mass spectrometry, fractionation                                                                                                                                                    │
+│      PMID: 24876496                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Related GO Terms from OLS4 (query: 'RAB8A')
+GO ID           Label             Description                                                                   
+GO:0033263      CORVET complex    A multimeric protein complex that acts as an endosomal tethering complex (COR…
+INFO  Saved → rab8a.md  rab8a.json

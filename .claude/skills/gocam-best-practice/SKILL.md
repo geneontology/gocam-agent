@@ -35,11 +35,13 @@ An activity unit is the fundamental building block of GO-CAM models:
 
 ## Annotation Guidelines by Activity Type
 
-The `references/` directory contains detailed guidelines for specific annotation scenarios. Load these files when working with the corresponding activity types:
+The `.claude/skills/gocam-best-practice/references/` directory contains detailed guidelines for specific annotation scenarios. Load these files when working with the corresponding activity types.
+
+A comprehensive overview of all GO-CAM guidelines is in `.claude/skills/gocam-best-practice/SP-GOCAM-guidelines-2025-02-06.md` — read this first for unfamiliar annotation scenarios.
 
 ### Core Guidelines
 
-- **GO-CAM_annotation_guidelines_README.md**: Overview of GO-CAM annotation principles
+- **SP-GOCAM-guidelines-2025-02-06.md** (skill root): Comprehensive GO-CAM guidelines — Noctua setup, activity units, causal relations, PTMs, receptors, adaptors, sequestering proteins, complexes, transporters
 - **How_to_annotate_complexes_in_GO-CAM.md**: When and how to represent protein complexes
 
 ### Specific Molecular Function Types
@@ -99,7 +101,7 @@ Always include:
 5. **Connect activities**: Use `barista add-fact` to create causal relationships
 6. **Add context**: Specify inputs, locations, and processes
 7. **Add evidence**: Support all facts with evidence codes and references
-8. **Validate**: Check against guidelines in `references/` files
+8. **Validate**: Check against guidelines in `.claude/skills/gocam-best-practice/references/`
 9. **Export and review**: Export the model to review its structure
 
 ## Reference File Usage Strategy
@@ -185,7 +187,7 @@ barista add-fact --model $MODEL_ID \
 
 ## Getting Help
 
-- Check relevant guideline files in `references/` directory
+- Check relevant guideline files in `.claude/skills/gocam-best-practice/references/`
 - Search for similar examples using `barista list-models`
 - Export and examine well-annotated models for patterns
 - Consult the GO Consortium documentation
@@ -193,7 +195,7 @@ barista add-fact --model $MODEL_ID \
 
 ## Reference Files Summary
 
-Load these files from the `references/` directory as needed:
+Load these files from `.claude/skills/gocam-best-practice/references/` as needed:
 
 - How_to_annotate_complexes_in_GO-CAM.md
 - How_to_annotate_molecular_adaptors.md

@@ -1,0 +1,112 @@
+Querying UniProt + QuickGO + OLS4 for SYT7 (Mus musculus, taxon:10090)…
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────── Search: SYT7 ──────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  UniProt ID        Q9R0N7                                                                                                                                                                                                       │
+│  Protein name      Synaptotagmin-7                                                                                                                                                                                              │
+│  Gene names        Syt7                                                                                                                                                                                                         │
+│  Species           Mus musculus                                                                                                                                                                                                 │
+│  Function          Ca(2+) sensor involved in Ca(2+)-dependent exocytosis of secretory and synaptic vesicles through Ca(2+) and phospholipid binding to the C2 domain. Ca(2+) induces binding of the C2-domains to phospholipid  │
+│                    membranes and to assembled SNARE-complexes; both actions contribute to triggering exocytosis. SY…                                                                                                            │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+GO Annotations from UniProt (50 total)
+Aspect    GO ID           Term                                                       Evidence             
+MF        GO:0005509      calcium ion binding                                        ISO:GO_Central       
+MF        GO:0061891      calcium ion sensor activity                                IBA:GO_Central       
+MF        GO:0005544      calcium-dependent phospholipid binding                     IDA:UniProtKB        
+MF        GO:0005516      calmodulin binding                                         IDA:UniProtKB        
+MF        GO:0030276      clathrin binding                                           ISO:GO_Central       
+MF        GO:0005546      phosphatidylinositol-4,5-bisphosphate binding              IDA:UniProtKB        
+MF        GO:0001786      phosphatidylserine binding                                 IDA:ParkinsonsUK-UCL 
+MF        GO:0000149      SNARE binding                                              IDA:ParkinsonsUK-UCL 
+MF        GO:0019905      syntaxin binding                                           ISO:GO_Central       
+BP        GO:1990927      calcium ion regulated lysosome exocytosis                  IMP:UniProtKB        
+BP        GO:0048791      calcium ion-regulated exocytosis of neurotransmitter       IMP:UniProtKB        
+BP        GO:0099502      calcium-dependent activation of synaptic vesicle fusion    IDA:SynGO            
+BP        GO:0017156      calcium-ion regulated exocytosis                           ISO:GO_Central       
+BP        GO:0030073      insulin secretion                                          IMP:MGI              
+BP        GO:0006909      phagocytosis                                               IMP:UniProtKB        
+BP        GO:0090385      phagosome-lysosome fusion                                  IMP:UniProtKB        
+BP        GO:0001778      plasma membrane repair                                     IDA:MGI              
+BP        GO:0045956      positive regulation of calcium ion-dependent exocytosis    ISO:GO_Central       
+BP        GO:0046850      regulation of bone remodeling                              IMP:UniProtKB        
+BP        GO:0017158      regulation of calcium ion-dependent exocytosis             IMP:ParkinsonsUK-UCL 
+BP        GO:0014059      regulation of dopamine secretion                           IMP:ParkinsonsUK-UCL 
+BP        GO:0070092      regulation of glucagon secretion                           IMP:UniProtKB        
+BP        GO:0050796      regulation of insulin secretion                            IMP:UniProtKB        
+BP        GO:0050764      regulation of phagocytosis                                 IMP:UniProtKB        
+BP        GO:1900242      regulation of synaptic vesicle endocytosis                 ISO:GO_Central       
+BP        GO:1990926      short-term synaptic potentiation                           IDA:UniProtKB        
+BP        GO:0036465      synaptic vesicle recycling                                 IMP:UniProtKB        
+BP        GO:0006906      vesicle fusion                                             IBA:GO_Central       
+BP        GO:0090119      vesicle-mediated cholesterol transport                     IDA:UniProtKB        
+BP        GO:0016192      vesicle-mediated transport                                 IBA:GO_Central       
+CC        GO:0030424      axon                                                       IBA:GO_Central       
+CC        GO:0043679      axon terminus                                              IDA:ParkinsonsUK-UCL 
+CC        GO:0005829      cytosol                                                    IEA:GOC              
+CC        GO:0030425      dendrite                                                   IDA:ParkinsonsUK-UCL 
+CC        GO:0031045      dense core granule                                         ISO:GO_Central       
+CC        GO:0032009      early phagosome                                            IDA:UniProtKB        
+CC        GO:0098982      GABA-ergic synapse                                         IDA:SynGO            
+CC        GO:0098978      glutamatergic synapse                                      IDA:SynGO            
+CC        GO:0098686      hippocampal mossy fiber to CA3 synapse                     ISO:GO_Central       
+CC        GO:0005765      lysosomal membrane                                         IEA:UniProtKB-SubCell
+CC        GO:0005764      lysosome                                                   IDA:UniProtKB        
+CC        GO:0043025      neuronal cell body                                         IDA:ParkinsonsUK-UCL 
+CC        GO:0005778      peroxisomal membrane                                       IEA:UniProtKB-SubCell
+CC        GO:0005777      peroxisome                                                 IDA:UniProtKB        
+CC        GO:0030670      phagocytic vesicle membrane                                IEA:UniProtKB-SubCell
+CC        GO:0005886      plasma membrane                                            IBA:GO_Central       
+CC        GO:0042734      presynaptic membrane                                       IDA:UniProtKB        
+CC        GO:0045202      synapse                                                    IBA:GO_Central       
+CC        GO:0008021      synaptic vesicle                                           IMP:UniProtKB        
+CC        GO:0030672      synaptic vesicle membrane                                  IEA:UniProtKB-SubCell
+
+QuickGO Annotations — 100 annotation(s) found for Q9R0N7
+GO ID           Term                                             Aspect    ECO            Reference     
+GO:0001778      plasma membrane repair                           BI        ECO:0000314    PMID:12925704 
+GO:0000149      SNARE binding                                    MO        ECO:0000318    GO_REF:0000033
+GO:0000149      SNARE binding                                    MO        ECO:0000256    GO_REF:0000117
+GO:0000149      SNARE binding                                    MO        ECO:0000314    PMID:12860971 
+GO:0001786      phosphatidylserine binding                       MO        ECO:0000314    PMID:12860971 
+GO:0005509      calcium ion binding                              MO        ECO:0000266    GO_REF:0000096
+GO:0005515      protein binding                                  MO        ECO:0000353    PMID:21041449 
+GO:0005516      calmodulin binding                               MO        ECO:0000314    PMID:24569478 
+GO:0005544      calcium-dependent phospholipid binding           MO        ECO:0000318    GO_REF:0000033
+GO:0005544      calcium-dependent phospholipid binding           MO        ECO:0000266    GO_REF:0000096
+GO:0005544      calcium-dependent phospholipid binding           MO        ECO:0000501    GO_REF:0000120
+GO:0005544      calcium-dependent phospholipid binding           MO        ECO:0000314    PMID:16982801 
+GO:0005546      phosphatidylinositol-4,5-bisphosphate binding    MO        ECO:0000314    PMID:12860971 
+GO:0005546      phosphatidylinositol-4,5-bisphosphate binding    MO        ECO:0000314    PMID:12860971 
+GO:0005546      phosphatidylinositol-4,5-bisphosphate binding    MO        ECO:0000314    PMID:25860611 
+GO:0019905      syntaxin binding                                 MO        ECO:0000266    GO_REF:0000096
+GO:0030276      clathrin binding                                 MO        ECO:0000266    GO_REF:0000096
+GO:0061891      calcium ion sensor activity                      MO        ECO:0000318    GO_REF:0000033
+GO:0001778      plasma membrane repair                           BI        ECO:0000266    GO_REF:0000096
+GO:0001778      plasma membrane repair                           BI        ECO:0000256    GO_REF:0000117
+  … and 80 more (see saved JSON)
+╭──────────────────────────────────────────────────────────────────────────────── SynGO Annotations  expert-curated synaptic  ·  5 annotation(s) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│  BP: regulation of synaptic vesicle endocytosis (GO:1900242)                                                                                                                                                                    │
+│      Evidence: cultured neurons, knockout, overexpression, electron microscopy, confocal microscopy, patch-clamp, optical imaging                                                                                               │
+│      PMID: 14532108                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: calcium-dependent activation of synaptic vesicle fusion (GO:0099502)                                                                                                                                                       │
+│      Evidence: cultured neurons, knockout, RNAi, overexpression, patch-clamp, electrophysiology                                                                                                                                 │
+│      PMID: 24267651                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  BP: regulation of synaptic vesicle exocytosis (GO:2000300)                                                                                                                                                                     │
+│      Evidence: intact tissue, knockout, patch-clamp, optical imaging                                                                                                                                                            │
+│      PMID: 32343229                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  CC: integral component of presynaptic membrane (GO:0099056)                                                                                                                                                                    │
+│      Evidence: intact tissue, cultured neurons, antibody, electron microscopy, confocal microscopy, microscopy, western blot, fractionation                                                                                     │
+│      PMID: 11395007                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+│  CC: integral component of synaptic membrane (GO:0099699)                                                                                                                                                                       │
+│      Evidence: intact tissue, knockout, confocal microscopy                                                                                                                                                                     │
+│      PMID: 32343229                                                                                                                                                                                                             │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+INFO  Saved → syt7.md  syt7.json
